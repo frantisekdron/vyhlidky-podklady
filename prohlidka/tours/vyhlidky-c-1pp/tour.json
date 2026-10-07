@@ -1,0 +1,1230 @@
+{
+ "version": 1,
+ "title": "Vyhlídky Suchdol – mezonet C · 1.PP (model podle půdorysu)",
+ "source": "demo",
+ "units": "m",
+ "spawn": {
+  "position": [
+   1.2,
+   0,
+   5.6
+  ],
+  "yaw": -80
+ },
+ "settings": {
+  "eyeHeight": 1.65,
+  "walkSpeed": 1.4,
+  "runMultiplier": 2.2
+ },
+ "floorPlan": {
+  "rooms": [
+   {
+    "id": "garaz",
+    "name": "Garáž",
+    "areaM2": 22.7,
+    "polygon": [
+     [
+      0.415,
+      0.415
+     ],
+     [
+      6.157,
+      0.415
+     ],
+     [
+      6.157,
+      4.375
+     ],
+     [
+      0.415,
+      4.375
+     ]
+    ]
+   },
+   {
+    "id": "pokoj",
+    "name": "Pokoj (pracovna / posilovna s infrasaunou)",
+    "areaM2": 13.6,
+    "polygon": [
+     [
+      6.258,
+      0.415
+     ],
+     [
+      9.89,
+      0.415
+     ],
+     [
+      9.89,
+      4.165
+     ],
+     [
+      6.258,
+      4.165
+     ]
+    ]
+   },
+   {
+    "id": "predsin",
+    "name": "Předsíň",
+    "areaM2": 7.2,
+    "polygon": [
+     [
+      0.415,
+      4.493
+     ],
+     [
+      5.428,
+      4.493
+     ],
+     [
+      5.428,
+      5.408
+     ],
+     [
+      3.009,
+      5.408
+     ],
+     [
+      3.009,
+      6.421
+     ],
+     [
+      0.415,
+      6.421
+     ]
+    ]
+   },
+   {
+    "id": "chodbicka",
+    "name": "Chodbička",
+    "areaM2": 1.9,
+    "polygon": [
+     [
+      5.529,
+      4.493
+     ],
+     [
+      6.258,
+      4.493
+     ],
+     [
+      6.258,
+      4.243
+     ],
+     [
+      7.286,
+      4.243
+     ],
+     [
+      7.286,
+      5.408
+     ],
+     [
+      5.529,
+      5.408
+     ]
+    ]
+   },
+   {
+    "id": "koupelna",
+    "name": "Koupelna s WC",
+    "areaM2": 4.9,
+    "polygon": [
+     [
+      7.364,
+      4.243
+     ],
+     [
+      9.89,
+      4.243
+     ],
+     [
+      9.89,
+      6.421
+     ],
+     [
+      7.92,
+      6.421
+     ],
+     [
+      7.92,
+      5.408
+     ],
+     [
+      7.364,
+      5.408
+     ]
+    ]
+   },
+   {
+    "id": "terasa",
+    "name": "Terasa do zahrady",
+    "areaM2": 18.2,
+    "polygon": [
+     [
+      10.283,
+      0.067
+     ],
+     [
+      12.988,
+      0.067
+     ],
+     [
+      12.988,
+      6.792
+     ],
+     [
+      10.283,
+      6.792
+     ]
+    ]
+   }
+  ],
+  "image": {
+   "url": "pudorys.jpg"
+  },
+  "imageTransform": {
+   "position": [
+    6.365,
+    3.317
+   ],
+   "rotationDeg": 0,
+   "scale": 0.0112259
+  },
+  "walls": [
+   [
+    0.208,
+    0.208,
+    10.086,
+    0.208
+   ],
+   [
+    0.208,
+    6.606,
+    10.086,
+    6.606
+   ],
+   [
+    0.208,
+    0.208,
+    0.208,
+    6.606
+   ],
+   [
+    10.086,
+    0.208,
+    10.086,
+    2.448
+   ],
+   [
+    10.086,
+    3.335,
+    10.086,
+    6.606
+   ],
+   [
+    6.208,
+    0.208,
+    6.208,
+    4.434
+   ],
+   [
+    0.208,
+    4.434,
+    1.247,
+    4.434
+   ],
+   [
+    2.078,
+    4.434,
+    6.208,
+    4.434
+   ],
+   [
+    6.208,
+    4.204,
+    6.421,
+    4.204
+   ],
+   [
+    7.207,
+    4.204,
+    7.398,
+    4.204
+   ],
+   [
+    8.184,
+    4.204,
+    10.086,
+    4.204
+   ],
+   [
+    5.478,
+    4.434,
+    5.478,
+    4.524
+   ],
+   [
+    5.478,
+    5.31,
+    5.478,
+    5.467
+   ],
+   [
+    3.059,
+    5.467,
+    7.881,
+    5.467
+   ],
+   [
+    3.059,
+    5.467,
+    3.059,
+    6.606
+   ],
+   [
+    6.898,
+    5.467,
+    6.898,
+    6.606
+   ],
+   [
+    7.881,
+    5.467,
+    7.881,
+    6.606
+   ],
+   [
+    7.325,
+    4.204,
+    7.325,
+    4.657
+   ],
+   [
+    7.325,
+    5.357,
+    7.325,
+    5.467
+   ],
+   [
+    10.283,
+    0.067,
+    12.988,
+    0.067
+   ],
+   [
+    12.988,
+    0.067,
+    12.988,
+    6.792
+   ],
+   [
+    10.283,
+    6.792,
+    12.988,
+    6.792
+   ]
+  ]
+ },
+ "waypoints": [
+  {
+   "id": "predsin",
+   "position": [
+    1.2,
+    0,
+    5.6
+   ],
+   "yaw": -80,
+   "roomId": "predsin",
+   "caption": "Model podle půdorysu (stav white wall). Předsíň u hlavního vstupu.",
+   "dwellS": 5,
+   "pitch": -3
+  },
+  {
+   "id": "garaz",
+   "position": [
+    3.2,
+    0,
+    3.6
+   ],
+   "yaw": 20,
+   "roomId": "garaz",
+   "caption": "Garáž asi 23 m²; vrata do ulice v modelu nejsou.",
+   "dwellS": 5,
+   "pitch": -3
+  },
+  {
+   "id": "pokoj",
+   "position": [
+    6.8,
+    0,
+    3.6
+   ],
+   "yaw": -50,
+   "roomId": "pokoj",
+   "caption": "Pokoj asi 14 m² s výstupem na terasu do zahrady.",
+   "dwellS": 5,
+   "pitch": -3
+  },
+  {
+   "id": "koupelna",
+   "position": [
+    7.7,
+    0,
+    4.7
+   ],
+   "yaw": -130,
+   "roomId": "koupelna",
+   "caption": "Koupelna s WC – zařízení není (white wall).",
+   "dwellS": 5,
+   "pitch": -3
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "hs-stav",
+   "position": [
+    2,
+    1.5,
+    5.4
+   ],
+   "title": "Stav white wall",
+   "text": "Mezonet se prodává ve stavu WHITE WALL: bílé omítky, bez finálních podlah a zařízení. Model je proto prázdný, podlaha je jen neutrální zástupná.",
+   "kind": "info"
+  },
+  {
+   "id": "hs-schodiste",
+   "position": [
+    4.6,
+    1.5,
+    5
+   ],
+   "title": "Schodiště",
+   "text": "Podle výkresu tu vede schodiště (ocel + masivní jasan) mezi 1.PP, 1.NP a 2.NP. 3D model schody neumí – na jejich místě je stěna.",
+   "kind": "info"
+  },
+  {
+   "id": "hs-garaz",
+   "position": [
+    0.9,
+    1.5,
+    2.3
+   ],
+   "title": "Garážová vrata",
+   "text": "Podle výkresu jsou v této stěně garážová vrata do ulice (asi 3 m). Vrata engine neumí – v modelu je zavřená stěna.",
+   "kind": "info"
+  },
+  {
+   "id": "hs-pokoj",
+   "position": [
+    8,
+    1.5,
+    1.5
+   ],
+   "title": "Pokoj",
+   "text": "Podle webu menší pokoj s infrasaunou – pracovna nebo posilovna. Dveře na částečně zapuštěnou terasu do zahrady.",
+   "kind": "info"
+  }
+ ],
+ "apartment": {
+  "wallHeight": 2.6,
+  "railingHeight": 1,
+  "rooms": [
+   {
+    "id": "garaz",
+    "name": "Garáž",
+    "areaM2": 22.7,
+    "polygon": [
+     [
+      0.415,
+      0.415
+     ],
+     [
+      6.157,
+      0.415
+     ],
+     [
+      6.157,
+      4.375
+     ],
+     [
+      0.415,
+      4.375
+     ]
+    ],
+    "floor": "tiles",
+    "wall": "neutral",
+    "lightId": "sw-garaz",
+    "band": {
+     "finish": "plaster",
+     "y0": 0,
+     "y1": 2.6
+    },
+    "lights": [
+     {
+      "x": 3.29,
+      "z": 2.39,
+      "y": 2.5500000000000003,
+      "intensity": 12,
+      "distance": 6,
+      "fixture": "none"
+     }
+    ]
+   },
+   {
+    "id": "pokoj",
+    "name": "Pokoj (pracovna / posilovna s infrasaunou)",
+    "areaM2": 13.6,
+    "polygon": [
+     [
+      6.258,
+      0.415
+     ],
+     [
+      9.89,
+      0.415
+     ],
+     [
+      9.89,
+      4.165
+     ],
+     [
+      6.258,
+      4.165
+     ]
+    ],
+    "floor": "tiles",
+    "wall": "neutral",
+    "lightId": "sw-pokoj",
+    "band": {
+     "finish": "plaster",
+     "y0": 0,
+     "y1": 2.6
+    },
+    "lights": [
+     {
+      "x": 8.07,
+      "z": 2.29,
+      "y": 2.5500000000000003,
+      "intensity": 12,
+      "distance": 6,
+      "fixture": "none"
+     }
+    ]
+   },
+   {
+    "id": "predsin",
+    "name": "Předsíň",
+    "areaM2": 7.2,
+    "polygon": [
+     [
+      0.415,
+      4.493
+     ],
+     [
+      5.428,
+      4.493
+     ],
+     [
+      5.428,
+      5.408
+     ],
+     [
+      3.009,
+      5.408
+     ],
+     [
+      3.009,
+      6.421
+     ],
+     [
+      0.415,
+      6.421
+     ]
+    ],
+    "floor": "tiles",
+    "wall": "neutral",
+    "lightId": "sw-predsin",
+    "dayLight": true,
+    "band": {
+     "finish": "plaster",
+     "y0": 0,
+     "y1": 2.6
+    },
+    "lights": [
+     {
+      "x": 2.48,
+      "z": 5.3,
+      "y": 2.5500000000000003,
+      "intensity": 12,
+      "distance": 6,
+      "fixture": "none"
+     }
+    ]
+   },
+   {
+    "id": "chodbicka",
+    "name": "Chodbička",
+    "areaM2": 1.9,
+    "polygon": [
+     [
+      5.529,
+      4.493
+     ],
+     [
+      6.258,
+      4.493
+     ],
+     [
+      6.258,
+      4.243
+     ],
+     [
+      7.286,
+      4.243
+     ],
+     [
+      7.286,
+      5.408
+     ],
+     [
+      5.529,
+      5.408
+     ]
+    ],
+    "floor": "tiles",
+    "wall": "neutral",
+    "lightId": "sw-chodbicka",
+    "dayLight": true,
+    "band": {
+     "finish": "plaster",
+     "y0": 0,
+     "y1": 2.6
+    },
+    "lights": [
+     {
+      "x": 6.46,
+      "z": 4.87,
+      "y": 2.5500000000000003,
+      "intensity": 6,
+      "distance": 3.5,
+      "fixture": "none"
+     }
+    ]
+   },
+   {
+    "id": "koupelna",
+    "name": "Koupelna s WC",
+    "areaM2": 4.9,
+    "polygon": [
+     [
+      7.364,
+      4.243
+     ],
+     [
+      9.89,
+      4.243
+     ],
+     [
+      9.89,
+      6.421
+     ],
+     [
+      7.92,
+      6.421
+     ],
+     [
+      7.92,
+      5.408
+     ],
+     [
+      7.364,
+      5.408
+     ]
+    ],
+    "floor": "tiles",
+    "wall": "neutral",
+    "lightId": "sw-koupelna",
+    "dayLight": true,
+    "band": {
+     "finish": "plaster",
+     "y0": 0,
+     "y1": 2.6
+    },
+    "lights": [
+     {
+      "x": 8.74,
+      "z": 5.27,
+      "y": 2.5500000000000003,
+      "intensity": 6,
+      "distance": 3.5,
+      "fixture": "none"
+     }
+    ]
+   },
+   {
+    "id": "terasa",
+    "name": "Terasa do zahrady",
+    "areaM2": 18.2,
+    "polygon": [
+     [
+      10.283,
+      0.067
+     ],
+     [
+      12.988,
+      0.067
+     ],
+     [
+      12.988,
+      6.792
+     ],
+     [
+      10.283,
+      6.792
+     ]
+    ],
+    "floor": "terrace",
+    "wall": "white",
+    "outdoor": true,
+    "ceiling": true
+   }
+  ],
+  "walls": [
+   {
+    "id": "sever",
+    "a": [
+     0.208,
+     0.208
+    ],
+    "b": [
+     10.086,
+     0.208
+    ],
+    "thickness": 0.415,
+    "exterior": true,
+    "openings": []
+   },
+   {
+    "id": "jih",
+    "a": [
+     0.208,
+     6.606
+    ],
+    "b": [
+     10.086,
+     6.606
+    ],
+    "thickness": 0.37,
+    "exterior": true,
+    "openings": []
+   },
+   {
+    "id": "zapad",
+    "a": [
+     0.208,
+     0.208
+    ],
+    "b": [
+     0.208,
+     6.606
+    ],
+    "thickness": 0.415,
+    "exterior": true,
+    "openings": [
+     {
+      "offset": 4.939,
+      "width": 0.954,
+      "sill": 0,
+      "height": 2.1,
+      "kind": "door",
+      "flush": true,
+      "label": "Hlavní vstup C",
+      "note": "Hlavní vstup do mezonetu C (z ulice po schodech dolů). V modelu zavřený."
+     }
+    ]
+   },
+   {
+    "id": "vychod",
+    "a": [
+     10.086,
+     0.208
+    ],
+    "b": [
+     10.086,
+     6.606
+    ],
+    "thickness": 0.393,
+    "exterior": true,
+    "openings": [
+     {
+      "offset": 1.521,
+      "width": 1.212,
+      "sill": 0.02,
+      "height": 2.3,
+      "kind": "window"
+     },
+     {
+      "offset": 2.683,
+      "width": 0.887,
+      "sill": 0,
+      "height": 2.3,
+      "kind": "door",
+      "id": "dv-terasa",
+      "hinge": "b",
+      "swing": 1,
+      "glazed": true,
+      "open": false
+     },
+     {
+      "offset": 4.513,
+      "width": 0.595,
+      "sill": 1,
+      "height": 1.2,
+      "kind": "window"
+     }
+    ]
+   },
+   {
+    "id": "garaz-pokoj",
+    "a": [
+     6.208,
+     0.208
+    ],
+    "b": [
+     6.208,
+     4.434
+    ],
+    "thickness": 0.101,
+    "exterior": false,
+    "openings": []
+   },
+   {
+    "id": "garaz-jih",
+    "a": [
+     0.208,
+     4.434
+    ],
+    "b": [
+     6.208,
+     4.434
+    ],
+    "thickness": 0.118,
+    "exterior": false,
+    "openings": [
+     {
+      "offset": 1.454,
+      "width": 0.831,
+      "sill": 0,
+      "height": 2,
+      "kind": "door",
+      "id": "dv-garaz",
+      "hinge": "a",
+      "swing": -1,
+      "open": true
+     }
+    ]
+   },
+   {
+    "id": "pokoj-jih",
+    "a": [
+     6.208,
+     4.204
+    ],
+    "b": [
+     10.086,
+     4.204
+    ],
+    "thickness": 0.079,
+    "exterior": false,
+    "openings": [
+     {
+      "offset": 0.606,
+      "width": 0.786,
+      "sill": 0,
+      "height": 2,
+      "kind": "door",
+      "id": "dv-pokoj",
+      "hinge": "a",
+      "swing": -1,
+      "open": true
+     },
+     {
+      "offset": 1.583,
+      "width": 0.786,
+      "sill": 0,
+      "height": 2,
+      "kind": "door",
+      "id": "dv-koupelna-pokoj",
+      "hinge": "b",
+      "swing": -1,
+      "open": true
+     }
+    ]
+   },
+   {
+    "id": "predsin-chodbicka",
+    "a": [
+     5.478,
+     4.434
+    ],
+    "b": [
+     5.478,
+     5.467
+    ],
+    "thickness": 0.101,
+    "exterior": false,
+    "openings": [
+     {
+      "offset": 0.483,
+      "width": 0.786,
+      "sill": 0,
+      "height": 2,
+      "kind": "door",
+      "id": "dv-chodbicka",
+      "hinge": "b",
+      "swing": 1,
+      "open": true
+     }
+    ]
+   },
+   {
+    "id": "schodiste-sever",
+    "a": [
+     3.059,
+     5.467
+    ],
+    "b": [
+     7.881,
+     5.467
+    ],
+    "thickness": 0.118,
+    "exterior": false,
+    "openings": []
+   },
+   {
+    "id": "schodiste-zapad",
+    "a": [
+     3.059,
+     5.467
+    ],
+    "b": [
+     3.059,
+     6.606
+    ],
+    "thickness": 0.101,
+    "exterior": false,
+    "openings": []
+   },
+   {
+    "id": "schodiste-vychod",
+    "a": [
+     6.898,
+     5.467
+    ],
+    "b": [
+     6.898,
+     6.606
+    ],
+    "thickness": 0.079,
+    "exterior": false,
+    "openings": []
+   },
+   {
+    "id": "komora-vychod",
+    "a": [
+     7.881,
+     5.467
+    ],
+    "b": [
+     7.881,
+     6.606
+    ],
+    "thickness": 0.079,
+    "exterior": false,
+    "openings": []
+   },
+   {
+    "id": "chodbicka-koupelna",
+    "a": [
+     7.325,
+     4.204
+    ],
+    "b": [
+     7.325,
+     5.467
+    ],
+    "thickness": 0.079,
+    "exterior": false,
+    "openings": [
+     {
+      "offset": 0.803,
+      "width": 0.7,
+      "sill": 0,
+      "height": 2,
+      "kind": "door",
+      "id": "dv-koupelna",
+      "hinge": "b",
+      "swing": -1,
+      "open": true
+     }
+    ]
+   }
+  ],
+  "switches": [
+   {
+    "id": "sw-garaz",
+    "roomId": "garaz",
+    "position": [
+     2.324,
+     4.375
+    ],
+    "normal": [
+     0,
+     -1
+    ]
+   },
+   {
+    "id": "sw-pokoj",
+    "roomId": "pokoj",
+    "position": [
+     6.258,
+     3.446
+    ],
+    "normal": [
+     1,
+     0
+    ]
+   },
+   {
+    "id": "sw-predsin",
+    "roomId": "predsin",
+    "position": [
+     0.415,
+     5.916
+    ],
+    "normal": [
+     1,
+     0
+    ]
+   },
+   {
+    "id": "sw-chodbicka",
+    "roomId": "chodbicka",
+    "position": [
+     5.916,
+     5.408
+    ],
+    "normal": [
+     0,
+     -1
+    ]
+   },
+   {
+    "id": "sw-koupelna",
+    "roomId": "koupelna",
+    "position": [
+     7.364,
+     4.457
+    ],
+    "normal": [
+     1,
+     0
+    ]
+   }
+  ],
+  "railings": [
+   {
+    "a": [
+     10.283,
+     0.067
+    ],
+    "b": [
+     12.988,
+     0.067
+    ]
+   },
+   {
+    "a": [
+     12.988,
+     0.067
+    ],
+    "b": [
+     12.988,
+     6.792
+    ]
+   },
+   {
+    "a": [
+     10.283,
+     6.792
+    ],
+    "b": [
+     12.988,
+     6.792
+    ]
+   }
+  ],
+  "surroundings": "villas",
+  "furniture": []
+ },
+ "photos": [
+  {
+   "id": "foto-g15",
+   "url": "fotky/foto-g15.jpg",
+   "thumb": "fotky/mini-g15.jpg",
+   "roomId": "pokoj",
+   "position": [
+    6.6,
+    1.45,
+    3.8
+   ],
+   "yaw": -50,
+   "hfov": 88,
+   "offsetY": 0,
+   "aspect": 1.5,
+   "title": "Pokoj 1.PP – k terase (ilustrace)",
+   "caption": "Prázdný pokoj asi 14 m² (pracovna / posilovna s infrasaunou), okno a dveře na terasu.",
+   "doors": {
+    "open": [],
+    "closed": [
+     "dv-chodbicka",
+     "dv-garaz",
+     "dv-koupelna",
+     "dv-koupelna-pokoj",
+     "dv-pokoj",
+     "dv-terasa"
+    ]
+   },
+   "illustration": {
+    "note": "Render 3D modelu podle půdorysu (stav white wall), není to fotka. Výšky a okna jsou předpoklad."
+   }
+  },
+  {
+   "id": "foto-g16",
+   "url": "fotky/foto-g16.jpg",
+   "thumb": "fotky/mini-g16.jpg",
+   "roomId": "pokoj",
+   "position": [
+    9.5,
+    1.45,
+    0.8
+   ],
+   "yaw": 130,
+   "hfov": 88,
+   "offsetY": 0,
+   "aspect": 1.5,
+   "title": "Pokoj 1.PP – ke dveřím (ilustrace)",
+   "caption": "Od okna ke dveřím do chodbičky a do koupelny.",
+   "doors": {
+    "open": [],
+    "closed": [
+     "dv-chodbicka",
+     "dv-garaz",
+     "dv-koupelna",
+     "dv-koupelna-pokoj",
+     "dv-pokoj",
+     "dv-terasa"
+    ]
+   },
+   "illustration": {
+    "note": "Render 3D modelu podle půdorysu (stav white wall), není to fotka. Výšky a okna jsou předpoklad."
+   }
+  },
+  {
+   "id": "foto-g17",
+   "url": "fotky/foto-g17.jpg",
+   "thumb": "fotky/mini-g17.jpg",
+   "roomId": "koupelna",
+   "position": [
+    7.6,
+    1.45,
+    4.5
+   ],
+   "yaw": -125,
+   "hfov": 96,
+   "offsetY": 0,
+   "aspect": 1.5,
+   "title": "Koupelna 1.PP (ilustrace)",
+   "caption": "Koupelna s WC bez zařízení (white wall); výkres kreslí sprchu, umyvadlo a WC u okna.",
+   "doors": {
+    "open": [],
+    "closed": [
+     "dv-chodbicka",
+     "dv-garaz",
+     "dv-koupelna",
+     "dv-koupelna-pokoj",
+     "dv-pokoj",
+     "dv-terasa"
+    ]
+   },
+   "illustration": {
+    "note": "Render 3D modelu podle půdorysu (stav white wall), není to fotka. Výšky a okna jsou předpoklad."
+   }
+  },
+  {
+   "id": "foto-g18",
+   "url": "fotky/foto-g18.jpg",
+   "thumb": "fotky/mini-g18.jpg",
+   "roomId": "predsin",
+   "position": [
+    5,
+    1.45,
+    5
+   ],
+   "yaw": 95,
+   "hfov": 88,
+   "offsetY": 0,
+   "aspect": 1.5,
+   "title": "Předsíň – k hlavnímu vstupu (ilustrace)",
+   "caption": "Předsíň u hlavního vstupu; vlevo stěna místo schodiště, vpravo dveře do garáže.",
+   "doors": {
+    "open": [],
+    "closed": [
+     "dv-chodbicka",
+     "dv-garaz",
+     "dv-koupelna",
+     "dv-koupelna-pokoj",
+     "dv-pokoj",
+     "dv-terasa"
+    ]
+   },
+   "illustration": {
+    "note": "Render 3D modelu podle půdorysu (stav white wall), není to fotka. Výšky a okna jsou předpoklad."
+   }
+  },
+  {
+   "id": "foto-g19",
+   "url": "fotky/foto-g19.jpg",
+   "thumb": "fotky/mini-g19.jpg",
+   "roomId": "terasa",
+   "position": [
+    12.5,
+    1.45,
+    6.3
+   ],
+   "yaw": 15,
+   "hfov": 88,
+   "offsetY": 0,
+   "aspect": 1.5,
+   "title": "Terasa 1.PP do zahrady (ilustrace)",
+   "caption": "Částečně zapuštěná terasa pod balkonem 1.NP; okraje a okolí jsou v modelu obecné.",
+   "doors": {
+    "open": [],
+    "closed": [
+     "dv-chodbicka",
+     "dv-garaz",
+     "dv-koupelna",
+     "dv-koupelna-pokoj",
+     "dv-pokoj",
+     "dv-terasa"
+    ]
+   },
+   "illustration": {
+    "note": "Render 3D modelu podle půdorysu (stav white wall), není to fotka. Výšky a okna jsou předpoklad."
+   },
+   "fadeS": 0.25
+  }
+ ]
+}

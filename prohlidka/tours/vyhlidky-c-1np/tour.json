@@ -1,0 +1,1246 @@
+{
+ "version": 1,
+ "title": "Vyhlídky Suchdol – mezonet C · 1.NP (model podle půdorysu)",
+ "source": "demo",
+ "units": "m",
+ "spawn": {
+  "position": [
+   4.2,
+   0,
+   4.9
+  ],
+  "yaw": -55
+ },
+ "settings": {
+  "eyeHeight": 1.65,
+  "walkSpeed": 1.4,
+  "runMultiplier": 2.2
+ },
+ "floorPlan": {
+  "rooms": [
+   {
+    "id": "obyvak",
+    "name": "Obývací prostor s kuchyní a jídelnou",
+    "areaM2": 48.7,
+    "polygon": [
+     [
+      0.415,
+      0.393
+     ],
+     [
+      9.901,
+      0.393
+     ],
+     [
+      9.901,
+      6.679
+     ],
+     [
+      7.145,
+      6.679
+     ],
+     [
+      7.145,
+      5.672
+     ],
+     [
+      3.312,
+      5.672
+     ],
+     [
+      3.312,
+      4.255
+     ],
+     [
+      0.415,
+      4.255
+     ]
+    ]
+   },
+   {
+    "id": "zadveri",
+    "name": "Zádveří se šatnou",
+    "areaM2": 4.6,
+    "polygon": [
+     [
+      0.415,
+      4.423
+     ],
+     [
+      3.166,
+      4.423
+     ],
+     [
+      3.166,
+      6.679
+     ],
+     [
+      2.088,
+      6.679
+     ],
+     [
+      2.088,
+      5.692
+     ],
+     [
+      0.415,
+      5.692
+     ]
+    ]
+   },
+   {
+    "id": "wc",
+    "name": "WC",
+    "areaM2": 1.4,
+    "polygon": [
+     [
+      0.415,
+      5.815
+     ],
+     [
+      1.987,
+      5.815
+     ],
+     [
+      1.987,
+      6.679
+     ],
+     [
+      0.415,
+      6.679
+     ]
+    ]
+   },
+   {
+    "id": "balkon-predni",
+    "name": "Přední balkon (do ulice)",
+    "areaM2": 12.4,
+    "polygon": [
+     [
+      -1.583,
+      -0.853
+     ],
+     [
+      0,
+      -0.853
+     ],
+     [
+      0,
+      6.982
+     ],
+     [
+      -1.583,
+      6.982
+     ]
+    ]
+   },
+   {
+    "id": "balkon-bocni",
+    "name": "Balkon u štítu",
+    "areaM2": 14.7,
+    "polygon": [
+     [
+      5.871,
+      -2.75
+     ],
+     [
+      11.203,
+      -2.75
+     ],
+     [
+      11.203,
+      0
+     ],
+     [
+      5.871,
+      0
+     ]
+    ]
+   },
+   {
+    "id": "balkon-zahrada",
+    "name": "Zadní balkon do zahrady",
+    "areaM2": 16.4,
+    "polygon": [
+     [
+      10.294,
+      0
+     ],
+     [
+      12.629,
+      0
+     ],
+     [
+      12.629,
+      7.005
+     ],
+     [
+      10.294,
+      7.005
+     ]
+    ]
+   }
+  ],
+  "image": {
+   "url": "pudorys.jpg"
+  },
+  "imageTransform": {
+   "position": [
+    6.376,
+    2.498
+   ],
+   "rotationDeg": 0,
+   "scale": 0.0112259
+  },
+  "walls": [
+   [
+    0.208,
+    0.196,
+    8.51,
+    0.196
+   ],
+   [
+    9.431,
+    0.196,
+    10.098,
+    0.196
+   ],
+   [
+    10.098,
+    0.196,
+    10.098,
+    1.38
+   ],
+   [
+    10.098,
+    2.302,
+    10.098,
+    6.876
+   ],
+   [
+    0.208,
+    6.876,
+    10.098,
+    6.876
+   ],
+   [
+    0.208,
+    0.196,
+    0.208,
+    6.876
+   ],
+   [
+    0.208,
+    4.339,
+    3.239,
+    4.339
+   ],
+   [
+    3.239,
+    4.339,
+    3.239,
+    4.525
+   ],
+   [
+    3.239,
+    5.344,
+    3.239,
+    6.876
+   ],
+   [
+    0.208,
+    5.753,
+    1.188,
+    5.753
+   ],
+   [
+    1.888,
+    5.753,
+    2.037,
+    5.753
+   ],
+   [
+    2.037,
+    5.753,
+    2.037,
+    6.876
+   ],
+   [
+    3.239,
+    5.731,
+    7.095,
+    5.731
+   ],
+   [
+    7.095,
+    5.731,
+    7.095,
+    6.876
+   ],
+   [
+    -1.583,
+    -0.853,
+    -1.583,
+    6.982
+   ],
+   [
+    -1.583,
+    6.982,
+    0,
+    6.982
+   ],
+   [
+    -1.583,
+    -0.853,
+    0,
+    -0.853
+   ],
+   [
+    0,
+    -0.853,
+    0,
+    0
+   ],
+   [
+    5.871,
+    -2.75,
+    11.203,
+    -2.75
+   ],
+   [
+    5.871,
+    -2.75,
+    5.871,
+    0
+   ],
+   [
+    11.203,
+    -2.75,
+    11.203,
+    0
+   ],
+   [
+    11.203,
+    0,
+    12.629,
+    0
+   ],
+   [
+    12.629,
+    0,
+    12.629,
+    7.005
+   ],
+   [
+    10.294,
+    7.005,
+    12.629,
+    7.005
+   ]
+  ]
+ },
+ "waypoints": [
+  {
+   "id": "obyvak-vstup",
+   "position": [
+    4.2,
+    0,
+    4.9
+   ],
+   "yaw": -55,
+   "roomId": "obyvak",
+   "caption": "Model podle půdorysu (stav white wall). Obývací prostor asi 49 m² s okny do tří stran.",
+   "dwellS": 5,
+   "pitch": -3
+  },
+  {
+   "id": "obyvak-kuchyn",
+   "position": [
+    6.4,
+    0,
+    4.4
+   ],
+   "yaw": 55,
+   "roomId": "obyvak",
+   "caption": "Na výkresu je tu kuchyň do L s ostrůvkem – v modelu není (white wall).",
+   "dwellS": 5,
+   "pitch": -3
+  },
+  {
+   "id": "obyvak-okna",
+   "position": [
+    8.7,
+    0,
+    2
+   ],
+   "yaw": 140,
+   "roomId": "obyvak",
+   "caption": "Pohled od oken zpět k zádveří a ke schodišti (v modelu stěna).",
+   "dwellS": 5,
+   "pitch": -3
+  },
+  {
+   "id": "zadveri",
+   "position": [
+    1.7,
+    0,
+    4.9
+   ],
+   "yaw": 180,
+   "roomId": "zadveri",
+   "caption": "Zádveří se šatnou a WC; vstup z předního balkonu.",
+   "dwellS": 5,
+   "pitch": -3
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "hs-stav",
+   "position": [
+    6.2,
+    1.5,
+    3
+   ],
+   "title": "Stav white wall",
+   "text": "Mezonet se prodává ve stavu WHITE WALL: bílé omítky, bez finálních podlah a zařízení. Model je proto prázdný, podlaha je jen neutrální zástupná.",
+   "kind": "info"
+  },
+  {
+   "id": "hs-schodiste",
+   "position": [
+    5.2,
+    1.5,
+    5.6
+   ],
+   "title": "Schodiště",
+   "text": "Podle výkresu tu vede schodiště (ocel + masivní jasan) mezi 1.PP, 1.NP a 2.NP. 3D model schody neumí – na jejich místě je stěna.",
+   "kind": "info"
+  },
+  {
+   "id": "hs-kuchyn",
+   "position": [
+    1.6,
+    1.5,
+    1.6
+   ],
+   "title": "Kuchyň (podle výkresu)",
+   "text": "Výkres developera tu kreslí kuchyň do L s ostrůvkem a třemi barovými židlemi. V modelu není – stav white wall.",
+   "kind": "info"
+  },
+  {
+   "id": "hs-balkon",
+   "position": [
+    11.4,
+    1.5,
+    3.2
+   ],
+   "title": "Zadní balkon do zahrady",
+   "text": "Balkon asi 14 m² navazuje na balkon u štítu (asi 16 m²); z rohu vedou schody do zahrady (v modelu nejsou).",
+   "kind": "info"
+  }
+ ],
+ "apartment": {
+  "wallHeight": 2.8,
+  "railingHeight": 1,
+  "rooms": [
+   {
+    "id": "obyvak",
+    "name": "Obývací prostor s kuchyní a jídelnou",
+    "areaM2": 48.7,
+    "polygon": [
+     [
+      0.415,
+      0.393
+     ],
+     [
+      9.901,
+      0.393
+     ],
+     [
+      9.901,
+      6.679
+     ],
+     [
+      7.145,
+      6.679
+     ],
+     [
+      7.145,
+      5.672
+     ],
+     [
+      3.312,
+      5.672
+     ],
+     [
+      3.312,
+      4.255
+     ],
+     [
+      0.415,
+      4.255
+     ]
+    ],
+    "floor": "tiles",
+    "wall": "neutral",
+    "lightId": "sw-obyvak",
+    "band": {
+     "finish": "plaster",
+     "y0": 0,
+     "y1": 2.8
+    },
+    "lights": [
+     {
+      "x": 2.5,
+      "z": 2.45,
+      "y": 2.75,
+      "intensity": 16,
+      "distance": 7,
+      "fixture": "none"
+     },
+     {
+      "x": 5.16,
+      "z": 2.45,
+      "y": 2.75,
+      "intensity": 16,
+      "distance": 7,
+      "fixture": "none"
+     },
+     {
+      "x": 7.81,
+      "z": 2.45,
+      "y": 2.75,
+      "intensity": 16,
+      "distance": 7,
+      "fixture": "none"
+     }
+    ]
+   },
+   {
+    "id": "zadveri",
+    "name": "Zádveří se šatnou",
+    "areaM2": 4.6,
+    "polygon": [
+     [
+      0.415,
+      4.423
+     ],
+     [
+      3.166,
+      4.423
+     ],
+     [
+      3.166,
+      6.679
+     ],
+     [
+      2.088,
+      6.679
+     ],
+     [
+      2.088,
+      5.692
+     ],
+     [
+      0.415,
+      5.692
+     ]
+    ],
+    "floor": "tiles",
+    "wall": "neutral",
+    "lightId": "sw-zadveri",
+    "dayLight": true,
+    "band": {
+     "finish": "plaster",
+     "y0": 0,
+     "y1": 2.8
+    },
+    "lights": [
+     {
+      "x": 1.99,
+      "z": 5.32,
+      "y": 2.75,
+      "intensity": 6,
+      "distance": 3.5,
+      "fixture": "none"
+     }
+    ]
+   },
+   {
+    "id": "wc",
+    "name": "WC",
+    "areaM2": 1.4,
+    "polygon": [
+     [
+      0.415,
+      5.815
+     ],
+     [
+      1.987,
+      5.815
+     ],
+     [
+      1.987,
+      6.679
+     ],
+     [
+      0.415,
+      6.679
+     ]
+    ],
+    "floor": "tiles",
+    "wall": "neutral",
+    "lightId": "sw-wc",
+    "dayLight": true,
+    "band": {
+     "finish": "plaster",
+     "y0": 0,
+     "y1": 2.8
+    },
+    "lights": [
+     {
+      "x": 1.2,
+      "z": 6.25,
+      "y": 2.75,
+      "intensity": 6,
+      "distance": 3.5,
+      "fixture": "none"
+     }
+    ]
+   },
+   {
+    "id": "balkon-predni",
+    "name": "Přední balkon (do ulice)",
+    "areaM2": 12.4,
+    "polygon": [
+     [
+      -1.583,
+      -0.853
+     ],
+     [
+      0,
+      -0.853
+     ],
+     [
+      0,
+      6.982
+     ],
+     [
+      -1.583,
+      6.982
+     ]
+    ],
+    "floor": "terrace",
+    "wall": "white",
+    "outdoor": true,
+    "sealed": true
+   },
+   {
+    "id": "balkon-bocni",
+    "name": "Balkon u štítu",
+    "areaM2": 14.7,
+    "polygon": [
+     [
+      5.871,
+      -2.75
+     ],
+     [
+      11.203,
+      -2.75
+     ],
+     [
+      11.203,
+      0
+     ],
+     [
+      5.871,
+      0
+     ]
+    ],
+    "floor": "terrace",
+    "wall": "white",
+    "outdoor": true
+   },
+   {
+    "id": "balkon-zahrada",
+    "name": "Zadní balkon do zahrady",
+    "areaM2": 16.4,
+    "polygon": [
+     [
+      10.294,
+      0
+     ],
+     [
+      12.629,
+      0
+     ],
+     [
+      12.629,
+      7.005
+     ],
+     [
+      10.294,
+      7.005
+     ]
+    ],
+    "floor": "terrace",
+    "wall": "white",
+    "outdoor": true
+   }
+  ],
+  "walls": [
+   {
+    "id": "sever",
+    "a": [
+     0.208,
+     0.196
+    ],
+    "b": [
+     10.098,
+     0.196
+    ],
+    "thickness": 0.393,
+    "exterior": true,
+    "openings": [
+     {
+      "offset": 4.401,
+      "width": 1.583,
+      "sill": 0.02,
+      "height": 2.5,
+      "kind": "window"
+     },
+     {
+      "offset": 7.375,
+      "width": 1.605,
+      "sill": 0.02,
+      "height": 2.5,
+      "kind": "window"
+     },
+     {
+      "offset": 8.762,
+      "width": 0.921,
+      "sill": 0,
+      "height": 2.5,
+      "kind": "door",
+      "id": "dv-balkon-sever",
+      "hinge": "b",
+      "swing": 1,
+      "glazed": true,
+      "open": false
+     }
+    ]
+   },
+   {
+    "id": "vychod",
+    "a": [
+     10.098,
+     0.196
+    ],
+    "b": [
+     10.098,
+     6.876
+    ],
+    "thickness": 0.393,
+    "exterior": true,
+    "openings": [
+     {
+      "offset": 0.78,
+      "width": 0.584,
+      "sill": 0.02,
+      "height": 2.5,
+      "kind": "window"
+     },
+     {
+      "offset": 1.645,
+      "width": 0.921,
+      "sill": 0,
+      "height": 2.5,
+      "kind": "door",
+      "id": "dv-balkon-zahrada",
+      "hinge": "a",
+      "swing": 1,
+      "glazed": true,
+      "open": false
+     },
+     {
+      "offset": 4.193,
+      "width": 2.402,
+      "sill": 0.02,
+      "height": 2.5,
+      "kind": "window"
+     }
+    ]
+   },
+   {
+    "id": "jih",
+    "a": [
+     0.208,
+     6.876
+    ],
+    "b": [
+     10.098,
+     6.876
+    ],
+    "thickness": 0.393,
+    "exterior": true,
+    "openings": []
+   },
+   {
+    "id": "zapad",
+    "a": [
+     0.208,
+     0.196
+    ],
+    "b": [
+     0.208,
+     6.876
+    ],
+    "thickness": 0.415,
+    "exterior": true,
+    "openings": [
+     {
+      "offset": 1.201,
+      "width": 0.797,
+      "sill": 0.02,
+      "height": 2.5,
+      "kind": "window"
+     },
+     {
+      "offset": 3.261,
+      "width": 1.167,
+      "sill": 0.02,
+      "height": 2.5,
+      "kind": "window"
+     },
+     {
+      "offset": 4.793,
+      "width": 0.977,
+      "sill": 0,
+      "height": 2.1,
+      "kind": "door",
+      "flush": true,
+      "label": "Vstup z předního balkonu",
+      "note": "Druhý vstup do domu z předního balkonu (od ulice). V modelu zavřený – balkon je vidět jen okny."
+     }
+    ]
+   },
+   {
+    "id": "zadveri-sever",
+    "a": [
+     0.208,
+     4.339
+    ],
+    "b": [
+     3.239,
+     4.339
+    ],
+    "thickness": 0.168,
+    "exterior": false,
+    "openings": []
+   },
+   {
+    "id": "zadveri-vychod",
+    "a": [
+     3.239,
+     4.339
+    ],
+    "b": [
+     3.239,
+     6.876
+    ],
+    "thickness": 0.146,
+    "exterior": false,
+    "openings": [
+     {
+      "offset": 0.595,
+      "width": 0.819,
+      "sill": 0,
+      "height": 2.1,
+      "kind": "passage"
+     }
+    ]
+   },
+   {
+    "id": "wc-sever",
+    "a": [
+     0.208,
+     5.753
+    ],
+    "b": [
+     2.037,
+     5.753
+    ],
+    "thickness": 0.123,
+    "exterior": false,
+    "openings": [
+     {
+      "offset": 1.33,
+      "width": 0.7,
+      "sill": 0,
+      "height": 2,
+      "kind": "door",
+      "id": "dv-wc",
+      "hinge": "a",
+      "swing": -1,
+      "open": true
+     }
+    ]
+   },
+   {
+    "id": "wc-vychod",
+    "a": [
+     2.037,
+     5.753
+    ],
+    "b": [
+     2.037,
+     6.876
+    ],
+    "thickness": 0.101,
+    "exterior": false,
+    "openings": []
+   },
+   {
+    "id": "schodiste-sever",
+    "a": [
+     3.239,
+     5.731
+    ],
+    "b": [
+     7.095,
+     5.731
+    ],
+    "thickness": 0.118,
+    "exterior": false,
+    "openings": []
+   },
+   {
+    "id": "schodiste-vychod",
+    "a": [
+     7.095,
+     5.731
+    ],
+    "b": [
+     7.095,
+     6.876
+    ],
+    "thickness": 0.101,
+    "exterior": false,
+    "openings": []
+   }
+  ],
+  "switches": [
+   {
+    "id": "sw-obyvak",
+    "roomId": "obyvak",
+    "position": [
+     3.313,
+     5.534
+    ],
+    "normal": [
+     1,
+     0
+    ]
+   },
+   {
+    "id": "sw-zadveri",
+    "roomId": "zadveri",
+    "position": [
+     1.1,
+     4.423
+    ],
+    "normal": [
+     0,
+     1
+    ]
+   },
+   {
+    "id": "sw-wc",
+    "roomId": "wc",
+    "position": [
+     1.987,
+     6.208
+    ],
+    "normal": [
+     -1,
+     0
+    ]
+   }
+  ],
+  "railings": [
+   {
+    "a": [
+     -1.583,
+     -0.853
+    ],
+    "b": [
+     -1.583,
+     6.982
+    ]
+   },
+   {
+    "a": [
+     -1.583,
+     6.982
+    ],
+    "b": [
+     0,
+     6.982
+    ]
+   },
+   {
+    "a": [
+     -1.583,
+     -0.853
+    ],
+    "b": [
+     0,
+     -0.853
+    ]
+   },
+   {
+    "a": [
+     0,
+     -0.853
+    ],
+    "b": [
+     0,
+     0
+    ]
+   },
+   {
+    "a": [
+     5.871,
+     -2.75
+    ],
+    "b": [
+     11.203,
+     -2.75
+    ]
+   },
+   {
+    "a": [
+     5.871,
+     -2.75
+    ],
+    "b": [
+     5.871,
+     0
+    ]
+   },
+   {
+    "a": [
+     11.203,
+     -2.75
+    ],
+    "b": [
+     11.203,
+     0
+    ]
+   },
+   {
+    "a": [
+     11.203,
+     0
+    ],
+    "b": [
+     12.629,
+     0
+    ]
+   },
+   {
+    "a": [
+     12.629,
+     0
+    ],
+    "b": [
+     12.629,
+     7.005
+    ]
+   },
+   {
+    "a": [
+     10.294,
+     7.005
+    ],
+    "b": [
+     12.629,
+     7.005
+    ]
+   }
+  ],
+  "surroundings": "villas",
+  "furniture": []
+ },
+ "photos": [
+  {
+   "id": "foto-g01",
+   "url": "fotky/foto-g01.jpg",
+   "thumb": "fotky/mini-g01.jpg",
+   "roomId": "obyvak",
+   "position": [
+    3.6,
+    1.45,
+    3.6
+   ],
+   "yaw": -80,
+   "hfov": 88,
+   "offsetY": 0,
+   "aspect": 1.5,
+   "title": "Obývací prostor – k oknům do zahrady (ilustrace)",
+   "caption": "Prázdný obývací prostor asi 49 m² podle půdorysu: přes místo pro jídelnu k oknům a dveřím na balkony.",
+   "doors": {
+    "open": [],
+    "closed": [
+     "dv-balkon-sever",
+     "dv-balkon-zahrada",
+     "dv-wc"
+    ]
+   },
+   "illustration": {
+    "note": "Render 3D modelu podle půdorysu (stav white wall), není to fotka. Výšky a okna jsou předpoklad."
+   }
+  },
+  {
+   "id": "foto-g02",
+   "url": "fotky/foto-g02.jpg",
+   "thumb": "fotky/mini-g02.jpg",
+   "roomId": "obyvak",
+   "position": [
+    6.6,
+    1.45,
+    4.8
+   ],
+   "yaw": 50,
+   "hfov": 88,
+   "offsetY": 0,
+   "aspect": 1.5,
+   "title": "Obývací prostor – kout pro kuchyň (ilustrace)",
+   "caption": "Severozápadní roh, kde výkres developera kreslí kuchyň do L s ostrůvkem; vlevo průchod do zádveří.",
+   "doors": {
+    "open": [],
+    "closed": [
+     "dv-balkon-sever",
+     "dv-balkon-zahrada",
+     "dv-wc"
+    ]
+   },
+   "illustration": {
+    "note": "Render 3D modelu podle půdorysu (stav white wall), není to fotka. Výšky a okna jsou předpoklad."
+   }
+  },
+  {
+   "id": "foto-g03",
+   "url": "fotky/foto-g03.jpg",
+   "thumb": "fotky/mini-g03.jpg",
+   "roomId": "obyvak",
+   "position": [
+    7.6,
+    1.45,
+    5.3
+   ],
+   "yaw": 5,
+   "hfov": 88,
+   "offsetY": 0,
+   "aspect": 1.5,
+   "title": "Obývací prostor – k oknům u štítu (ilustrace)",
+   "caption": "Pohled k oknům a dveřím na balkon u štítu; podle výkresu tu stojí sedací souprava.",
+   "doors": {
+    "open": [],
+    "closed": [
+     "dv-balkon-sever",
+     "dv-balkon-zahrada",
+     "dv-wc"
+    ]
+   },
+   "illustration": {
+    "note": "Render 3D modelu podle půdorysu (stav white wall), není to fotka. Výšky a okna jsou předpoklad."
+   }
+  },
+  {
+   "id": "foto-g04",
+   "url": "fotky/foto-g04.jpg",
+   "thumb": "fotky/mini-g04.jpg",
+   "roomId": "obyvak",
+   "position": [
+    9.2,
+    1.45,
+    1.4
+   ],
+   "yaw": 125,
+   "hfov": 88,
+   "offsetY": 0,
+   "aspect": 1.5,
+   "title": "Obývací prostor – ke schodišti a zádveří (ilustrace)",
+   "caption": "Od oken zpět: vlevo stěna místo schodiště (3D schody neumí), uprostřed průchod do zádveří.",
+   "doors": {
+    "open": [],
+    "closed": [
+     "dv-balkon-sever",
+     "dv-balkon-zahrada",
+     "dv-wc"
+    ]
+   },
+   "illustration": {
+    "note": "Render 3D modelu podle půdorysu (stav white wall), není to fotka. Výšky a okna jsou předpoklad."
+   }
+  },
+  {
+   "id": "foto-g05",
+   "url": "fotky/foto-g05.jpg",
+   "thumb": "fotky/mini-g05.jpg",
+   "roomId": "obyvak",
+   "position": [
+    9.3,
+    1.45,
+    3
+   ],
+   "yaw": 100,
+   "hfov": 88,
+   "offsetY": 0,
+   "aspect": 1.5,
+   "title": "Obývací prostor – celý prostor k ulici (ilustrace)",
+   "caption": "Celý obývací prostor od oken do zahrady k oknům do ulice.",
+   "doors": {
+    "open": [],
+    "closed": [
+     "dv-balkon-sever",
+     "dv-balkon-zahrada",
+     "dv-wc"
+    ]
+   },
+   "illustration": {
+    "note": "Render 3D modelu podle půdorysu (stav white wall), není to fotka. Výšky a okna jsou předpoklad."
+   }
+  },
+  {
+   "id": "foto-g06",
+   "url": "fotky/foto-g06.jpg",
+   "thumb": "fotky/mini-g06.jpg",
+   "roomId": "balkon-zahrada",
+   "position": [
+    12.2,
+    1.45,
+    6.5
+   ],
+   "yaw": 10,
+   "hfov": 88,
+   "offsetY": 0,
+   "aspect": 1.5,
+   "title": "Zadní balkon do zahrady (ilustrace)",
+   "caption": "Balkon asi 14 m² se skleněným zábradlím, navazuje na balkon u štítu. Okolí je obecné.",
+   "doors": {
+    "open": [],
+    "closed": [
+     "dv-balkon-sever",
+     "dv-balkon-zahrada",
+     "dv-wc"
+    ]
+   },
+   "illustration": {
+    "note": "Render 3D modelu podle půdorysu (stav white wall), není to fotka. Výšky a okna jsou předpoklad."
+   },
+   "fadeS": 0.25
+  }
+ ]
+}

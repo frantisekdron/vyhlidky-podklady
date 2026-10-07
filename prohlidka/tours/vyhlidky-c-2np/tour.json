@@ -1,0 +1,1713 @@
+{
+ "version": 1,
+ "title": "Vyhlídky Suchdol – mezonet C · 2.NP (model podle půdorysu)",
+ "source": "demo",
+ "units": "m",
+ "spawn": {
+  "position": [
+   4.2,
+   0,
+   5.2
+  ],
+  "yaw": 10
+ },
+ "settings": {
+  "eyeHeight": 1.65,
+  "walkSpeed": 1.4,
+  "runMultiplier": 2.2
+ },
+ "floorPlan": {
+  "rooms": [
+   {
+    "id": "pokoj-141",
+    "name": "Pokoj 14,1 m²",
+    "areaM2": 14.1,
+    "polygon": [
+     [
+      0.387,
+      0.377
+     ],
+     [
+      5.339,
+      0.377
+     ],
+     [
+      5.339,
+      3.788
+     ],
+     [
+      3.773,
+      3.788
+     ],
+     [
+      3.773,
+      2.976
+     ],
+     [
+      0.387,
+      2.976
+     ]
+    ]
+   },
+   {
+    "id": "loznice",
+    "name": "Ložnice s balkonem do zahrady",
+    "areaM2": 16.5,
+    "polygon": [
+     [
+      5.435,
+      0.377
+     ],
+     [
+      9.866,
+      0.377
+     ],
+     [
+      9.866,
+      4.097
+     ],
+     [
+      7.006,
+      4.097
+     ],
+     [
+      7.006,
+      4.329
+     ],
+     [
+      6.039,
+      4.329
+     ],
+     [
+      6.039,
+      3.788
+     ],
+     [
+      5.435,
+      3.788
+     ]
+    ]
+   },
+   {
+    "id": "pokoj-99",
+    "name": "Pokoj 9,9 m²",
+    "areaM2": 9.8,
+    "polygon": [
+     [
+      0.387,
+      3.073
+     ],
+     [
+      3.677,
+      3.073
+     ],
+     [
+      3.677,
+      4.339
+     ],
+     [
+      3.073,
+      4.339
+     ],
+     [
+      3.073,
+      6.435
+     ],
+     [
+      0.387,
+      6.435
+     ]
+    ]
+   },
+   {
+    "id": "chodba",
+    "name": "Chodba",
+    "areaM2": 5.9,
+    "polygon": [
+     [
+      3.773,
+      3.875
+     ],
+     [
+      5.943,
+      3.875
+     ],
+     [
+      5.943,
+      4.416
+     ],
+     [
+      7.006,
+      4.416
+     ],
+     [
+      7.006,
+      5.435
+     ],
+     [
+      6.571,
+      5.435
+     ],
+     [
+      6.571,
+      6.435
+     ],
+     [
+      5.769,
+      6.435
+     ],
+     [
+      5.769,
+      5.43
+     ],
+     [
+      3.169,
+      5.43
+     ],
+     [
+      3.169,
+      4.435
+     ],
+     [
+      3.773,
+      4.435
+     ]
+    ]
+   },
+   {
+    "id": "koupelna",
+    "name": "Koupelna s WC",
+    "areaM2": 5.7,
+    "polygon": [
+     [
+      7.097,
+      4.174
+     ],
+     [
+      9.866,
+      4.174
+     ],
+     [
+      9.866,
+      6.435
+     ],
+     [
+      7.643,
+      6.435
+     ],
+     [
+      7.643,
+      5.435
+     ],
+     [
+      7.097,
+      5.435
+     ]
+    ]
+   },
+   {
+    "id": "balkon-ulice",
+    "name": "Balkon do ulice (2 pokoje)",
+    "areaM2": 9.4,
+    "polygon": [
+     [
+      -1.449,
+      0.048
+     ],
+     [
+      0,
+      0.048
+     ],
+     [
+      0,
+      6.561
+     ],
+     [
+      -1.449,
+      6.561
+     ]
+    ]
+   },
+   {
+    "id": "balkon-zahrada",
+    "name": "Balkon ložnice do zahrady",
+    "areaM2": 11.1,
+    "polygon": [
+     [
+      10.243,
+      0.048
+     ],
+     [
+      11.953,
+      0.048
+     ],
+     [
+      11.953,
+      6.551
+     ],
+     [
+      10.243,
+      6.551
+     ]
+    ]
+   }
+  ],
+  "image": {
+   "url": "pudorys.jpg"
+  },
+  "imageTransform": {
+   "position": [
+    5.421,
+    2.966
+   ],
+   "rotationDeg": 0,
+   "scale": 0.0096628
+  },
+  "walls": [
+   [
+    0.193,
+    0.188,
+    10.054,
+    0.188
+   ],
+   [
+    0.193,
+    6.522,
+    10.054,
+    6.522
+   ],
+   [
+    0.193,
+    0.188,
+    0.193,
+    2.194
+   ],
+   [
+    0.193,
+    2.967,
+    0.193,
+    4.917
+   ],
+   [
+    0.193,
+    5.69,
+    0.193,
+    6.522
+   ],
+   [
+    10.054,
+    0.188,
+    10.054,
+    2.648
+   ],
+   [
+    10.054,
+    3.421,
+    10.054,
+    6.522
+   ],
+   [
+    0.193,
+    3.024,
+    3.725,
+    3.024
+   ],
+   [
+    3.725,
+    3.024,
+    3.725,
+    4.387
+   ],
+   [
+    3.121,
+    4.387,
+    3.725,
+    4.387
+   ],
+   [
+    3.121,
+    4.387,
+    3.121,
+    4.512
+   ],
+   [
+    3.121,
+    5.296,
+    3.121,
+    6.522
+   ],
+   [
+    5.387,
+    0.188,
+    5.387,
+    3.831
+   ],
+   [
+    3.725,
+    3.831,
+    3.875,
+    3.831
+   ],
+   [
+    4.658,
+    3.831,
+    5.991,
+    3.831
+   ],
+   [
+    5.991,
+    3.831,
+    5.991,
+    4.372
+   ],
+   [
+    5.991,
+    4.372,
+    6.116,
+    4.372
+   ],
+   [
+    6.9,
+    4.372,
+    7.054,
+    4.372
+   ],
+   [
+    7.054,
+    4.136,
+    7.161,
+    4.136
+   ],
+   [
+    7.944,
+    4.136,
+    10.054,
+    4.136
+   ],
+   [
+    7.054,
+    4.136,
+    7.054,
+    4.619
+   ],
+   [
+    7.054,
+    5.402,
+    7.054,
+    5.479
+   ],
+   [
+    6.614,
+    5.479,
+    7.605,
+    5.479
+   ],
+   [
+    6.614,
+    5.479,
+    6.614,
+    6.522
+   ],
+   [
+    7.605,
+    5.479,
+    7.605,
+    6.522
+   ],
+   [
+    3.121,
+    5.479,
+    5.73,
+    5.479
+   ],
+   [
+    5.73,
+    5.479,
+    5.73,
+    6.522
+   ],
+   [
+    -1.449,
+    0.048,
+    -1.449,
+    6.561
+   ],
+   [
+    -1.449,
+    0.048,
+    0,
+    0.048
+   ],
+   [
+    -1.449,
+    6.561,
+    0,
+    6.561
+   ],
+   [
+    11.953,
+    0.048,
+    11.953,
+    6.551
+   ],
+   [
+    10.243,
+    0.048,
+    11.953,
+    0.048
+   ],
+   [
+    10.243,
+    6.551,
+    11.953,
+    6.551
+   ]
+  ]
+ },
+ "waypoints": [
+  {
+   "id": "chodba",
+   "position": [
+    4.2,
+    0,
+    5.2
+   ],
+   "yaw": 10,
+   "roomId": "chodba",
+   "caption": "Model podle půdorysu (stav white wall). Chodba 2.NP; schodiště je v modelu zavřený otvor.",
+   "dwellS": 5,
+   "pitch": -3
+  },
+  {
+   "id": "loznice",
+   "position": [
+    6.2,
+    0,
+    3.5
+   ],
+   "yaw": -50,
+   "roomId": "loznice",
+   "caption": "Ložnice asi 16 m² s balkonem do zahrady.",
+   "dwellS": 5,
+   "pitch": -3
+  },
+  {
+   "id": "pokoj-141",
+   "position": [
+    4.7,
+    0,
+    2.6
+   ],
+   "yaw": 75,
+   "roomId": "pokoj-141",
+   "caption": "Pokoj asi 14 m² se vstupem na balkon do ulice.",
+   "dwellS": 5,
+   "pitch": -3
+  },
+  {
+   "id": "pokoj-99",
+   "position": [
+    2.7,
+    0,
+    5.9
+   ],
+   "yaw": 55,
+   "roomId": "pokoj-99",
+   "caption": "Pokoj asi 10 m² se vstupem na balkon do ulice.",
+   "dwellS": 5,
+   "pitch": -3
+  },
+  {
+   "id": "koupelna",
+   "position": [
+    7.5,
+    0,
+    4.55
+   ],
+   "yaw": -125,
+   "roomId": "koupelna",
+   "caption": "Koupelna s WC – zařízení není (white wall).",
+   "dwellS": 5,
+   "pitch": -3
+  }
+ ],
+ "hotspots": [
+  {
+   "id": "hs-stav",
+   "position": [
+    7.5,
+    1.5,
+    1.8
+   ],
+   "title": "Stav white wall",
+   "text": "Mezonet se prodává ve stavu WHITE WALL: bílé omítky, bez finálních podlah a zařízení. Model je proto prázdný, podlaha je jen neutrální zástupná.",
+   "kind": "info"
+  },
+  {
+   "id": "hs-schodiste",
+   "position": [
+    3.6,
+    1.5,
+    5.3
+   ],
+   "title": "Schodiště",
+   "text": "Podle výkresu tu vede schodiště (ocel + masivní jasan) mezi 1.PP, 1.NP a 2.NP. 3D model schody neumí – na jejich místě je stěna.",
+   "kind": "info"
+  },
+  {
+   "id": "hs-strop",
+   "position": [
+    2.6,
+    1.5,
+    1.6
+   ],
+   "title": "Výška stropu",
+   "text": "Web uvádí ve 2.NP zvýšené stropy. Tvar stropu z podkladů neznáme – model má rovný strop 2,9 m (předpoklad).",
+   "kind": "info"
+  },
+  {
+   "id": "hs-koupelna",
+   "position": [
+    8.9,
+    1.5,
+    5.4
+   ],
+   "title": "Koupelna (podle výkresu)",
+   "text": "Výkres kreslí rohovou vanu, umyvadlo a závěsné WC. V modelu nejsou – stav white wall.",
+   "kind": "info"
+  }
+ ],
+ "apartment": {
+  "wallHeight": 2.9,
+  "railingHeight": 1,
+  "rooms": [
+   {
+    "id": "pokoj-141",
+    "name": "Pokoj 14,1 m²",
+    "areaM2": 14.1,
+    "polygon": [
+     [
+      0.387,
+      0.377
+     ],
+     [
+      5.339,
+      0.377
+     ],
+     [
+      5.339,
+      3.788
+     ],
+     [
+      3.773,
+      3.788
+     ],
+     [
+      3.773,
+      2.976
+     ],
+     [
+      0.387,
+      2.976
+     ]
+    ],
+    "floor": "tiles",
+    "wall": "neutral",
+    "lightId": "sw-141",
+    "band": {
+     "finish": "plaster",
+     "y0": 0,
+     "y1": 2.9
+    },
+    "lights": [
+     {
+      "x": 3.02,
+      "z": 1.83,
+      "y": 2.85,
+      "intensity": 12,
+      "distance": 6,
+      "fixture": "none"
+     }
+    ]
+   },
+   {
+    "id": "loznice",
+    "name": "Ložnice s balkonem do zahrady",
+    "areaM2": 16.5,
+    "polygon": [
+     [
+      5.435,
+      0.377
+     ],
+     [
+      9.866,
+      0.377
+     ],
+     [
+      9.866,
+      4.097
+     ],
+     [
+      7.006,
+      4.097
+     ],
+     [
+      7.006,
+      4.329
+     ],
+     [
+      6.039,
+      4.329
+     ],
+     [
+      6.039,
+      3.788
+     ],
+     [
+      5.435,
+      3.788
+     ]
+    ],
+    "floor": "tiles",
+    "wall": "neutral",
+    "lightId": "sw-loznice",
+    "band": {
+     "finish": "plaster",
+     "y0": 0,
+     "y1": 2.9
+    },
+    "lights": [
+     {
+      "x": 7.66,
+      "z": 2.24,
+      "y": 2.85,
+      "intensity": 12,
+      "distance": 6,
+      "fixture": "none"
+     }
+    ]
+   },
+   {
+    "id": "pokoj-99",
+    "name": "Pokoj 9,9 m²",
+    "areaM2": 9.8,
+    "polygon": [
+     [
+      0.387,
+      3.073
+     ],
+     [
+      3.677,
+      3.073
+     ],
+     [
+      3.677,
+      4.339
+     ],
+     [
+      3.073,
+      4.339
+     ],
+     [
+      3.073,
+      6.435
+     ],
+     [
+      0.387,
+      6.435
+     ]
+    ],
+    "floor": "tiles",
+    "wall": "neutral",
+    "lightId": "sw-99",
+    "band": {
+     "finish": "plaster",
+     "y0": 0,
+     "y1": 2.9
+    },
+    "lights": [
+     {
+      "x": 1.86,
+      "z": 4.67,
+      "y": 2.85,
+      "intensity": 12,
+      "distance": 6,
+      "fixture": "none"
+     }
+    ]
+   },
+   {
+    "id": "chodba",
+    "name": "Chodba",
+    "areaM2": 5.9,
+    "polygon": [
+     [
+      3.773,
+      3.875
+     ],
+     [
+      5.943,
+      3.875
+     ],
+     [
+      5.943,
+      4.416
+     ],
+     [
+      7.006,
+      4.416
+     ],
+     [
+      7.006,
+      5.435
+     ],
+     [
+      6.571,
+      5.435
+     ],
+     [
+      6.571,
+      6.435
+     ],
+     [
+      5.769,
+      6.435
+     ],
+     [
+      5.769,
+      5.43
+     ],
+     [
+      3.169,
+      5.43
+     ],
+     [
+      3.169,
+      4.435
+     ],
+     [
+      3.773,
+      4.435
+     ]
+    ],
+    "floor": "tiles",
+    "wall": "neutral",
+    "lightId": "sw-chodba",
+    "dayLight": true,
+    "band": {
+     "finish": "plaster",
+     "y0": 0,
+     "y1": 2.9
+    },
+    "lights": [
+     {
+      "x": 5.19,
+      "z": 4.91,
+      "y": 2.85,
+      "intensity": 6,
+      "distance": 3.5,
+      "fixture": "none"
+     }
+    ]
+   },
+   {
+    "id": "koupelna",
+    "name": "Koupelna s WC",
+    "areaM2": 5.7,
+    "polygon": [
+     [
+      7.097,
+      4.174
+     ],
+     [
+      9.866,
+      4.174
+     ],
+     [
+      9.866,
+      6.435
+     ],
+     [
+      7.643,
+      6.435
+     ],
+     [
+      7.643,
+      5.435
+     ],
+     [
+      7.097,
+      5.435
+     ]
+    ],
+    "floor": "tiles",
+    "wall": "neutral",
+    "lightId": "sw-koupelna",
+    "dayLight": true,
+    "band": {
+     "finish": "plaster",
+     "y0": 0,
+     "y1": 2.9
+    },
+    "lights": [
+     {
+      "x": 8.59,
+      "z": 5.24,
+      "y": 2.85,
+      "intensity": 6,
+      "distance": 3.5,
+      "fixture": "none"
+     }
+    ]
+   },
+   {
+    "id": "balkon-ulice",
+    "name": "Balkon do ulice (2 pokoje)",
+    "areaM2": 9.4,
+    "polygon": [
+     [
+      -1.449,
+      0.048
+     ],
+     [
+      0,
+      0.048
+     ],
+     [
+      0,
+      6.561
+     ],
+     [
+      -1.449,
+      6.561
+     ]
+    ],
+    "floor": "terrace",
+    "wall": "white",
+    "outdoor": true
+   },
+   {
+    "id": "balkon-zahrada",
+    "name": "Balkon ložnice do zahrady",
+    "areaM2": 11.1,
+    "polygon": [
+     [
+      10.243,
+      0.048
+     ],
+     [
+      11.953,
+      0.048
+     ],
+     [
+      11.953,
+      6.551
+     ],
+     [
+      10.243,
+      6.551
+     ]
+    ],
+    "floor": "terrace",
+    "wall": "white",
+    "outdoor": true
+   }
+  ],
+  "walls": [
+   {
+    "id": "sever",
+    "a": [
+     0.193,
+     0.188
+    ],
+    "b": [
+     10.054,
+     0.188
+    ],
+    "thickness": 0.377,
+    "exterior": true,
+    "openings": []
+   },
+   {
+    "id": "jih",
+    "a": [
+     0.193,
+     6.522
+    ],
+    "b": [
+     10.054,
+     6.522
+    ],
+    "thickness": 0.174,
+    "exterior": true,
+    "openings": []
+   },
+   {
+    "id": "zapad",
+    "a": [
+     0.193,
+     0.188
+    ],
+    "b": [
+     0.193,
+     6.522
+    ],
+    "thickness": 0.387,
+    "exterior": true,
+    "openings": [
+     {
+      "offset": 1.454,
+      "width": 0.889,
+      "sill": 0.02,
+      "height": 2.3,
+      "kind": "window"
+     },
+     {
+      "offset": 2.392,
+      "width": 0.773,
+      "sill": 0,
+      "height": 2.3,
+      "kind": "door",
+      "id": "dv-balkon-141",
+      "hinge": "b",
+      "swing": -1,
+      "glazed": true,
+      "open": false
+     },
+     {
+      "offset": 4.174,
+      "width": 0.899,
+      "sill": 0.02,
+      "height": 2.3,
+      "kind": "window"
+     },
+     {
+      "offset": 5.116,
+      "width": 0.773,
+      "sill": 0,
+      "height": 2.3,
+      "kind": "door",
+      "id": "dv-balkon-99",
+      "hinge": "b",
+      "swing": -1,
+      "glazed": true,
+      "open": false
+     }
+    ]
+   },
+   {
+    "id": "vychod",
+    "a": [
+     10.054,
+     0.188
+    ],
+    "b": [
+     10.054,
+     6.522
+    ],
+    "thickness": 0.377,
+    "exterior": true,
+    "openings": [
+     {
+      "offset": 1.715,
+      "width": 1.275,
+      "sill": 0.02,
+      "height": 2.3,
+      "kind": "window"
+     },
+     {
+      "offset": 2.846,
+      "width": 0.773,
+      "sill": 0,
+      "height": 2.3,
+      "kind": "door",
+      "id": "dv-balkon-loznice",
+      "hinge": "b",
+      "swing": 1,
+      "glazed": true,
+      "open": false
+     },
+     {
+      "offset": 4.343,
+      "width": 0.715,
+      "sill": 0.9,
+      "height": 1.3,
+      "kind": "window"
+     }
+    ]
+   },
+   {
+    "id": "p141-p99",
+    "a": [
+     0.193,
+     3.024
+    ],
+    "b": [
+     3.725,
+     3.024
+    ],
+    "thickness": 0.097,
+    "exterior": false,
+    "openings": []
+   },
+   {
+    "id": "p99-vychod",
+    "a": [
+     3.725,
+     3.024
+    ],
+    "b": [
+     3.725,
+     4.387
+    ],
+    "thickness": 0.097,
+    "exterior": false,
+    "openings": []
+   },
+   {
+    "id": "p99-zarez",
+    "a": [
+     3.121,
+     4.387
+    ],
+    "b": [
+     3.725,
+     4.387
+    ],
+    "thickness": 0.097,
+    "exterior": false,
+    "openings": []
+   },
+   {
+    "id": "p99-chodba",
+    "a": [
+     3.121,
+     4.387
+    ],
+    "b": [
+     3.121,
+     6.522
+    ],
+    "thickness": 0.097,
+    "exterior": false,
+    "openings": [
+     {
+      "offset": 0.517,
+      "width": 0.783,
+      "sill": 0,
+      "height": 2,
+      "kind": "door",
+      "id": "dv-pokoj-99",
+      "hinge": "a",
+      "swing": 1,
+      "open": true
+     }
+    ]
+   },
+   {
+    "id": "p141-loznice",
+    "a": [
+     5.387,
+     0.188
+    ],
+    "b": [
+     5.387,
+     3.831
+    ],
+    "thickness": 0.097,
+    "exterior": false,
+    "openings": []
+   },
+   {
+    "id": "p141-chodba",
+    "a": [
+     3.725,
+     3.831
+    ],
+    "b": [
+     5.991,
+     3.831
+    ],
+    "thickness": 0.087,
+    "exterior": false,
+    "openings": [
+     {
+      "offset": 0.541,
+      "width": 0.783,
+      "sill": 0,
+      "height": 2,
+      "kind": "door",
+      "id": "dv-pokoj-141",
+      "hinge": "b",
+      "swing": -1,
+      "open": true
+     }
+    ]
+   },
+   {
+    "id": "chodba-lalok",
+    "a": [
+     5.991,
+     3.831
+    ],
+    "b": [
+     5.991,
+     4.372
+    ],
+    "thickness": 0.097,
+    "exterior": false,
+    "openings": []
+   },
+   {
+    "id": "loznice-chodba",
+    "a": [
+     5.991,
+     4.372
+    ],
+    "b": [
+     7.054,
+     4.372
+    ],
+    "thickness": 0.087,
+    "exterior": false,
+    "openings": [
+     {
+      "offset": 0.517,
+      "width": 0.783,
+      "sill": 0,
+      "height": 2,
+      "kind": "door",
+      "id": "dv-loznice",
+      "hinge": "a",
+      "swing": -1,
+      "open": true
+     }
+    ]
+   },
+   {
+    "id": "koupelna-sever",
+    "a": [
+     7.054,
+     4.136
+    ],
+    "b": [
+     10.054,
+     4.136
+    ],
+    "thickness": 0.077,
+    "exterior": false,
+    "openings": [
+     {
+      "offset": 0.498,
+      "width": 0.783,
+      "sill": 0,
+      "height": 2,
+      "kind": "door",
+      "id": "dv-koupelna-loznice",
+      "hinge": "a",
+      "swing": -1,
+      "open": true
+     }
+    ]
+   },
+   {
+    "id": "koupelna-zapad",
+    "a": [
+     7.054,
+     4.136
+    ],
+    "b": [
+     7.054,
+     5.479
+    ],
+    "thickness": 0.087,
+    "exterior": false,
+    "openings": [
+     {
+      "offset": 0.874,
+      "width": 0.783,
+      "sill": 0,
+      "height": 2,
+      "kind": "door",
+      "id": "dv-koupelna",
+      "hinge": "b",
+      "swing": 1,
+      "open": true
+     }
+    ]
+   },
+   {
+    "id": "komora-sever",
+    "a": [
+     6.614,
+     5.479
+    ],
+    "b": [
+     7.605,
+     5.479
+    ],
+    "thickness": 0.087,
+    "exterior": false,
+    "openings": []
+   },
+   {
+    "id": "komora-zapad",
+    "a": [
+     6.614,
+     5.479
+    ],
+    "b": [
+     6.614,
+     6.522
+    ],
+    "thickness": 0.087,
+    "exterior": false,
+    "openings": []
+   },
+   {
+    "id": "komora-vychod",
+    "a": [
+     7.605,
+     5.479
+    ],
+    "b": [
+     7.605,
+     6.522
+    ],
+    "thickness": 0.077,
+    "exterior": false,
+    "openings": []
+   },
+   {
+    "id": "schodiste-sever",
+    "a": [
+     3.121,
+     5.479
+    ],
+    "b": [
+     5.73,
+     5.479
+    ],
+    "thickness": 0.097,
+    "exterior": false,
+    "openings": [
+     {
+      "offset": 0.502,
+      "width": 0.889,
+      "sill": 0,
+      "height": 2.1,
+      "kind": "door",
+      "label": "Schodiště do 1.NP",
+      "note": "Tady je podle výkresu příchod schodiště z 1.NP (ocel + masivní jasan). 3D schody neumí – místo nich je zavřený otvor."
+     }
+    ]
+   },
+   {
+    "id": "schodiste-vychod",
+    "a": [
+     5.73,
+     5.479
+    ],
+    "b": [
+     5.73,
+     6.522
+    ],
+    "thickness": 0.077,
+    "exterior": false,
+    "openings": []
+   }
+  ],
+  "switches": [
+   {
+    "id": "sw-141",
+    "roomId": "pokoj-141",
+    "position": [
+     5.034,
+     3.788
+    ],
+    "normal": [
+     0,
+     -1
+    ]
+   },
+   {
+    "id": "sw-loznice",
+    "roomId": "loznice",
+    "position": [
+     5.711,
+     3.788
+    ],
+    "normal": [
+     0,
+     -1
+    ]
+   },
+   {
+    "id": "sw-99",
+    "roomId": "pokoj-99",
+    "position": [
+     3.073,
+     5.836
+    ],
+    "normal": [
+     -1,
+     0
+    ]
+   },
+   {
+    "id": "sw-chodba",
+    "roomId": "chodba",
+    "position": [
+     4.455,
+     5.43
+    ],
+    "normal": [
+     0,
+     -1
+    ]
+   },
+   {
+    "id": "sw-koupelna",
+    "roomId": "koupelna",
+    "position": [
+     7.097,
+     4.387
+    ],
+    "normal": [
+     1,
+     0
+    ]
+   }
+  ],
+  "railings": [
+   {
+    "a": [
+     -1.449,
+     0.048
+    ],
+    "b": [
+     -1.449,
+     6.561
+    ]
+   },
+   {
+    "a": [
+     -1.449,
+     0.048
+    ],
+    "b": [
+     0,
+     0.048
+    ]
+   },
+   {
+    "a": [
+     -1.449,
+     6.561
+    ],
+    "b": [
+     0,
+     6.561
+    ]
+   },
+   {
+    "a": [
+     11.953,
+     0.048
+    ],
+    "b": [
+     11.953,
+     6.551
+    ]
+   },
+   {
+    "a": [
+     10.243,
+     0.048
+    ],
+    "b": [
+     11.953,
+     0.048
+    ]
+   },
+   {
+    "a": [
+     10.243,
+     6.551
+    ],
+    "b": [
+     11.953,
+     6.551
+    ]
+   }
+  ],
+  "surroundings": "villas",
+  "furniture": []
+ },
+ "photos": [
+  {
+   "id": "foto-g07",
+   "url": "fotky/foto-g07.jpg",
+   "thumb": "fotky/mini-g07.jpg",
+   "roomId": "loznice",
+   "position": [
+    5.9,
+    1.45,
+    0.9
+   ],
+   "yaw": -115,
+   "hfov": 90,
+   "offsetY": 0,
+   "aspect": 1.5,
+   "title": "Ložnice – k balkonu do zahrady (ilustrace)",
+   "caption": "Prázdná ložnice asi 16 m² podle půdorysu, okno a dveře na balkon do zahrady.",
+   "doors": {
+    "open": [],
+    "closed": [
+     "dv-balkon-141",
+     "dv-balkon-99",
+     "dv-balkon-loznice",
+     "dv-koupelna",
+     "dv-koupelna-loznice",
+     "dv-loznice",
+     "dv-pokoj-141",
+     "dv-pokoj-99"
+    ]
+   },
+   "illustration": {
+    "note": "Render 3D modelu podle půdorysu (stav white wall), není to fotka. Výšky a okna jsou předpoklad."
+   }
+  },
+  {
+   "id": "foto-g08",
+   "url": "fotky/foto-g08.jpg",
+   "thumb": "fotky/mini-g08.jpg",
+   "roomId": "loznice",
+   "position": [
+    6.5,
+    1.45,
+    3.95
+   ],
+   "yaw": -30,
+   "hfov": 90,
+   "offsetY": 0,
+   "aspect": 1.5,
+   "title": "Ložnice – ke stěně pro postel (ilustrace)",
+   "caption": "Od dveří ke stěně, u které výkres kreslí manželskou postel; vpravo balkonové okno.",
+   "doors": {
+    "open": [],
+    "closed": [
+     "dv-balkon-141",
+     "dv-balkon-99",
+     "dv-balkon-loznice",
+     "dv-koupelna",
+     "dv-koupelna-loznice",
+     "dv-loznice",
+     "dv-pokoj-141",
+     "dv-pokoj-99"
+    ]
+   },
+   "illustration": {
+    "note": "Render 3D modelu podle půdorysu (stav white wall), není to fotka. Výšky a okna jsou předpoklad."
+   }
+  },
+  {
+   "id": "foto-g09",
+   "url": "fotky/foto-g09.jpg",
+   "thumb": "fotky/mini-g09.jpg",
+   "roomId": "loznice",
+   "position": [
+    9.4,
+    1.45,
+    0.8
+   ],
+   "yaw": 130,
+   "hfov": 90,
+   "offsetY": 0,
+   "aspect": 1.5,
+   "title": "Ložnice – ke dveřím (ilustrace)",
+   "caption": "Od okna ke dveřím do chodby a do koupelny.",
+   "doors": {
+    "open": [],
+    "closed": [
+     "dv-balkon-141",
+     "dv-balkon-99",
+     "dv-balkon-loznice",
+     "dv-koupelna",
+     "dv-koupelna-loznice",
+     "dv-loznice",
+     "dv-pokoj-141",
+     "dv-pokoj-99"
+    ]
+   },
+   "illustration": {
+    "note": "Render 3D modelu podle půdorysu (stav white wall), není to fotka. Výšky a okna jsou předpoklad."
+   }
+  },
+  {
+   "id": "foto-g10",
+   "url": "fotky/foto-g10.jpg",
+   "thumb": "fotky/mini-g10.jpg",
+   "roomId": "pokoj-141",
+   "position": [
+    5,
+    1.45,
+    0.75
+   ],
+   "yaw": 110,
+   "hfov": 88,
+   "offsetY": 0,
+   "aspect": 1.5,
+   "title": "Pokoj 14 m² – k balkonu (ilustrace)",
+   "caption": "Prázdný pokoj asi 14 m² podle půdorysu, okno a dveře na balkon do ulice.",
+   "doors": {
+    "open": [],
+    "closed": [
+     "dv-balkon-141",
+     "dv-balkon-99",
+     "dv-balkon-loznice",
+     "dv-koupelna",
+     "dv-koupelna-loznice",
+     "dv-loznice",
+     "dv-pokoj-141",
+     "dv-pokoj-99"
+    ]
+   },
+   "illustration": {
+    "note": "Render 3D modelu podle půdorysu (stav white wall), není to fotka. Výšky a okna jsou předpoklad."
+   }
+  },
+  {
+   "id": "foto-g11",
+   "url": "fotky/foto-g11.jpg",
+   "thumb": "fotky/mini-g11.jpg",
+   "roomId": "pokoj-141",
+   "position": [
+    5,
+    1.45,
+    2.6
+   ],
+   "yaw": 70,
+   "hfov": 88,
+   "offsetY": 0,
+   "aspect": 1.5,
+   "title": "Pokoj 14 m² – k oknu (ilustrace)",
+   "caption": "Pokoj asi 14 m² od dveří k oknu a severní stěně.",
+   "doors": {
+    "open": [],
+    "closed": [
+     "dv-balkon-141",
+     "dv-balkon-99",
+     "dv-balkon-loznice",
+     "dv-koupelna",
+     "dv-koupelna-loznice",
+     "dv-loznice",
+     "dv-pokoj-141",
+     "dv-pokoj-99"
+    ]
+   },
+   "illustration": {
+    "note": "Render 3D modelu podle půdorysu (stav white wall), není to fotka. Výšky a okna jsou předpoklad."
+   }
+  },
+  {
+   "id": "foto-g12",
+   "url": "fotky/foto-g12.jpg",
+   "thumb": "fotky/mini-g12.jpg",
+   "roomId": "pokoj-99",
+   "position": [
+    2.75,
+    1.45,
+    6.1
+   ],
+   "yaw": 55,
+   "hfov": 88,
+   "offsetY": 0,
+   "aspect": 1.5,
+   "title": "Pokoj 10 m² – k balkonu (ilustrace)",
+   "caption": "Prázdný pokoj asi 10 m² podle půdorysu, okno a dveře na balkon do ulice.",
+   "doors": {
+    "open": [],
+    "closed": [
+     "dv-balkon-141",
+     "dv-balkon-99",
+     "dv-balkon-loznice",
+     "dv-koupelna",
+     "dv-koupelna-loznice",
+     "dv-loznice",
+     "dv-pokoj-141",
+     "dv-pokoj-99"
+    ]
+   },
+   "illustration": {
+    "note": "Render 3D modelu podle půdorysu (stav white wall), není to fotka. Výšky a okna jsou předpoklad."
+   }
+  },
+  {
+   "id": "foto-g13",
+   "url": "fotky/foto-g13.jpg",
+   "thumb": "fotky/mini-g13.jpg",
+   "roomId": "koupelna",
+   "position": [
+    7.3,
+    1.45,
+    4.45
+   ],
+   "yaw": -120,
+   "hfov": 96,
+   "offsetY": 0,
+   "aspect": 1.5,
+   "title": "Koupelna 2.NP – k oknu (ilustrace)",
+   "caption": "Koupelna asi 5,5 m² bez zařízení (white wall); výkres kreslí rohovou vanu, umyvadlo a WC.",
+   "doors": {
+    "open": [],
+    "closed": [
+     "dv-balkon-141",
+     "dv-balkon-99",
+     "dv-balkon-loznice",
+     "dv-koupelna",
+     "dv-koupelna-loznice",
+     "dv-loznice",
+     "dv-pokoj-141",
+     "dv-pokoj-99"
+    ]
+   },
+   "illustration": {
+    "note": "Render 3D modelu podle půdorysu (stav white wall), není to fotka. Výšky a okna jsou předpoklad."
+   }
+  },
+  {
+   "id": "foto-g14",
+   "url": "fotky/foto-g14.jpg",
+   "thumb": "fotky/mini-g14.jpg",
+   "roomId": "koupelna",
+   "position": [
+    9.6,
+    1.45,
+    4.45
+   ],
+   "yaw": 135,
+   "hfov": 96,
+   "offsetY": 0,
+   "aspect": 1.5,
+   "title": "Koupelna 2.NP – ke dveřím (ilustrace)",
+   "caption": "Koupelna od okna ke dveřím do chodby; vlevo stěna komory.",
+   "doors": {
+    "open": [],
+    "closed": [
+     "dv-balkon-141",
+     "dv-balkon-99",
+     "dv-balkon-loznice",
+     "dv-koupelna",
+     "dv-koupelna-loznice",
+     "dv-loznice",
+     "dv-pokoj-141",
+     "dv-pokoj-99"
+    ]
+   },
+   "illustration": {
+    "note": "Render 3D modelu podle půdorysu (stav white wall), není to fotka. Výšky a okna jsou předpoklad."
+   }
+  }
+ ]
+}
