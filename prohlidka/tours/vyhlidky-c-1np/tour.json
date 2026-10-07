@@ -1099,7 +1099,14 @@
    },
    "illustration": {
     "note": "Render 3D modelu podle půdorysu (stav white wall), není to fotka. Výšky a okna jsou předpoklad."
-   }
+   },
+   "staging": [
+    {
+     "url": "fotky/viz-g01.jpg",
+     "title": "návrh interiéru",
+     "note": "Návrh dokončení a zařízení (AI) podle výkresu. Dům se prodává ve stavu white wall – materiály, nábytek i záběr jsou návrh, ne skutečný stav."
+    }
+   ]
   },
   {
    "id": "foto-g02",
@@ -1127,7 +1134,14 @@
    },
    "illustration": {
     "note": "Render 3D modelu podle půdorysu (stav white wall), není to fotka. Výšky a okna jsou předpoklad."
-   }
+   },
+   "staging": [
+    {
+     "url": "fotky/viz-g02.jpg",
+     "title": "návrh interiéru",
+     "note": "Návrh dokončení a zařízení (AI) podle výkresu. Dům se prodává ve stavu white wall – materiály, nábytek i záběr jsou návrh, ne skutečný stav."
+    }
+   ]
   },
   {
    "id": "foto-g03",
@@ -1155,7 +1169,14 @@
    },
    "illustration": {
     "note": "Render 3D modelu podle půdorysu (stav white wall), není to fotka. Výšky a okna jsou předpoklad."
-   }
+   },
+   "staging": [
+    {
+     "url": "fotky/viz-g03.jpg",
+     "title": "návrh interiéru",
+     "note": "Návrh dokončení a zařízení (AI) podle výkresu. Dům se prodává ve stavu white wall – materiály, nábytek i záběr jsou návrh, ne skutečný stav."
+    }
+   ]
   },
   {
    "id": "foto-g04",
@@ -1183,7 +1204,14 @@
    },
    "illustration": {
     "note": "Render 3D modelu podle půdorysu (stav white wall), není to fotka. Výšky a okna jsou předpoklad."
-   }
+   },
+   "staging": [
+    {
+     "url": "fotky/viz-g04.jpg",
+     "title": "návrh interiéru",
+     "note": "Návrh dokončení a zařízení (AI) podle výkresu. Dům se prodává ve stavu white wall – materiály, nábytek i záběr jsou návrh, ne skutečný stav."
+    }
+   ]
   },
   {
    "id": "foto-g05",
@@ -1211,7 +1239,14 @@
    },
    "illustration": {
     "note": "Render 3D modelu podle půdorysu (stav white wall), není to fotka. Výšky a okna jsou předpoklad."
-   }
+   },
+   "staging": [
+    {
+     "url": "fotky/viz-g05.jpg",
+     "title": "návrh interiéru",
+     "note": "Návrh dokončení a zařízení (AI) podle výkresu. Dům se prodává ve stavu white wall – materiály, nábytek i záběr jsou návrh, ne skutečný stav."
+    }
+   ]
   },
   {
    "id": "foto-g06",
@@ -1240,7 +1275,14 @@
    "illustration": {
     "note": "Render 3D modelu podle půdorysu (stav white wall), není to fotka. Výšky a okna jsou předpoklad."
    },
-   "fadeS": 0.25
+   "fadeS": 0.25,
+   "staging": [
+    {
+     "url": "fotky/viz-g06.jpg",
+     "title": "návrh interiéru",
+     "note": "Návrh dokončení a zařízení (AI) podle výkresu. Dům se prodává ve stavu white wall – materiály, nábytek i záběr jsou návrh, ne skutečný stav."
+    }
+   ]
   }
  ]
 }

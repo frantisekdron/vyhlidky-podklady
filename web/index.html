@@ -144,6 +144,8 @@ p{margin:0}
 .gallery .ph{height:100%}
 .gallery .g-main{grid-row:1 / span 2}
 .gallery{margin-bottom:10px}
+.gallery--int{grid-template-columns:minmax(0,5fr) minmax(0,7fr)}.gallery--int .g-main{grid-column:2;grid-row:1 / span 2}
+.gal-note{font-size:13px;color:#6b7686;text-align:center;margin:4px 10px 0}
 
 /* ============ VÝBĚR MEZONETU ============ */
 .picker{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:24px;align-items:stretch}
@@ -528,6 +530,7 @@ html.reveal .hero-img{animation:settle 2.4s cubic-bezier(.2,.7,.2,1) both}
   .proj-inset{position:relative;left:auto;width:72%;margin:-48px 0 0 auto;border-width:6px}
   .gallery{grid-template-columns:minmax(0,1fr);grid-template-rows:auto;height:auto;padding:0;gap:6px}
   .gallery .g-main{grid-row:auto}
+  .gallery--int .g-main{grid-column:auto}
   .gallery .ph{aspect-ratio:3/2;height:auto}
   .plan-panel{padding:14px 12px 12px}
   .legend{display:none}
@@ -714,6 +717,23 @@ html.reveal .hero-img{animation:settle 2.4s cubic-bezier(.2,.7,.2,1) both}
     <span class="tag"><i></i>Mezonet B · fotografie</span>
   </figure>
 </section>
+
+<!-- ============ INTERIÉR 1.NP (vizualizace ChatGPT, 8. 10. 2026) ============ -->
+<section class="gallery gallery--int" aria-label="Interiér 1.NP – vizualizace" data-reveal>
+  <figure class="ph g-main">
+    <img src="img/viz-int-obyvak.jpg" alt="Vizualizace obytného patra mezonetu C: jídelní stůl, obývací kout a okna do zahrady" width="1600" height="1067" loading="lazy">
+    <span class="tag tag--viz"><i></i>1.NP · obývací prostor · vizualizace</span>
+  </figure>
+  <figure class="ph">
+    <img src="img/viz-int-kuchyn.jpg" alt="Vizualizace kuchyně s ostrůvkem v obytném patře" width="1600" height="1067" loading="lazy">
+    <span class="tag tag--viz"><i></i>1.NP · kuchyň · vizualizace</span>
+  </figure>
+  <figure class="ph">
+    <img src="img/viz-int-obyvaci-zona.jpg" alt="Vizualizace obývací zóny u oken do zahrady" width="1600" height="1067" loading="lazy">
+    <span class="tag tag--viz"><i></i>1.NP · obývací zóna · vizualizace</span>
+  </figure>
+</section>
+<p class="gal-note">Vizualizace návrhu dokončení – mezonety se prodávají ve stavu white wall.</p>
 
 <!-- ============ VÝBĚR MEZONETU ============ -->
 <section class="sec sec--paper" id="mezonety">
@@ -914,23 +934,23 @@ html.reveal .hero-img{animation:settle 2.4s cubic-bezier(.2,.7,.2,1) both}
   <div class="wrap tour">
     <div data-reveal>
       <p class="eyebrow">3D prohlídka</p>
-      <h2 class="h2">Projděte si mezonet C <em>po místnostech.</em></h2>
+      <h2 class="h2">Projděte si mezonet C <em>dřív, než přijedete.</em></h2>
       <p class="lead" style="margin-top:22px">Přepněte prázdný stav na vizualizaci zařízení a zpět. Uvidíte, jak se v obytném patře rozvrhne kuchyň, jídelna i obývák, ještě před dokončením stavby.</p>
       <ul class="tour-list">
-        <li><svg viewBox="0 0 24 24"><path d="M4 12h16M12 4v16"/><circle cx="12" cy="12" r="9"/></svg>Procházka po všech třech podlažích</li>
+        <li><svg viewBox="0 0 24 24"><path d="M4 12h16M12 4v16"/><circle cx="12" cy="12" r="9"/></svg>Procházka obytným patrem 1.NP</li>
         <li><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="M12 5v14"/></svg>Prázdný stav ↔ vizualizace zařízení</li>
         <li><svg viewBox="0 0 24 24"><rect x="7" y="2.5" width="10" height="19" rx="2"/><path d="M11 18.5h2"/></svg>Funguje v mobilu i na počítači</li>
       </ul>
       <div class="tour-cta">
-        <button class="btn btn--white" type="button" data-toast="3D prohlídka se připravuje. Ukázka je součástí návrhu.">Spustit 3D prohlídku</button>
+        <a class="btn btn--white" href="../prohlidka/index.html?tour=tours/vyhlidky-c-1np/tour.json" target="_blank" rel="noopener">Spustit 3D prohlídku</a>
       </div>
     </div>
     <div data-reveal>
-      <button class="tour-frame" type="button" data-toast="3D prohlídka se připravuje. Ukázka je součástí návrhu." aria-label="Spustit 3D prohlídku mezonetu C">
+      <a class="tour-frame" href="../prohlidka/index.html?tour=tours/vyhlidky-c-1np/tour.json" target="_blank" rel="noopener" aria-label="Spustit 3D prohlídku mezonetu C">
         <img src="img/c-1np-3d.jpg" alt="3D zařízený půdorys obytného patra mezonetu C" width="1400" height="929">
         <span class="play"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M6 3.5v17l14-8.5z"/></svg></span>
         <span class="tag tag--viz"><i></i>Ilustrační vizualizace · 1.NP</span>
-      </button>
+      </a>
     </div>
   </div>
 </section>
