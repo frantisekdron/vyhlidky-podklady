@@ -263,7 +263,7 @@ input:focus-visible+.sw{outline:2px solid #ff6b78;outline-offset:2px}
 })();
 </script><script>
 (function(){
-var URL='', KEY='vyhl077-pd-7f3k', NTFY='fdboard-1698757f87bc', W3F='a53a21c5-b75b-462e-8a38-7efe355e7620', MAX=25*1024*1024, DK='vyhl_pf_v1';
+var URL='https://script.google.com/macros/s/AKfycbyM2FtYj1i2NZbru8k28ATJFNlzUSlqpLciEK1jL_5F5MGleeWlR25cT-hQVg1TLs8o/exec', KEY='vyhl077-pd-7f3k', NTFY='fdboard-1698757f87bc', W3F='a53a21c5-b75b-462e-8a38-7efe355e7620', MAX=25*1024*1024, DK='vyhl_pf_v1';
 var f=document.getElementById('pf'); if(!f) return;
 var files={}, sendBtn=document.getElementById('pfSend'), sum=document.getElementById('pfSum'), msg=document.getElementById('pfMsg'), bar=f.querySelector('.pfp'), bi=bar.querySelector('i');
 function plural(n,a,b,c){ return n===1?a:(n>=2&&n<=4?b:c); }
@@ -316,12 +316,14 @@ function text(o){
 function b64(file){ return new Promise(function(res,rej){ var r=new FileReader(); r.onload=function(){ res(String(r.result).split(',')[1]||''); }; r.onerror=function(){ rej(r.error); }; r.readAsDataURL(file); }); }
 function post(o){ return fetch(URL,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(o)})
   .then(function(r){ return r.json(); }).then(function(j){ if(!j.ok) throw new Error(j.err||'chyba'); return j; }); }
+var EVA=/maklerkaeva\.cz$/.test(location.hostname);
+function mail(title,body,o){ return fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},
+    body:JSON.stringify({access_key:W3F,subject:title,from_name:o.jmeno||'Vlastník – Vyhlídky Suchdol',email:o.email||'',phone:o.telefon||'',message:body,botcheck:''})})
+    .then(function(r){return r.json();}).then(function(j){ if(!j.success) throw new Error('w3f'); }); }
 function backup(title,body,o){
   var jobs=[fetch('https://ntfy.sh/',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({topic:NTFY,title:title,message:body.slice(0,3900),tags:['house','memo'],priority:4})})
     .then(function(r){ if(!r.ok) throw new Error(r.status); })];
-  if(/maklerkaeva\.cz$/.test(location.hostname)) jobs.push(fetch('https://api.web3forms.com/submit',{method:'POST',headers:{'Content-Type':'application/json','Accept':'application/json'},
-    body:JSON.stringify({access_key:W3F,subject:title,from_name:o.jmeno||'Vlastník – Vyhlídky Suchdol',email:o.email||'',phone:o.telefon||'',message:body,botcheck:''})})
-    .then(function(r){return r.json();}).then(function(j){ if(!j.success) throw new Error('w3f'); }));
+  if(EVA) jobs.push(mail(title,body,o));
   return Promise.allSettled(jobs).then(function(r){ if(!r.some(function(x){return x.status==='fulfilled';})) throw new Error('none'); });
 }
 function say(t,cls){ msg.textContent=t; msg.className='pfm '+(cls||''); }
@@ -352,7 +354,9 @@ f.addEventListener('submit',function(e){
   }
   next().then(function(){
     var b2=body+(bad.length?'\n\nNENAHRÁNO: '+bad.join(', '):'');
-    return post({key:KEY,batch:batch,type:'answers',text:b2,who:o.jmeno,nfiles:ok}).catch(function(){ return backup(title,b2,o); });
+    return post({key:KEY,batch:batch,type:'answers',text:b2,who:o.jmeno,nfiles:ok})
+      .then(function(){ if(EVA) mail(title,b2+'\n\nSoubory ('+ok+') jsou na Google Disku FD Studia.',o).catch(function(){}); })
+      .catch(function(){ return backup(title,b2,o); });
   }).then(function(){
     bi.style.width='100%';
     if(bad.length) say('Odpovědi a '+ok+' '+plural(ok,'soubor','soubory','souborů')+' máme ✓ Nenahrálo se: '+bad.join(', ')+'. Zkuste je poslat znovu.','err');
