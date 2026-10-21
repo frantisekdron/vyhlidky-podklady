@@ -172,6 +172,12 @@ footer{background:var(--mid);color:#8fa1b8;font-family:var(--mono);font-size:11p
 .odp{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:22px} .od{background:#fff;border-radius:6px;padding:18px 20px;border-top:3px solid var(--red)}
 .od b{display:block;font-size:17px;color:var(--navy);line-height:1.25} .od p{font-size:14.5px;color:var(--ink2);margin-top:6px;line-height:1.45}
 @media (max-width:900px){.odp{grid-template-columns:1fr}}
+#odpovedi{background:var(--navy);color:#fff} #odpovedi h2{color:#fff} #odpovedi h2 em{color:#ff6b78} #odpovedi .lead{color:#c6d1de} #odpovedi .eb{color:#ff8a95}
+.nw{display:inline-block;background:var(--red);color:#fff;border-radius:3px;padding:3px 8px;margin-right:10px;letter-spacing:.12em}
+.sum{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-top:22px} .sum a{display:block;background:var(--red);color:#fff;border-radius:6px;padding:14px 16px;text-decoration:none}
+.sum a:nth-child(n+2){background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.25)} .sum small{display:block;font-size:12px;opacity:.85;text-transform:uppercase;letter-spacing:.08em} .sum b{display:block;font-size:17px;margin-top:4px;line-height:1.25}
+#odpovedi .od{border-top-color:#ff6b78;color:var(--ink)}
+@media (max-width:900px){.sum{grid-template-columns:1fr 1fr}} @media (max-width:520px){.sum{grid-template-columns:1fr}}
 
 .gsel{margin-top:18px}.gsel .units{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
 .gsel .units button{display:grid;gap:1px;text-align:left;padding:10px 14px;border:1px solid var(--line);border-radius:10px;background:#fff;cursor:pointer;color:var(--navy)}
@@ -263,8 +269,12 @@ input:focus-visible+.sw{outline:2px solid var(--red);outline-offset:2px}
 <p>Děkujeme za odpovědi. Zapracovali jsme je – tady je plán, jak prodat zbývající čtyři domy. Ceny, smlouvu i termíny probereme na schůzce.</p>
 <div class="ctas"><a class="btn red" href="#sestavte">Sestavte si dům</a><a class="btn ghost" href="Vyhlidky_Suchdol_navrh_spoluprace.pdf" download>PDF · 6 stran</a></div></div></header>
 
-<section id="odpovedi" class="alt"><div class="wrap"><div class="eb">Vaše odpovědi · 20. 10.</div><h2>Co jsme z nich <em>vzali.</em></h2>
+<section id="odpovedi"><div class="wrap"><div class="eb"><span class="nw">Nové</span>Vaše odpovědi · 20. 10.</div><h2>Co jsme z nich <em>vzali.</em></h2>
 <p class="lead">Děkujeme za podklady. Tady je, co z nich plyne – a co jsme podle toho v návrhu změnili.</p>
+<div class="sum"><a href="#cena"><small>Nové ceny</small><b>B 24,9 · C 24,9 · E 24,2 · D 23,4 mil.</b></a>
+<a href="#cena"><small>Vaše bonusy</small><b>0,5 + 1 mil. do 31. 12.</b></a>
+<a href="#spoluprace"><small>Spolupráce s Evou</small><b>2 %, pak 3 % + DPH – až z prodeje</b></a>
+<a href="#dal"><small>Další krok</small><b>schůzka čt 22. / pá 23. 10.</b></a></div>
 <div class="odp"><div class="od"><b>Inzerujeme v Domech</b><p>4+kk + garsonka se zahradou. Podle stavebního povolení byt, kupec dostává dům – titulky inzerátů i návrhy reklam jsme podle toho přepsali.</p></div><div class="od"><b>C, D a E jako vzorový B</b><p>Potvrdil jste nám, že C, D a E dostanou podlahy, koupelny a dveře jako vzorový B. V konfigurátoru i v inzerátech to uvádíme jako součást ceny.</p></div><div class="od"><b>Bonusy pro kupce</b><p>0,5 mil. Kč za první rezervaci a 1 mil. Kč při uzavření kupní smlouvy a platbě do 31. 12. 2026. Nejsnáz je využije B – je jediný zkolaudovaný, smlouva i platba mohou proběhnout ještě letos.</p></div><div class="od"><b>Reklamu zatím nikdo nevedl</b><p>Kupci z Googlu a sociálních sítí o domech nevědí. Začínáme od nuly a od prvního dne měříme poptávky i cenu jedné poptávky.</p></div><div class="od"><b>Loni vadily pokoje a letadla</b><p>Malé pokoje ve 2.NP, stísněný prostor kvůli galeriím (ty už nejsou) a letadla. Odpovídáme níž v části „Na co se ptají kupci“.</p></div><div class="od"><b>Zahrady, stání, správa</b><p>Zahrady podle situace: C 476, E 380, D 295 m². Garáž pro jedno auto, druhé stání venku. Vjezd spravuje SVJ, zbytek má každý dům svůj.</p></div></div></div></section>
 
 <section id="rekli"><div class="wrap"><div class="eb">Co brzdí prodej</div><h2>Devět brzd, <em>devět řešení.</em></h2>
