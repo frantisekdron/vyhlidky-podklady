@@ -1,0 +1,214 @@
+<!doctype html>
+<html lang="cs">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow">
+<title>Suchdol B · natáčení</title>
+<style>
+@font-face{font-family:Switzer;src:url(font/Switzer-Variable.ttf) format("truetype");font-weight:100 900}
+:root{--ink:#16130f;--paper:#f6f1e8;--card:#fffdf8;--line:#e2d9c8;--mute:#6f675b;--wine:#7a1f2b;--gold:#b08a4a;--ok:#2f7a4f;--okbg:#e6f1e9}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 16px/1.45 Switzer,-apple-system,"Helvetica Neue",Arial,sans-serif}
+.wrap{max-width:900px;margin:0 auto;padding:0 16px 70px}
+.tabs{position:sticky;top:0;z-index:10;display:flex;gap:6px;overflow-x:auto;background:rgba(246,241,232,.97);margin:0 -16px;padding:10px 16px;border-bottom:1px solid var(--line);scrollbar-width:none}
+.tabs::-webkit-scrollbar{display:none}
+.tabs button{flex:none;font:inherit;font-size:15px;font-weight:600;border:1.5px solid var(--ink);background:#fff;color:var(--ink);border-radius:99px;padding:8px 14px;cursor:pointer}
+.tabs button.on{background:var(--ink);color:#fff}
+.tabs .pdf{margin-left:auto;text-decoration:none;color:var(--mute);font-size:14px;align-self:center;white-space:nowrap}
+.pnl{display:none;padding-top:14px}
+.pnl.on{display:block}
+.eyebrow{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--wine);font-weight:600}
+h2{font-weight:700;font-size:27px;line-height:1.15;margin:4px 0 2px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.poc{color:var(--mute);margin:0 0 8px;font-size:14.5px}
+.oco{font-size:16.5px;margin:0 0 8px}
+.meta{display:flex;flex-wrap:wrap;gap:6px;margin:0 0 12px}
+.meta span{border:1px solid var(--line);background:var(--card);border-radius:99px;padding:3px 10px;font-size:13px}
+.vb{display:inline-block;font-size:12px;font-weight:700;border-radius:5px;padding:2px 7px;color:#fff;vertical-align:1px}
+h2 .vb{font-size:16px;padding:3px 9px}
+.vb.s2{background:#9a6b1f}.vb.f1{background:#c0561b}.vb.f2{background:#111;color:#8fe39a}
+.kap{display:grid;grid-template-columns:200px 1fr;gap:12px;background:var(--card);border:1px solid var(--line);border-radius:12px;padding:10px;margin:8px 0}
+.kap img,.kap .noimg{width:100%;aspect-ratio:16/9;object-fit:cover;border-radius:8px;display:block;background:#e9e1d3}
+.kap h3{margin:0 0 3px;font-size:17px;display:flex;align-items:center;gap:8px}
+.kn{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:var(--ink);color:#fff;font-size:13.5px;flex:none}
+.kap p{margin:0 0 5px;font-size:15px}
+.say{border-left:4px solid var(--wine);background:#fbf0f1;border-radius:0 8px 8px 0;padding:5px 10px;margin:5px 0;font-size:15.5px;font-weight:500}
+.say .who{display:block;font-size:10.5px;letter-spacing:.12em;text-transform:uppercase;color:var(--wine);font-weight:800}
+.vanda{color:#4a4038;font-style:italic}
+.nat{color:#3a332a}.nat b{color:var(--ink)}
+.ref{color:var(--wine);font-weight:600;white-space:nowrap}
+h4{font-size:14px;letter-spacing:.12em;text-transform:uppercase;color:var(--mute);margin:16px 0 6px}
+.harm{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);font-size:14.5px}
+.harm th,.harm td{text-align:left;padding:6px 8px;border-bottom:1px solid var(--line);vertical-align:top}
+.harm th{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--mute)}
+.harm .t{font-weight:700;white-space:nowrap}.harm .rr{white-space:nowrap;color:var(--mute)}
+.harm .vb{margin-right:3px}
+.tag{display:inline-block;font-size:11px;font-weight:700;border-radius:5px;padding:1px 6px;color:#fff;background:#8a8275;margin-left:4px;vertical-align:1px}
+.tag.d{background:#d9a441;color:#1d1606}.tag.n{background:#3b4a6b}.tag.u{background:var(--wine)}
+.rules{font-size:14px;color:#3a332a;margin:8px 0 0}
+.prog{font-weight:700;margin-left:auto;font-size:14px;white-space:nowrap}
+.blk{display:flex;align-items:center;gap:8px;background:var(--ink);color:#fff;border-radius:10px;padding:7px 12px;margin:14px 0 4px}
+.bt{font-weight:800}.bk{font-weight:600}
+.sl{display:grid;grid-template-columns:1fr auto;gap:2px 10px;background:var(--card);border:1px solid var(--line);border-radius:10px;padding:8px 10px;margin:4px 0}
+.sl label{display:flex;gap:10px;align-items:flex-start;cursor:pointer}
+.sl input{flex:none;appearance:none;-webkit-appearance:none;width:28px;height:28px;margin:0;border:2.5px solid var(--ink);border-radius:7px;background:#fff;display:grid;place-content:center;cursor:pointer}
+.sl input:checked{background:var(--ok);border-color:var(--ok)}
+.sl input:checked:after{content:"";width:8px;height:14px;border:solid #fff;border-width:0 3px 3px 0;transform:translateY(-2px) rotate(45deg)}
+.sl .n{font-weight:700;color:var(--wine);min-width:22px;padding-top:3px}
+.sl .tx{font-size:15.5px;padding-top:2px}
+.sl .rf{display:flex;gap:4px;align-items:flex-start;flex-wrap:wrap;justify-content:flex-end;padding-top:3px}
+.sl .rf i{font-style:normal;font-size:11px;font-weight:700;color:var(--mute);margin:2px 4px 0 1px}
+.sl .say,.sl .alt{grid-column:1/-1;margin-left:70px}
+.alt{font-size:13.5px;color:#5a4547}
+.alt summary{cursor:pointer;color:var(--wine);font-weight:600}
+.alt p{margin:3px 0}
+.p{display:inline-block;font-size:11px;font-weight:700;border-radius:5px;padding:2px 6px;color:#fff}
+.p.h{background:var(--wine)}.p.k{background:#2f6b4f}.p.x{background:#8a8275}.p.f{background:#4d6a86}
+.sl.done{background:var(--okbg)}
+.sl.done .tx{text-decoration:line-through;color:#5b6b60}
+.sl.done .say,.sl.done .alt{opacity:.5}
+.foot{margin-top:24px;font-size:12px;color:var(--mute)}
+@media (max-width:640px){
+  .kap{grid-template-columns:1fr}
+  h2{font-size:23px}
+  .sl{grid-template-columns:1fr}
+  .sl .rf{justify-content:flex-start;margin-left:70px}
+  .sl .say,.sl .alt{margin-left:0}
+}
+@media print{
+  @page{size:A4;margin:9mm 10mm}
+  body{background:#fff;font-size:9pt}
+  .wrap{max-width:none;padding:0}
+  .tabs,.alt,.noprint{display:none!important}
+  .pnl{display:block!important;padding-top:0;break-before:page}
+  .pnl:first-of-type{break-before:auto}
+  h2{font-size:17pt;margin:2px 0 0}.poc{font-size:8.5pt;margin-bottom:3px}.oco{font-size:9.5pt;margin-bottom:4px}
+  .meta{margin-bottom:5px}.meta span{font-size:8pt;padding:1px 7px}
+  .kap{grid-template-columns:44mm 1fr;gap:8px;padding:5px 7px;margin:4px 0;break-inside:avoid}
+  .kap h3{font-size:10.5pt;margin-bottom:1px}.kn{width:18px;height:18px;font-size:8.5pt}
+  .kap p{font-size:8.8pt;margin-bottom:2px}
+  .say{font-size:9pt;padding:2px 7px;margin:2px 0}.say .who{font-size:6.5pt}
+  .harm{font-size:8.5pt}.harm th,.harm td{padding:2px 6px}
+  h4{margin:6px 0 3px;font-size:8pt}
+  .rules{font-size:8.5pt;margin-top:3px}
+  .blk{padding:2px 8px;margin:5px 0 2px;border-radius:5px;break-after:avoid}
+  .sl{padding:2px 7px;margin:2px 0;border-radius:5px;break-inside:avoid}
+  .sl input{width:12px;height:12px;border-width:1.5px;border-radius:2px}
+  .sl .n{padding-top:0;min-width:16px}.sl .tx{font-size:8.6pt;padding-top:0}
+  .sl .say{margin-left:44px;font-size:8.4pt;padding:1px 6px}
+  .sl .rf{padding-top:0}
+  .slw{columns:2;column-gap:5mm}
+  .blk{break-inside:avoid;font-size:8.5pt}
+  .sl{display:block;padding:2px 5px}.sl label{display:inline-flex;gap:5px}
+  .sl .rf{display:inline-flex;margin-left:4px;vertical-align:1px}.sl .rf .vb,.sl .rf .p{font-size:6.5pt;padding:0 4px}
+  .sl .say{margin:1px 0 0 28px;font-size:8pt}
+  .sl .tx{font-size:8.3pt}
+  .vb,.p,.tag,.blk,.kn,.say,.harm th{-webkit-print-color-adjust:exact;print-color-adjust:exact}
+}
+.p.s{background:#7a5a1f}.tc{font-size:13px;font-weight:600;color:var(--mute);margin-left:4px}
+.rf i.u{background:#eef2f6;color:#33465f;border-radius:6px;padding:1px 6px;font-style:normal;font-size:11.5px;margin-left:3px;white-space:nowrap}
+.tabs .dl{flex:none;text-decoration:none;font-size:14px;font-weight:600;border:1.5px solid var(--gold);color:#5b4520;background:#fff8ea;border-radius:99px;padding:7px 12px;align-self:center;white-space:nowrap}
+.tabs .dl:first-of-type{margin-left:auto}
+.kam{border:2px solid var(--gold);background:linear-gradient(180deg,#fff6e2,#fffdf8);border-radius:14px;padding:12px 16px;margin:12px 0}
+.kam .kh{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--wine);font-weight:800}
+.kam .adr{font-size:24px;font-weight:700;line-height:1.2;margin:2px 0 4px}
+.kam p{margin:0 0 6px;font-size:15.5px}.kam .gps{font-size:16px}.kam .gps a{color:var(--ink)}.kam .gps b{font-variant-numeric:tabular-nums;user-select:all}
+.kam .sm{font-size:13.5px;color:var(--mute);margin:6px 0 0}
+.navb{display:flex;flex-wrap:wrap;gap:8px;margin:8px 0 2px}
+.navb a{text-decoration:none;font-weight:700;font-size:15px;background:var(--ink);color:#fff;border-radius:10px;padding:10px 14px}
+.navb a+a{background:#fff;color:var(--ink);border:1.5px solid var(--ink)}
+.mapa{margin:10px 0}.mapa img{width:100%;display:block;border-radius:12px}
+.mapa figcaption{font-size:13.5px;color:#3a332a;margin-top:6px}.mapa figcaption a{font-weight:700;color:var(--wine);white-space:nowrap}
+.prav{background:var(--card);border:1px solid var(--line);border-radius:12px;padding:8px 14px;margin:10px 0}
+.prav h4{margin:2px 0 4px}.prav ul{margin:0;padding-left:18px}.prav li{font-size:14.5px;margin:2px 0}
+@media print{.kam{padding:5px 9px;margin:4px 0;border-width:1.5px}.kam .adr{font-size:14pt}.kam p{font-size:9pt;margin-bottom:2px}
+.kam .gps{font-size:10pt}.kam .sm{font-size:8pt}.mapa{margin:4px 0;break-inside:avoid}.mapa img{border-radius:4px}.mapa figcaption{font-size:8pt}
+.prav{padding:3px 9px;margin:4px 0;break-inside:avoid}.prav li{font-size:8.5pt;margin:0}.slt{break-before:page}
+.kam,.navb a,.mapa img{-webkit-print-color-adjust:exact;print-color-adjust:exact}}</style>
+</head>
+<body>
+<div class="wrap">
+<nav class="tabs"><button type="button" data-t="SL">Plán dne</button><button type="button" data-t="F">Film 16:9</button><button type="button" data-t="V">Na výšku</button><button type="button" data-t="R">Reklama</button><button type="button" data-t="P">Po natáčení</button><a class="dl" href="Suchdol_B_natoceni.pdf" download>⬇ PDF</a><a class="dl" href="img/mapa_letu.jpg" download="Suchdol_B_mapa_letu.jpg">⬇ Mapa</a></nav>
+<section class="pnl" data-tab="SL"><div class="eyebrow">Vyhlídky Suchdol · dům B · Eva Goldšmíd RE/MAX</div><h2>Plán dne · neděle 8. 11. 11:30–16:15 <span id="prog" class="prog noprint"></span></h2><p class="rules"><b>Odpoledne kvůli mlze.</b> Nejdřív interiér a Eva (slunce z jihu svítí do oken), pak venku ze země, od 14:30 dron (slunce z JZ svítí na zahradní stranu B) a na konec zlatá hodina s Evou. Slunce 11:30 175° a 23°, 14:30 220° a 14°, 15:30 233° a 7°, západ 16:28.</p><div class="kam"><div class="kh">Kam jet</div><div class="adr">Bažantní 1380/3, 165 00 Praha 6 – Suchdol</div><p>Bílý dvojdům A+B přímo u silnice Bažantní, naproti přes silnici louka. B je severní polovina (blíž k trojdomu C–E), zahrada s bazénem za domem na západ. Zastavit na silnici u bodu P.</p><p class="gps">Bod P · <a href="https://www.google.com/maps/dir/?api=1&destination=50.142046,14.373143&travelmode=driving" target="_blank" rel="noopener"><b>50.142046, 14.373143</b></a></p><div class="navb noprint"><a href="https://www.google.com/maps/dir/?api=1&destination=50.142046,14.373143&travelmode=driving" target="_blank" rel="noopener">Navigovat · Google Maps</a><a href="https://mapy.com/fnc/v1/showmap?mapset=aerial&center=14.373143,50.142046&zoom=19&marker=true" target="_blank" rel="noopener">Mapy.cz</a></div><p class="sm">Výjezd v 11:00, na místě kolem 11:30, konec 16:15 (západ 16:28). Na místě p. Sládek – domluvit klíče a zapnutá světla.</p></div><figure class="mapa"><a href="img/mapa_letu.jpg" target="_blank"><img src="img/mapa_letu.jpg" alt="Mapa letů"></a><figcaption><b>Čísla = řádky shotlistu</b> (říkat nahlas). Zlatá = dron, bílá = ze země, P = příjezd, žlutá = slunce. Bílá šipka = dráha, kolečko s šipkou nahoru = svislé stoupání (13), dvojité kolečko nad B = kolmo shora (14). <a class="noprint" href="img/mapa_letu.jpg" download="Suchdol_B_mapa_letu.jpg">⬇ Stáhnout mapu</a></figcaption></figure><div class="prav"><h4>Jak točit</h4><ul><li>Lety krátce (10–15 s), pomalu a plynule. Jen rovná dráha nebo oblouk do 30° kolem domu, nikdy otáčení na místě, sklon kamery během letu neměnit.</li><li>Na začátku a konci letu 3 s staticky. SRT (telemetrie) zapnuté. 4K, 25 fps.</li><li>Před každým záběrem nahlas číslo řádku (u dronu 1 s telefonu s číslem) – podle něj se klipy v FD Studiu přiřadí ke scénáři.</li><li>Klíčové věci točit i na výšku (řádky 1, 5, 9, 16): reel, Instagram a reklama 9:16 je nedostanou z výřezu v kvalitě.</li><li>Fotky ze stativu ve výšce 1,4 m, svislice rovně, bez lidí, všechna světla zapnout. Zadní schody k bazénu nejsou a nebudou v základní ceně – zahradu točit tak, aby chybějící schody nebyly téma.</li><li>Mlha ráno: interiér je stejně první. Dron až když se zvedne – nebo naopak využít mlhu nad údolím pro řádek 13.</li></ul></div><h4 class="slt">Shotlist · číslo = mapa · K = kapitola filmu · štítky = kam záběr půjde</h4><div class="slw"><div class="blk"><span class="bt">11:30</span><span class="bk">Uvnitř · slunce z jihu do oken</span><span class="tag d">INTERIÉR</span></div>
+<div class="sl" data-id="r1"><label><input type="checkbox" data-id="r1"><span class="n">1</span><span class="tx">Obývák 1.NP: gimbal od vstupu k oknům, za okny zahrada a údolí, 10 s × 2 (i na výšku). Foto obývák a kuchyň ze 2 rohů ze stativu v 1,4 m, svislice rovně, světla zapnout</span></label><span class="rf"><span class="p k">GIMBAL</span><i>K4</i><i class="u">film</i><i class="u">IG</i><i class="u">banner C</i><i class="u">portály</i><i class="u">vizualizace</i></span></div>
+<div class="sl" data-id="r2"><label><input type="checkbox" data-id="r2"><span class="n">2</span><span class="tx">Kuchyň a jídelna: 5 detailů po 5 s (panel Loxone, linka, okno, podlaha, vypínače) + foto</span></label><span class="rf"><span class="p k">GIMBAL</span><i>K4</i><i>K5</i><i class="u">film</i><i class="u">portály</i></span></div>
+<div class="sl" data-id="r3"><label><input type="checkbox" data-id="r3"><span class="n">3</span><span class="tx">Schody nahoru (8 s), v patře pokoje a koupelna: gimbal 6 s v každém + foto každé místnosti z rohu</span></label><span class="rf"><span class="p k">GIMBAL</span><i>K4</i><i class="u">film</i><i class="u">portály</i><i class="u">vizualizace</i></span></div>
+<div class="sl" data-id="r4"><label><input type="checkbox" data-id="r4"><span class="n">4</span><span class="tx">1.PP: garsonka s terasou, garáž, technika (čerpadlo, rekuperace, baterie) – detaily 5 s + foto</span></label><span class="rf"><span class="p k">GIMBAL</span><i>K4</i><i>K5</i><i class="u">film</i><i class="u">portály</i><i class="u">vizualizace</i></span></div>
+<div class="blk"><span class="bt">12:40</span><span class="bk">Eva uvnitř</span><span class="tag d">MLUVENÉ</span></div>
+<div class="sl" data-id="r5"><label><input type="checkbox" data-id="r5"><span class="n">5</span><span class="tx">Eva u oken v obýváku: věta E1 na šířku (stativ), hned znovu na výšku</span></label><span class="rf"><span class="p s">STATIV</span><i>K3</i><i class="u">film</i><i class="u">reel</i></span><div class="say"><span class="who">🎤 Eva · E1</span>Dobrý den, jsem Eva Goldšmíd z RE/MAX. Tohle je dům B ve Vyhlídkách Suchdol – hotový, zkolaudovaný a za okny začíná údolí.</div><details class="alt"><summary>další 2 varianty</summary><p><b>B</b> Vítejte ve Vyhlídkách. Dům je hotový a můžete se nastěhovat hned – podívejte se, kolik světla sem jde.</p><p><b>C</b> Hotový dům v Praze 6. Za okny údolí.</p></details></div>
+<div class="sl" data-id="r6"><label><input type="checkbox" data-id="r6"><span class="n">6</span><span class="tx">Eva u Loxone: věta E2, pak 5 s detail ruky na panelu</span></label><span class="rf"><span class="p s">STATIV</span><i>K5</i><i class="u">film</i><i class="u">banner C</i></span><div class="say"><span class="who">🎤 Eva · E2</span>Tepelné čerpadlo, fotovoltaika s baterií, rekuperace s chlazením a chytrá domácnost Loxone – to všechno už je v ceně.</div><details class="alt"><summary>další 2 varianty</summary><p><b>B</b> Na provoz tu stavitel myslel za vás: čerpadlo, fotovoltaika, baterie a celý dům ovládáte z mobilu.</p><p><b>C</b> Technika za stovky tisíc. V ceně.</p></details></div>
+<div class="sl" data-id="r7"><label><input type="checkbox" data-id="r7"><span class="n">7</span><span class="tx">Vstup na Instagram na mobil na výšku u okna s výhledem, 2–3 pokusy</span></label><span class="rf"><span class="p k">MOBIL 9:16</span><i class="u">IG</i></span><div class="say"><span class="who">🎤 Eva · IG</span>Mám pro vás novinku a ukazuju ji jako první tady: hotový dům v Suchdolu se zahradou, bazénem a údolím kousek za domem. Pojďte se podívat se mnou.</div><details class="alt"><summary>další 2 varianty</summary><p><b>B</b> Kde v Praze 6 máte bazén, zahradu a za domy přírodní rezervaci? Ukážu vám to.</p><p><b>C</b> Praha 6. Bazén. Údolí. Pojďte se mnou.</p></details></div>
+<div class="blk"><span class="bt">13:30</span><span class="bk">Venku ze země</span><span class="tag d">SLUNCE JJZ</span></div>
+<div class="sl" data-id="r8"><label><input type="checkbox" data-id="r8"><span class="n">8</span><span class="tx">Od bodu P k domu: ulice, vjezd, parkování B, vstup (gimbal 10 s). Foto uliční strany a vjezdu</span></label><span class="rf"><span class="p k">GIMBAL</span><i>K2</i><i class="u">film</i><i class="u">portály</i></span></div>
+<div class="sl" data-id="r9"><label><input type="checkbox" data-id="r9"><span class="n">9</span><span class="tx">Zahrada: z terasy ke kraji zahrady a do údolí (gimbal 10 s, i na výšku). Foto zahradní fasáda + bazén (podklad pro letní vizualizaci)</span></label><span class="rf"><span class="p k">GIMBAL</span><i>K6</i><i class="u">film</i><i class="u">reel</i><i class="u">banner A</i><i class="u">vizualizace</i></span></div>
+<div class="sl" data-id="r10"><label><input type="checkbox" data-id="r10"><span class="n">10</span><span class="tx">Reel „3 věci“ na výšku: hook před domem, pak u bazénu, na zahradě, s výhledem do údolí – 4 krátké záběry s Evou</span></label><span class="rf"><span class="p k">MOBIL 9:16</span><i class="u">reel</i></span><div class="say"><span class="who">🎤 Eva · R1</span>Tři věci, které v bytě v Praze 6 mít nebudete.</div><details class="alt"><summary>další 2 varianty</summary><p><b>B</b> V bytě tohle nemáte. Počítejte se mnou.</p><p><b>C</b> Byt, nebo tohle?</p></details><div class="say"><span class="who">🎤 Eva · R2</span>Jedna: vlastní bazén. Dvě: zahrada. Tři: údolí kousek za domem.</div><details class="alt"><summary>další 2 varianty</summary><p><b>B</b> Bazén – jedna. Zahrada – dvě. A tři: místo, kde končí Praha.</p><p><b>C</b> Bazén. Zahrada. Údolí.</p></details><div class="say"><span class="who">🎤 Eva · R3</span>A uvnitř hotový dům, kam se můžete nastěhovat hned. Napište mi.</div><details class="alt"><summary>další 2 varianty</summary><p><b>B</b> Hotovo, zkolaudováno, klíče čekají. Ozvěte se.</p><p><b>C</b> Napište mi.</p></details></div>
+<div class="sl" data-id="r11"><label><input type="checkbox" data-id="r11"><span class="n">11</span><span class="tx">Okolí pěšky: louka naproti, začátek cesty Ke Kozím hřbetům (80 m na SZ, GPS 50.142615, 14.372191), okraj rezervace – 3 statické záběry po 8 s + foto</span></label><span class="rf"><span class="p s">STATIV</span><i>K7</i><i class="u">film</i><i class="u">banner B</i></span></div>
+<div class="blk"><span class="bt">14:30</span><span class="bk">Dron</span><span class="tag d">SLUNCE JZ</span></div>
+<div class="sl" data-id="r12"><label><input type="checkbox" data-id="r12"><span class="n">12</span><span class="tx">Oblouk kolem B nad zahradou, 30 m od domu, 20 m výška, kamera stále na B, slunce za kamerou, 15 s × 2 + foto</span></label><span class="rf"><span class="p h">DRON</span><i>K2</i><i class="u">film</i><i class="u">banner A</i><i class="u">portály</i></span></div>
+<div class="sl" data-id="r13"><label><input type="checkbox" data-id="r13"><span class="n">13</span><span class="tx">Svislé stoupání nad zahradou B z 10 do 60 m, kamera k JZ do údolí (bez otáčení), 15 s. Když je mlha, tohle první – nad mlhu</span></label><span class="rf"><span class="p h">DRON</span><i>K1</i><i>K7</i><i class="u">film</i><i class="u">banner B</i></span></div>
+<div class="sl" data-id="r14"><label><input type="checkbox" data-id="r14"><span class="n">14</span><span class="tx">Kolmo shora nad B ve 40 m 10 s staticky, pak stoupání do 80 m 10 s. Foto ve 40 a 80 m (zákres pozemku a zahrady)</span></label><span class="rf"><span class="p h">DRON</span><i>K6</i><i class="u">film</i><i class="u">portály</i></span></div>
+<div class="sl" data-id="r15"><label><input type="checkbox" data-id="r15"><span class="n">15</span><span class="tx">Nízký přelet nad loukou naproti k domu v 8 m (pozor na dráty u silnice), 12 s. Pak foto panorama ve 60 m do 8 směrů</span></label><span class="rf"><span class="p h">DRON</span><i>K1</i><i>K7</i><i class="u">film</i><i class="u">banner B</i><i class="u">portály</i></span></div>
+<div class="blk"><span class="bt">15:30</span><span class="bk">Zlatá hodina</span><span class="tag d">SLUNCE 7° → ZÁPAD 16:28</span></div>
+<div class="sl" data-id="r16"><label><input type="checkbox" data-id="r16"><span class="n">16</span><span class="tx">Eva na terase v zlatém světle: věty E3 a E4 na šířku i na výšku (konec reelu)</span></label><span class="rf"><span class="p s">STATIV</span><i>K6</i><i>K8</i><i class="u">film</i><i class="u">reel</i></span><div class="say"><span class="who">🎤 Eva · E3</span>Vlastní zahrada s bazénem – a kousek za domy začíná přírodní rezervace Údolí Únětického potoka.</div><details class="alt"><summary>další 2 varianty</summary><p><b>B</b> Bazén, zahrada a za ní louky a údolí. Tohle je kraj Suchdolu.</p><p><b>C</b> Bazén. Zahrada. Údolí.</p></details><div class="say"><span class="who">🎤 Eva · E4</span>Prohlídku vám ráda ukážu osobně, v klidu a jen vám. Zavolejte mi – Eva Goldšmíd, RE/MAX.</div><details class="alt"><summary>další 2 varianty</summary><p><b>B</b> Chcete se přijít podívat? Domluvíme si termín jen pro vás.</p><p><b>C</b> Zavolejte, provedu vás.</p></details></div>
+<div class="sl" data-id="r17"><label><input type="checkbox" data-id="r17"><span class="n">17</span><span class="tx">Nálet od západu k zahradě B ve 25 m (nad střechou souseda, bez lidí pod dronem), slunce za kamerou, 32 m za 15 s × 2 – úvod filmu</span></label><span class="rf"><span class="p h">DRON</span><i>K1</i><i class="u">film</i><i class="u">banner A</i><i class="u">banner B</i></span></div>
+<div class="sl" data-id="r18"><label><input type="checkbox" data-id="r18"><span class="n">18</span><span class="tx">Foto hero: zahradní fasáda a bazén v zapadajícím slunci (stativ), dům z louky. Volitelně 16:30 modrá hodina se všemi světly v domě</span></label><span class="rf"><span class="p s">STATIV</span><i>K8</i><i class="u">banner A</i><i class="u">banner B</i><i class="u">banner C</i><i class="u">portály</i><i class="u">vizualizace</i></span></div></div></section>
+<section class="pnl" data-tab="F"><div class="eyebrow">Vyhlídky Suchdol · dům B · neděle 8. 11.</div>
+<h2>Film 16:9 · cca 66 s</h2>
+<p class="oco">Hlavní video. Začátek filmově (genius loci, bez titulků), pak svižná realitní část s titulky v prostoru a Evou jako průvodkyní. Natáčí se jinak, podle světla (Plán dne). Odkaz „řádky“ skočí do shotlistu.</p>
+<div class="meta"><span>4K, 25 fps</span><span>hudba, řezy na údery</span><span>Eva 4 věty</span><span>titulky v prostoru</span><span>konec: RE/MAX + telefon</span></div>
+<div class="kap"><img src="img/vyhled.jpg" alt=""><div><h3><span class="kn">1</span>Kde končí Praha <span class="tc">0:00–0:08</span></h3><p>Genius loci: nízké zlaté slunce nad krajem obce a údolím, dron se blíží k domu B (řádek 17). Když bude mlha, záběr nad mlhou (13). Bez titulků kromě názvu, filmově.</p><div class="say" style="border-color:#b08a4a;background:#fff6e2"><span class="who" style="color:#7a5a1f">Titulek</span>VYHLÍDKY SUCHDOL · PRAHA 6</div><p class="nat"><b>Natočit:</b> <span class="ref" data-r="13">→ řádky 13, 15, 17</span></p></div></div>
+<div class="kap"><img src="img/dum.jpg" alt=""><div><h3><span class="kn">2</span>Dům B <span class="tc">0:08–0:14</span></h3><p>Oblouk kolem zahradní fasády v odpoledním světle (12), pak příchod od ulice ke vstupu (8).</p><div class="say" style="border-color:#b08a4a;background:#fff6e2"><span class="who" style="color:#7a5a1f">Titulek</span>HOTOVÝ DŮM · K NASTĚHOVÁNÍ HNED</div><p class="nat"><b>Natočit:</b> <span class="ref" data-r="8">→ řádky 8, 12</span></p></div></div>
+<div class="kap"><img src="img/obyvak.jpg" alt=""><div><h3><span class="kn">3</span>Eva <span class="tc">0:14–0:20</span></h3><p>Eva u velkých oken v obýváku. Jedna věta, za ní zahrada.</p><div class="say"><span class="who">🎤 Eva · E1</span>Dobrý den, jsem Eva Goldšmíd z RE/MAX. Tohle je dům B ve Vyhlídkách Suchdol – hotový, zkolaudovaný a za okny začíná údolí.</div><details class="alt"><summary>další 2 varianty</summary><p><b>B</b> Vítejte ve Vyhlídkách. Dům je hotový a můžete se nastěhovat hned – podívejte se, kolik světla sem jde.</p><p><b>C</b> Hotový dům v Praze 6. Za okny údolí.</p></details><p class="nat"><b>Natočit:</b> <span class="ref" data-r="5">→ řádky 5</span></p></div></div>
+<div class="kap"><img src="img/koupelna.jpg" alt=""><div><h3><span class="kn">4</span>Uvnitř <span class="tc">0:20–0:36</span></h3><p>Montáž na údery: obývák s kuchyní, schody, pokoje a koupelna v patře, garsonka s terasou v 1.PP, garáž. Titulky v prostoru.</p><div class="say" style="border-color:#b08a4a;background:#fff6e2"><span class="who" style="color:#7a5a1f">Titulek</span>4+KK + GARSONKA · OBÝVÁK 48,8 M² · GARÁŽ 28,7 M²</div><p class="nat"><b>Natočit:</b> <span class="ref" data-r="1">→ řádky 1, 2, 3, 4</span></p></div></div>
+<div class="kap"><div class="noimg"></div><div><h3><span class="kn">5</span>Technika v ceně <span class="tc">0:36–0:42</span></h3><p>Eva u ovládání Loxone, detaily techniky (čerpadlo, baterie, panel).</p><div class="say"><span class="who">🎤 Eva · E2</span>Tepelné čerpadlo, fotovoltaika s baterií, rekuperace s chlazením a chytrá domácnost Loxone – to všechno už je v ceně.</div><details class="alt"><summary>další 2 varianty</summary><p><b>B</b> Na provoz tu stavitel myslel za vás: čerpadlo, fotovoltaika, baterie a celý dům ovládáte z mobilu.</p><p><b>C</b> Technika za stovky tisíc. V ceně.</p></details><div class="say" style="border-color:#b08a4a;background:#fff6e2"><span class="who" style="color:#7a5a1f">Titulek</span>TEPELNÉ ČERPADLO · FVE + BATERIE · REKUPERACE · LOXONE</div><p class="nat"><b>Natočit:</b> <span class="ref" data-r="2">→ řádky 2, 4, 6</span></p></div></div>
+<div class="kap"><img src="img/zahrada.jpg" alt=""><div><h3><span class="kn">6</span>Zahrada a bazén <span class="tc">0:42–0:50</span></h3><p>Z terasy ke kraji zahrady (9), shora pozemek (14). Bazén je v listopadu zazimovaný: krátce, letní podobu ukáže vizualizace se štítkem.</p><div class="say"><span class="who">🎤 Eva · E3</span>Vlastní zahrada s bazénem – a kousek za domy začíná přírodní rezervace Údolí Únětického potoka.</div><details class="alt"><summary>další 2 varianty</summary><p><b>B</b> Bazén, zahrada a za ní louky a údolí. Tohle je kraj Suchdolu.</p><p><b>C</b> Bazén. Zahrada. Údolí.</p></details><div class="say" style="border-color:#b08a4a;background:#fff6e2"><span class="who" style="color:#7a5a1f">Titulek</span>VLASTNÍ ZAHRADA S BAZÉNEM</div><p class="nat"><b>Natočit:</b> <span class="ref" data-r="9">→ řádky 9, 14, 16</span></p></div></div>
+<div class="kap"><div class="noimg"></div><div><h3><span class="kn">7</span>Kraj Suchdolu <span class="tc">0:50–0:58</span></h3><p>Stoupání nad zahradou do údolí (13), louka naproti (15), cesta Ke Kozím hřbetům (11). Vzdálenosti před titulky ověřit.</p><div class="say" style="border-color:#b08a4a;background:#fff6e2"><span class="who" style="color:#7a5a1f">Titulek</span>PŘÍRODNÍ REZERVACE ZA DOMY · KOZÍ HŘBETY · ŠKOLA 450 M</div><p class="nat"><b>Natočit:</b> <span class="ref" data-r="11">→ řádky 11, 13, 15</span></p></div></div>
+<div class="kap"><div class="noimg"></div><div><h3><span class="kn">8</span>Prohlídka <span class="tc">0:58–1:06</span></h3><p>Eva na terase ve zlatém světle (16), konec na fasádě v zapadajícím slunci (18) + logo RE/MAX. Cena až po potvrzení majitelem.</p><div class="say"><span class="who">🎤 Eva · E4</span>Prohlídku vám ráda ukážu osobně, v klidu a jen vám. Zavolejte mi – Eva Goldšmíd, RE/MAX.</div><details class="alt"><summary>další 2 varianty</summary><p><b>B</b> Chcete se přijít podívat? Domluvíme si termín jen pro vás.</p><p><b>C</b> Zavolejte, provedu vás.</p></details><div class="say" style="border-color:#b08a4a;background:#fff6e2"><span class="who" style="color:#7a5a1f">Titulek</span>EVA GOLDŠMÍD · RE/MAX PARTNER · TELEFON</div><p class="nat"><b>Natočit:</b> <span class="ref" data-r="16">→ řádky 16, 18</span></p></div></div>
+</section>
+<section class="pnl" data-tab="V"><div class="eyebrow">Na výšku 9:16</div><h2>Instagram, reel a film na výšku</h2>
+<p class="oco">Instagram Evy organicky (bez placené reklamy na Metě – Franta na schůzce: Meta zatím ne). Reel prodává konkrétní věci z domu.</p>
+<div class="kap"><div class="noimg"></div><div><h3>Vstup na Instagram (Eva, 20–30 s)</h3><p>Natočit zvlášť na mobil na výšku, osobně a do kamery, u okna s výhledem. Pod tím 3 záběry z domu na výšku (gimbal 9:16 v řádcích 1, 9, 16).</p><div class="say"><span class="who">🎤 Eva · IG</span>Mám pro vás novinku a ukazuju ji jako první tady: hotový dům v Suchdolu se zahradou, bazénem a údolím kousek za domem. Pojďte se podívat se mnou.</div><details class="alt"><summary>další 2 varianty</summary><p><b>B</b> Kde v Praze 6 máte bazén, zahradu a za domy přírodní rezervaci? Ukážu vám to.</p><p><b>C</b> Praha 6. Bazén. Údolí. Pojďte se mnou.</p></details><p class="nat"><b>Natočit:</b> <span class="ref" data-r="7">→ řádky 7</span></p></div></div>
+<div class="kap"><div class="noimg"></div><div><h3>Reel „3 věci“ (~25 s)</h3><p>Hook před domem do 2 s, pak bazén → zahrada → údolí (střih na údery, Eva ukazuje prsty 1–2–3), konec Eva na terase. Titulky po slovech.</p><div class="say"><span class="who">🎤 Eva · R1</span>Tři věci, které v bytě v Praze 6 mít nebudete.</div><details class="alt"><summary>další 2 varianty</summary><p><b>B</b> V bytě tohle nemáte. Počítejte se mnou.</p><p><b>C</b> Byt, nebo tohle?</p></details><div class="say"><span class="who">🎤 Eva · R2</span>Jedna: vlastní bazén. Dvě: zahrada. Tři: údolí kousek za domem.</div><details class="alt"><summary>další 2 varianty</summary><p><b>B</b> Bazén – jedna. Zahrada – dvě. A tři: místo, kde končí Praha.</p><p><b>C</b> Bazén. Zahrada. Údolí.</p></details><div class="say"><span class="who">🎤 Eva · R3</span>A uvnitř hotový dům, kam se můžete nastěhovat hned. Napište mi.</div><details class="alt"><summary>další 2 varianty</summary><p><b>B</b> Hotovo, zkolaudováno, klíče čekají. Ozvěte se.</p><p><b>C</b> Napište mi.</p></details><p class="nat"><b>Natočit:</b> <span class="ref" data-r="10">→ řádky 10, 16</span></p></div></div>
+<div class="kap"><div class="noimg"></div><div><h3>Film na výšku 30–45 s</h3><p>Výřez z filmu: dron, Eva E1 a E4, interiér. Pro reklamu na YouTube Shorts a stories (formát 9:16 z 4K, Eva točená i na výšku).</p><p class="nat"><b>Natočit:</b> výřez z filmu</p></div></div>
+</section>
+<section class="pnl" data-tab="R"><div class="eyebrow">Propojení s reklamou</div><h2>Co z natáčení kam půjde</h2>
+<p class="oco">Každý řádek shotlistu má štítek, kam jeho záběr půjde (film, reel, IG, banner A/B/C, portály, vizualizace). Tady je pořadí kanálů ze schůzky 6. 11. a tři reklamní sdělení pro test A/B/C.</p>
+<div class="kap"><div class="noimg"></div><div><h3>Fáze 1 · naše síť <span class="tc">týden po schválení výstupů</span></h3><p>Eva pošle RE/MAX a síti 200 makléřů krátkou zprávu „Znáte někoho, kdo by si to mohl koupit?“ s odkazem, filmem a 6 fotkami. Odměna za doporučení kupce – výši a kdo ji platí domluvit s p. Sládkem. Eva zároveň dá vstup a reel na svůj Instagram.</p></div></div>
+<div class="kap"><div class="noimg"></div><div><h3>Fáze 2 · veřejně <span class="tc">po fázi 1, ještě před Vánoci</span></h3><p>Nová nabídka s novými fotkami: portály v kategorii Domy (4+kk + garsonka se zahradou), film a 3D/fotky. Slevy ani bonusy v inzerátu neukazovat – až při jednání.</p></div></div>
+<div class="kap"><div class="noimg"></div><div><h3>Google · vyhledávání <span class="tc">od fáze 2</span></h3><p>Hledání „dům se zahradou Praha 6“, „novostavba Suchdol“, „dům s bazénem Praha“. Tři sady textů A/B/C, každé pondělí report a úprava.</p></div></div>
+<div class="kap"><div class="noimg"></div><div><h3>Google · bannery a YouTube <span class="tc">od fáze 2</span></h3><p>Bannery 1200×628, 1200×1200, 960×1200 a 300×250 z fotek (řádky označené „banner A/B/C“), YouTube 15 s a 6 s z filmu, Shorts z verze na výšku.</p></div></div>
+<div class="kap"><div class="noimg"></div><div><h3>Meta (Facebook, Instagram) <span class="tc">zatím ne</span></h3><p>Placená reklama na Metě zatím vypnutá (kupci 35–45 let hledají přes Google a portály). Instagram jen Evin organicky. Zapnout, až když síť a Google nestačí.</p></div></div>
+<h4>Test A/B/C (Google, vždy titulek + hero záběr + 15s výřez)</h4><div class="meta"><span><b>A · Cena</b> – „Dům se zahradou a bazénem za cenu bytu“ · hero: fasáda + bazén (12, 17, 18)</span><span><b>B · Místo</b> – „Kde končí Praha 6: za domy údolí a louky“ · hero: dron nad údolím (13, 15, 17)</span><span><b>C · Hotovo</b> – „Hotový dům, technika v ceně, nastěhování hned“ · hero: obývák a Loxone (1, 6, 18)</span></div>
+</section>
+<section class="pnl" data-tab="P"><div class="eyebrow">Po natáčení</div><h2>Co se děje dál</h2>
+<div class="kap"><div class="noimg"></div><div><h3>Do 7 dnů (do ne 15. 11.)</h3><p>První výstupy ke schválení p. Sládkovi: film v1, reel, Evin vstup na IG, 30 vybraných fotek. Nezatěžovat ho dalšími otázkami.</p></div></div>
+<div class="kap"><div class="noimg"></div><div><h3>Vizualizace</h3><p>Z fotek prázdných místností (řádky 1–4): obývák s kuchyní, ložnice, dětský pokoj, garsonka v 1.PP, letní zahrada s odkrytým bazénem (řádky 9 a 18). Vždy štítek „Vizualizace“, jeden styl pro celou sadu. Pokud bude 3D prohlídka B, vizualizace až po ní.</p></div></div>
+<div class="kap"><div class="noimg"></div><div><h3>Půdorysy</h3><p>Upravit půdorysy B: vymazat zadní schodiště k bazénu (není v základní ceně – příplatek). Dveře jako volitelný příplatek.</p></div></div>
+<div class="kap"><div class="noimg"></div><div><h3>Cena a podklady</h3><p>Základní cena co nejnižší (pod 25 mil.) bez zadních schodů a dveří – číslo potvrdí p. Sládek. Ceny příplatků (schody ~75 tis., s podestou ~160 tis.) od něj.</p></div></div>
+<div class="kap"><div class="noimg"></div><div><h3>Prohlídky</h3><p>Jen individuálně s Evou, žádné hromadné dny otevřených dveří.</p></div></div>
+</section>
+<p class="foot noprint">Interní podklad FrantišekDron × Eva Goldšmíd · Vyhlídky Suchdol, dům B · verze 1 · 6. 11. 2026</p>
+</div>
+<script>
+(function(){
+  var K='fd_suchdol_B_natoceni_v1', st={};
+  try{st=JSON.parse(localStorage.getItem(K)||'{}')}catch(e){}
+  var tabs=[].slice.call(document.querySelectorAll('.tabs button')), pn=[].slice.call(document.querySelectorAll('.pnl'));
+  function show(id){tabs.forEach(function(b){b.classList.toggle('on',b.dataset.t===id)});pn.forEach(function(p){p.classList.toggle('on',p.dataset.tab===id)});try{localStorage.setItem(K+'_tab',id)}catch(e){};window.scrollTo(0,0)}
+  tabs.forEach(function(b){b.addEventListener('click',function(){show(b.dataset.t)})});
+  var t0='SL'; try{t0=localStorage.getItem(K+'_tab')||'SL'}catch(e){}
+  if(!document.querySelector('[data-tab="'+t0+'"]'))t0='SL';
+  show(t0);
+  document.querySelectorAll('.ref').forEach(function(r){r.style.cursor='pointer';r.addEventListener('click',function(){show('SL');var row=document.querySelector('.sl[data-id="r'+r.dataset.r+'"]');if(row)window.scrollTo(0,row.getBoundingClientRect().top+window.scrollY-70)})});
+  var bx=[].slice.call(document.querySelectorAll('.sl input'));
+  function prog(){var d=bx.filter(function(x){return x.checked}).length;document.getElementById('prog').textContent=d+' / '+bx.length+' hotovo'}
+  bx.forEach(function(x){
+    x.checked=!!st[x.dataset.id]; x.closest('.sl').classList.toggle('done',x.checked);
+    x.addEventListener('change',function(){if(x.checked)st[x.dataset.id]=1;else delete st[x.dataset.id];x.closest('.sl').classList.toggle('done',x.checked);try{localStorage.setItem(K,JSON.stringify(st))}catch(e){};prog()});
+  });
+  prog();
+})();
+</script>
+</body>
+</html>
