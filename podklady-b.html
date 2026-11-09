@@ -158,7 +158,7 @@ ceny příplatků a plochy. Ve videu i v inzerátu chceme ukázat jen to, co v d
     var chain=Promise.resolve();parts.forEach(function(p,i){chain=chain.then(function(){return post(TOPIC,'Podklady B · '+(i+1)+'/'+parts.length+' · #'+id,p,['house'])})});
     chain.then(function(){if(FDB&&!TEST)return post(FDB,'Suchdol B · p. Sládek vyplnil podklady','Odpovědi: https://frantisekdron.github.io/vyhlidky-podklady/podklady-b.html#odeslano',['house','white_check_mark']).catch(function(){})})
     .then(function(){st.className='ok';st.textContent='Odesláno. Děkujeme! Odpovědi vidíte dole v části „Odesláno“ a můžete je kdykoli doplnit a poslat znovu.';
-      try{localStorage.setItem(K+'_sent',JSON.stringify({cas:new Date().toLocaleString('cs-CZ'),text:t}))}catch(e){};show();b.disabled=false})
+      try{localStorage.setItem(K+'_sent',JSON.stringify({cas:new Date().toLocaleString('cs-CZ'),text:t}))}catch(e){};show();var bt=b.textContent;b.textContent='✓ Odesláno';setTimeout(function(){b.textContent=bt;b.disabled=false},15000)})
     .catch(function(e){st.className='err';st.textContent='Nepodařilo se odeslat ('+e.message+'). Zkuste to prosím znovu, vyplněné zůstává uložené.';b.disabled=false});
   });
   function render(list){var el=document.getElementById('odeslano');if(!list.length){el.innerHTML='';return}
@@ -169,7 +169,7 @@ ceny příplatků a plochy. Ve videu i v inzerátu chceme ukázat jen to, co v d
       var g={};tx.split('\n').forEach(function(l){if(!l.trim())return;var m;try{m=JSON.parse(l)}catch(e){return}if(m.event!=='message')return;
         var mm=/(\d+)\/(\d+) · #(\w+)/.exec(m.title||'');if(!mm)return;var k=mm[3];g[k]=g[k]||{n:+mm[2],p:{},t:m.time};g[k].p[+mm[1]]=m.message});
       var list=Object.keys(g).map(function(k){var x=g[k],a=[];for(var i=1;i<=x.n;i++)a.push(x.p[i]||'[chybí část '+i+']');return {t:x.t,cas:new Date(x.t*1000).toLocaleString('cs-CZ'),text:a.join('\n')}}).sort(function(a,b){return b.t-a.t});
-      if(!list.length&&loc)list=[loc];render(list.slice(0,3))}).catch(function(){if(loc)render([loc])})}
+      var vid={};list=list.filter(function(x){if(vid[x.text])return false;vid[x.text]=1;return true});if(!list.length&&loc)list=[loc];render(list.slice(0,3))}).catch(function(){if(loc)render([loc])})}
   show();
   var lb=document.getElementById('lb'),li=lb.querySelector('img');
   document.querySelectorAll('a.pic').forEach(function(a){a.addEventListener('click',function(e){e.preventDefault();li.src=a.dataset.full;lb.classList.add('on')})});
