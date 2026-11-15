@@ -971,6 +971,13 @@
     "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/model/n_rozlozena_podlazi.jpg"
    },
    {
+    "nazev": "schody navrh",
+    "typ": "nahled",
+    "popisky_v_cene_na_prani": false,
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/model/schody_navrh.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/model/n_schody_navrh.jpg"
+   },
+   {
     "nazev": "shora",
     "typ": "nahled",
     "popisky_v_cene_na_prani": false,
