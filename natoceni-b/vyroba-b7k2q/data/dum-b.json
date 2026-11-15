@@ -53,7 +53,7 @@
    "vyhřívání bazénu",
    "dokončení automatické závlahy",
    "wallbox",
-   "zadní schodiště z terasy na zahradu"
+   "schodiště z terasy do zahrady"
   ],
   "nikdy_netvrdit": [
    "že fotovoltaika, tepelné čerpadlo, wallbox, žaluzie, kuchyň nebo dveře jsou v ceně",
@@ -1333,11 +1333,11 @@
    },
    {
     "id": "schodiste",
-    "nazev": "Schodiště z terasy na zahradu",
-    "popis": "Přímý sestup z terasy k bazénu.",
+    "nazev": "Schodiště z terasy do zahrady",
+    "popis": "Ocelové schodiště se skleněným zábradlím ze severního konce terasy do zahrady.",
     "cena_kc": 75000,
     "pohled": "zahrada",
-    "vrstva": null
+    "vrstva": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/konfigurator/zahrada_schodiste.png"
    }
   ],
   "_pozn_vrstvy": "Obraz = pohledy[pohled].zaklad; zapnutá položka přidá svou vrstvu (PNG s průhledností, stejný rám 1920 × 1200) přes základ téhož pohledu, vrstvy skládat v pořadí pole polozky. vrstva null = položka bez obrázku (jen ikona)."
