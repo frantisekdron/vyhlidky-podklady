@@ -1,0 +1,761 @@
+{
+ "aktualizace": "15. 11. 2026 večer",
+ "poznamka": "Datový balíček domu B (Vyhlídky Suchdol, Bažantní 1380/3). Všechny url jsou absolutní a veřejně stažitelné. Fakta jsou jediný zdroj pravdy.",
+ "fakta": {
+  "_pozn": "Ověřená fakta o domě B – jediný zdroj pravdy pro web, reklamu a titulky. Upravuje řídicí relace. Stav 15. 11. 2026.",
+  "nazev": "Vyhlídky Suchdol – dům B",
+  "adresa": "Bažantní 1380/3, 165 00 Praha 6 – Suchdol",
+  "typ": "rodinný dům 5+kk, polovina dvojdomu (severní), hotový a zkolaudovaný",
+  "cena_kc": 23490000,
+  "cena_text": "23 490 000 Kč",
+  "nastehovani": "reálně do 31. 1. 2027 (podle výběru kuchyně, dveří a technologií na přání)",
+  "plochy": {
+   "uzitna_m2": 178,
+   "obyvaci_prostor_m2": 48.8,
+   "pozemek_m2": 491,
+   "balkony_terasy_m2": "52 + 19",
+   "pokoje_2np_m2": [
+    13.6,
+    11.2,
+    10.6
+   ],
+   "koupelna_2np_m2": 6.6,
+   "garaz_m2": 28.7,
+   "garsonka_1pp_m2": "13,7 (podle podkladů developera; ověřuje se)"
+  },
+  "bazen": "venkovní zapuštěný 3 × 6 m",
+  "v_cene": [
+   "železobetonové obvodové zdi 20 cm + zateplení",
+   "podlahové topení ve všech podlažích",
+   "rekuperace (jednotka Licon + rozvody)",
+   "chytré řízení Loxone – základní funkce",
+   "písečná akumulační baterie pod domem (smysl dává v kombinaci s fotovoltaikou)",
+   "plynový kotel jako záložní zdroj",
+   "vinylové podlahy",
+   "hotové koupelny (obklady, sanita)",
+   "garážová vrata s pohonem",
+   "venkovní stání na dvoře",
+   "oplocení, branka",
+   "trávník",
+   "zábradlí teras a balkonů",
+   "rozvody závlahy"
+  ],
+  "na_prani": [
+   "fotovoltaika 10 kW s baterií",
+   "tepelné čerpadlo",
+   "chlazení rekuperací",
+   "venkovní žaluzie",
+   "kuchyňská linka a spotřebiče (např. Hanák, SIKO)",
+   "interiérové dveře",
+   "svítidla",
+   "infrasauna",
+   "zastřešení bazénu",
+   "vyhřívání bazénu",
+   "dokončení automatické závlahy",
+   "wallbox",
+   "zadní schodiště z terasy na zahradu"
+  ],
+  "nikdy_netvrdit": [
+   "že fotovoltaika, tepelné čerpadlo, wallbox, žaluzie, kuchyň nebo dveře jsou v ceně",
+   "název developerské firmy",
+   "slovo investor / výnos",
+   "den otevřených dveří"
+  ],
+  "lokalita": {
+   "priroda": "přírodní rezervace Údolí Únětického potoka kousek za domem",
+   "dojezdy": [
+    [
+     "Dejvice",
+     "12 min"
+    ],
+    [
+     "letiště Václava Havla",
+     "15 min"
+    ]
+   ],
+   "genius_loci": "„Kdybyste nevěděli, že jste v Praze, nepoznáte to.“ – kraj Prahy 6, kde město končí a začíná údolí"
+  },
+  "developer": "36 let ve stavebnictví, rodinné domy 10 let (název firmy neuvádět)",
+  "makler": {
+   "jmeno": "Ing. Eva Goldšmíd",
+   "firma": "RE/MAX Partner",
+   "telefon": "+420 737 766 030",
+   "email": "eva.goldsmid@remax-czech.cz",
+   "web": "maklerkaeva.cz"
+  },
+  "znacka": "viz vyroba-B/strih/brand_eva.md (Montserrat + Prata, námořní #0C2749, zlatá #B8955A / #E9D7AE, červená linka RE/MAX #FF1200)",
+  "vizualizace_pravidlo": "každý AI obrázek se štítkem „Vizualizace“; zařízení je návrh, není součástí dodávky"
+ },
+ "zakladni_url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/",
+ "obrazky": {
+  "fotky": [
+   {
+    "patro": "Venku",
+    "mistnost": "Ulice a příjezd",
+    "popis": "Dům z příjezdové ulice, brána a plot",
+    "id": "P1194804",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1194804.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/nahled/P1194804.jpg"
+   },
+   {
+    "patro": "Venku",
+    "mistnost": "Ulice a příjezd",
+    "popis": "Plot s cedulí projektu, dům od ulice",
+    "id": "P1194812",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1194812.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/nahled/P1194812.jpg"
+   },
+   {
+    "patro": "Venku",
+    "mistnost": "Ulice a příjezd",
+    "popis": "Dvůr se stáním a garáží, východní balkony, proti slunci",
+    "id": "P1194761",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1194761.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/nahled/P1194761.jpg"
+   },
+   {
+    "patro": "Venku",
+    "mistnost": "Severní strana",
+    "popis": "Dvůr s autem a trávník ze severovýchodu",
+    "id": "P1194767",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1194767.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/nahled/P1194767.jpg"
+   },
+   {
+    "patro": "Venku",
+    "mistnost": "Severní strana",
+    "popis": "Severní štít se dvěma okny obýváku, vzadu bazén",
+    "id": "P1194771",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1194771.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/nahled/P1194771.jpg"
+   },
+   {
+    "patro": "Venku",
+    "mistnost": "Severní strana",
+    "popis": "Severozápadní roh, zahrada s bazénem",
+    "id": "P1194774",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1194774.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/nahled/P1194774.jpg"
+   },
+   {
+    "patro": "Venku",
+    "mistnost": "Zahrada a bazén",
+    "popis": "Celá zahrada od západního konce, dům čelně",
+    "id": "P1194779",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1194779.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/nahled/P1194779.jpg"
+   },
+   {
+    "patro": "Venku",
+    "mistnost": "Zahrada a bazén",
+    "popis": "Západní fasáda čelně s bazénem – hlavní pohled",
+    "id": "P1194788",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1194788.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/nahled/P1194788.jpg"
+   },
+   {
+    "patro": "Venku",
+    "mistnost": "Zahrada a bazén",
+    "popis": "Západní fasáda a bazén zblízka",
+    "id": "P1194790",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1194790.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/nahled/P1194790.jpg"
+   },
+   {
+    "patro": "Venku",
+    "mistnost": "Zahrada a bazén",
+    "popis": "Terasy a balkony zblízka, vstup do garsonky",
+    "id": "P1194797",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1194797.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/nahled/P1194797.jpg"
+   },
+   {
+    "patro": "Venku",
+    "mistnost": "Zahrada a bazén",
+    "popis": "Bazén a zahrada směrem od domu",
+    "id": "P1194801",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1194801.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/nahled/P1194801.jpg"
+   },
+   {
+    "patro": "1.PP",
+    "mistnost": "Zádveří",
+    "popis": "Vstup z ulice, dveře do garáže",
+    "id": "P1184089",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1184089.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/nahled/P1184089.jpg"
+   },
+   {
+    "patro": "1.PP",
+    "mistnost": "Garáž",
+    "popis": "Garáž k vratům s pohonem",
+    "id": "P1184104",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1184104.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/nahled/P1184104.jpg"
+   },
+   {
+    "patro": "1.PP",
+    "mistnost": "Garáž",
+    "popis": "Garáž k technickému koutu",
+    "id": "P1184094",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1184094.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/nahled/P1184094.jpg"
+   },
+   {
+    "patro": "1.PP",
+    "mistnost": "Garáž",
+    "popis": "Garáž ke dveřím na chodbu a schodiště",
+    "id": "P1184098",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1184098.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/nahled/P1184098.jpg"
+   },
+   {
+    "patro": "1.PP",
+    "mistnost": "Garáž",
+    "popis": "Technický kout: plynový kotel",
+    "id": "P1184110",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1184110.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/nahled/P1184110.jpg"
+   },
+   {
+    "patro": "1.PP",
+    "mistnost": "Chodba a schodiště",
+    "popis": "Chodba ke garáži, schodiště nahoru",
+    "id": "P1184145",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1184145.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/nahled/P1184145.jpg"
+   },
+   {
+    "patro": "1.PP",
+    "mistnost": "Chodba a schodiště",
+    "popis": "Schodiště a pohled do koupelny",
+    "id": "P1184113",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1184113.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/nahled/P1184113.jpg"
+   },
+   {
+    "patro": "1.PP",
+    "mistnost": "Chodba a schodiště",
+    "popis": "Chodba ke garáži, vpravo sprchový kout",
+    "id": "P1184128",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1184128.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/nahled/P1184128.jpg"
+   },
+   {
+    "patro": "1.PP",
+    "mistnost": "Koupelna",
+    "popis": "Koupelna s oknem a WC (sanita v obalech)",
+    "id": "P1184118",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1184118.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/nahled/P1184118.jpg"
+   },
+   {
+    "patro": "1.PP",
+    "mistnost": "Garsonka",
+    "popis": "Garsonka k terase a bazénu",
+    "id": "P1184133",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1184133.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/nahled/P1184133.jpg"
+   },
+   {
+    "patro": "1.PP",
+    "mistnost": "Garsonka",
+    "popis": "Garsonka ke kuchyňskému koutu a dveřím",
+    "id": "P1184138",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1184138.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/nahled/P1184138.jpg"
+   },
+   {
+    "patro": "1.NP",
+    "mistnost": "Obývací prostor",
+    "popis": "K západní prosklené stěně a severnímu oknu – hlavní pohled",
+    "id": "P1194937",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1194937.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/nahled/P1194937.jpg"
+   },
+   {
+    "patro": "1.NP",
+    "mistnost": "Obývací prostor",
+    "popis": "Od schodiště k západní terase",
+    "id": "P1194931",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1194931.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/nahled/P1194931.jpg"
+   },
+   {
+    "patro": "1.NP",
+    "mistnost": "Obývací prostor",
+    "popis": "Ke schodišti a východním oknům",
+    "id": "P1194950",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1194950.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/nahled/P1194950.jpg"
+   },
+   {
+    "patro": "1.NP",
+    "mistnost": "Obývací prostor",
+    "popis": "Schodiště zblízka, vlevo severní okna",
+    "id": "P1194946",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1194946.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/nahled/P1194946.jpg"
+   },
+   {
+    "patro": "1.NP",
+    "mistnost": "Obývací prostor",
+    "popis": "Od severního okna ke schodišti a vstupu",
+    "id": "P1194942",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1194942.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/nahled/P1194942.jpg"
+   },
+   {
+    "patro": "2.NP",
+    "mistnost": "Ložnice",
+    "popis": "Ložnice k západnímu balkonu",
+    "id": "P1194836",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1194836.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/nahled/P1194836.jpg"
+   },
+   {
+    "patro": "2.NP",
+    "mistnost": "Ložnice",
+    "popis": "Ložnice k balkonu, vlevo dveře na chodbu",
+    "id": "P1194834",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1194834.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/nahled/P1194834.jpg"
+   },
+   {
+    "patro": "2.NP",
+    "mistnost": "Ložnice",
+    "popis": "Ložnice ke dveřím, vpravo balkon",
+    "id": "P1194850",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1194850.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/nahled/P1194850.jpg"
+   },
+   {
+    "patro": "2.NP",
+    "mistnost": "Ložnice",
+    "popis": "Ložnice – volná stěna",
+    "id": "P1194845",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1194845.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/nahled/P1194845.jpg"
+   },
+   {
+    "patro": "2.NP",
+    "mistnost": "Pokoj",
+    "popis": "Pokoj k východnímu balkonu, dveře ke schodišti",
+    "id": "P1194864",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1194864.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/nahled/P1194864.jpg"
+   },
+   {
+    "patro": "2.NP",
+    "mistnost": "Pokoj",
+    "popis": "Pokoj k balkonu",
+    "id": "P1194856",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1194856.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/nahled/P1194856.jpg"
+   },
+   {
+    "patro": "2.NP",
+    "mistnost": "Pokoj",
+    "popis": "Pokoj – volný roh",
+    "id": "P1194867",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1194867.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/nahled/P1194867.jpg"
+   },
+   {
+    "patro": "2.NP",
+    "mistnost": "Pokoj",
+    "popis": "Pokoj k balkonu s výhledem na louky",
+    "id": "P1194886",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1194886.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/nahled/P1194886.jpg"
+   },
+   {
+    "patro": "2.NP",
+    "mistnost": "Pokoj",
+    "popis": "Pokoj ke dveřím na chodbu",
+    "id": "P1194894",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1194894.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/nahled/P1194894.jpg"
+   },
+   {
+    "patro": "2.NP",
+    "mistnost": "Chodba",
+    "popis": "Chodba k balkonovým dveřím, rozvaděče",
+    "id": "P1194851",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1194851.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/nahled/P1194851.jpg"
+   },
+   {
+    "patro": "2.NP",
+    "mistnost": "Chodba",
+    "popis": "Chodba ke koupelně, zábradlí schodiště",
+    "id": "P1194897",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1194897.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/nahled/P1194897.jpg"
+   },
+   {
+    "patro": "2.NP",
+    "mistnost": "Koupelna",
+    "popis": "Koupelna s vanou (sanita v obalech)",
+    "id": "P1194906",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1194906.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/nahled/P1194906.jpg"
+   },
+   {
+    "patro": "2.NP",
+    "mistnost": "Balkon",
+    "popis": "Balkon – výhled do krajiny v podvečer",
+    "id": "P1194880",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1194880.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/nahled/P1194880.jpg"
+   },
+   {
+    "patro": "2.NP",
+    "mistnost": "Balkon",
+    "popis": "Balkon podél fasády, dole ulice",
+    "id": "P1194881",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1194881.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/nahled/P1194881.jpg"
+   }
+  ],
+  "vizualizace": [
+   {
+    "nazev": "Obývací prostor – k západnímu prosklení (referenční)",
+    "skupina": "Místnosti a zahrada",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/01_P1194937_viz.jpg",
+    "foto": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1194937.jpg",
+    "stav": "vyhrady"
+   },
+   {
+    "nazev": "Ložnice k západnímu balkonu",
+    "skupina": "Místnosti a zahrada",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/02_P1194836_viz.jpg",
+    "foto": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1194836.jpg",
+    "stav": "vyhrady"
+   },
+   {
+    "nazev": "Pokoj SV (ke schodišti)",
+    "skupina": "Místnosti a zahrada",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/03_P1194864_viz.jpg",
+    "foto": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1194864.jpg",
+    "stav": "ok"
+   },
+   {
+    "nazev": "Pokoj JV (výhled na louky)",
+    "skupina": "Místnosti a zahrada",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/04_P1194886_viz.jpg",
+    "foto": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1194886.jpg",
+    "stav": "ok"
+   },
+   {
+    "nazev": "Místnost u terasy 1.PP",
+    "skupina": "Místnosti a zahrada",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/05_P1184133_viz.jpg",
+    "foto": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1184133.jpg",
+    "stav": "vyhrady"
+   },
+   {
+    "nazev": "Koupelna 2.NP",
+    "skupina": "Místnosti a zahrada",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/06_P1194906_viz.jpg",
+    "foto": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1194906.jpg",
+    "stav": "vyhrady"
+   },
+   {
+    "nazev": "Zahrada s bazénem – den",
+    "skupina": "Místnosti a zahrada",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/07_P1194788_viz.jpg",
+    "foto": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1194788.jpg",
+    "stav": "ok"
+   },
+   {
+    "nazev": "Zahrada s bazénem – soumrak",
+    "skupina": "Místnosti a zahrada",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/08_P1194788_soumrak_viz.jpg",
+    "foto": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1194788.jpg",
+    "stav": "ok"
+   },
+   {
+    "nazev": "Fasáda a bazén zblízka – den",
+    "skupina": "Místnosti a zahrada",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/09_P1194790_viz.jpg",
+    "foto": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1194790.jpg",
+    "stav": "ok"
+   },
+   {
+    "nazev": "Obývací prostor – od schodiště k terase",
+    "skupina": "Místnosti a zahrada",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/10_P1194931_viz.jpg",
+    "foto": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1194931.jpg",
+    "stav": "vyhrady"
+   },
+   {
+    "nazev": "Obývací prostor – ke schodišti a kuchyni",
+    "skupina": "Místnosti a zahrada",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/11_P1194950_viz.jpg",
+    "foto": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1194950.jpg",
+    "stav": "vyhrady"
+   },
+   {
+    "nazev": "Evin vstup – obývák · A Teplý současný luxus",
+    "skupina": "Evin vstup – obývák",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/12_varianta_A.jpg",
+    "foto": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/12_foto.jpg",
+    "stav": "ok"
+   },
+   {
+    "nazev": "Evin vstup – obývák · B Japandi",
+    "skupina": "Evin vstup – obývák",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/13_varianta_B.jpg",
+    "foto": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/13_foto.jpg",
+    "stav": "ok"
+   },
+   {
+    "nazev": "Evin vstup – obývák · C Elegantní tmavší",
+    "skupina": "Evin vstup – obývák",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/14_varianta_C.jpg",
+    "foto": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/14_foto.jpg",
+    "stav": "ok"
+   },
+   {
+    "nazev": "Evin vstup – obývák · D Světlý severský prémiový",
+    "skupina": "Evin vstup – obývák",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/15_varianta_D.jpg",
+    "foto": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/15_foto.jpg",
+    "stav": "ok"
+   },
+   {
+    "nazev": "Evin vstup – obývák · E Moderní s charakterem",
+    "skupina": "Evin vstup – obývák",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/16_varianta_E.jpg",
+    "foto": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/16_foto.jpg",
+    "stav": "ok"
+   }
+  ],
+  "model3d": [
+   {
+    "nazev": "clay SV",
+    "typ": "nahled",
+    "popisky_v_cene_na_prani": false,
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/model/clay_SV.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/model/n_clay_SV.jpg"
+   },
+   {
+    "nazev": "clay zahrada",
+    "typ": "nahled",
+    "popisky_v_cene_na_prani": false,
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/model/clay_zahrada.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/model/n_clay_zahrada.jpg"
+   },
+   {
+    "nazev": "na prani ulice",
+    "typ": "nahled",
+    "popisky_v_cene_na_prani": false,
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/model/na_prani_ulice.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/model/n_na_prani_ulice.jpg"
+   },
+   {
+    "nazev": "na prani ulice popisky",
+    "typ": "nahled",
+    "popisky_v_cene_na_prani": true,
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/model/na_prani_ulice_popisky.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/model/n_na_prani_ulice_popisky.jpg"
+   },
+   {
+    "nazev": "na prani zahrada",
+    "typ": "nahled",
+    "popisky_v_cene_na_prani": false,
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/model/na_prani_zahrada.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/model/n_na_prani_zahrada.jpg"
+   },
+   {
+    "nazev": "na prani zahrada popisky",
+    "typ": "nahled",
+    "popisky_v_cene_na_prani": true,
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/model/na_prani_zahrada_popisky.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/model/n_na_prani_zahrada_popisky.jpg"
+   },
+   {
+    "nazev": "rez domem",
+    "typ": "nahled",
+    "popisky_v_cene_na_prani": false,
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/model/rez_domem.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/model/n_rez_domem.jpg"
+   },
+   {
+    "nazev": "rez domem popisky",
+    "typ": "nahled",
+    "popisky_v_cene_na_prani": true,
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/model/rez_domem_popisky.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/model/n_rez_domem_popisky.jpg"
+   },
+   {
+    "nazev": "roh JV",
+    "typ": "nahled",
+    "popisky_v_cene_na_prani": false,
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/model/roh_JV.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/model/n_roh_JV.jpg"
+   },
+   {
+    "nazev": "roh JZ",
+    "typ": "nahled",
+    "popisky_v_cene_na_prani": false,
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/model/roh_JZ.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/model/n_roh_JZ.jpg"
+   },
+   {
+    "nazev": "roh SV",
+    "typ": "nahled",
+    "popisky_v_cene_na_prani": false,
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/model/roh_SV.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/model/n_roh_SV.jpg"
+   },
+   {
+    "nazev": "roh SZ",
+    "typ": "nahled",
+    "popisky_v_cene_na_prani": false,
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/model/roh_SZ.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/model/n_roh_SZ.jpg"
+   },
+   {
+    "nazev": "rozlozena podlazi",
+    "typ": "nahled",
+    "popisky_v_cene_na_prani": false,
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/model/rozlozena_podlazi.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/model/n_rozlozena_podlazi.jpg"
+   },
+   {
+    "nazev": "shora",
+    "typ": "nahled",
+    "popisky_v_cene_na_prani": false,
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/model/shora.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/model/n_shora.jpg"
+   },
+   {
+    "nazev": "v cene",
+    "typ": "nahled",
+    "popisky_v_cene_na_prani": false,
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/model/v_cene.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/model/n_v_cene.jpg"
+   },
+   {
+    "nazev": "v cene popisky",
+    "typ": "nahled",
+    "popisky_v_cene_na_prani": true,
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/model/v_cene_popisky.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/model/n_v_cene_popisky.jpg"
+   },
+   {
+    "nazev": "01 pudorys 1NP",
+    "typ": "list_ke_schvaleni",
+    "popisky_v_cene_na_prani": false,
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/model_listy/01_pudorys_1NP.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/model_listy/n_01_pudorys_1NP.jpg"
+   },
+   {
+    "nazev": "01 pudorys 1NP nahled",
+    "typ": "list_ke_schvaleni",
+    "popisky_v_cene_na_prani": false,
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/model_listy/01_pudorys_1NP_nahled.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/model_listy/n_01_pudorys_1NP_nahled.jpg"
+   },
+   {
+    "nazev": "01 pudorys 1PP",
+    "typ": "list_ke_schvaleni",
+    "popisky_v_cene_na_prani": false,
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/model_listy/01_pudorys_1PP.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/model_listy/n_01_pudorys_1PP.jpg"
+   },
+   {
+    "nazev": "01 pudorys 1PP nahled",
+    "typ": "list_ke_schvaleni",
+    "popisky_v_cene_na_prani": false,
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/model_listy/01_pudorys_1PP_nahled.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/model_listy/n_01_pudorys_1PP_nahled.jpg"
+   },
+   {
+    "nazev": "01 pudorys 2NP",
+    "typ": "list_ke_schvaleni",
+    "popisky_v_cene_na_prani": false,
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/model_listy/01_pudorys_2NP.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/model_listy/n_01_pudorys_2NP.jpg"
+   },
+   {
+    "nazev": "01 pudorys 2NP nahled",
+    "typ": "list_ke_schvaleni",
+    "popisky_v_cene_na_prani": false,
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/model_listy/01_pudorys_2NP_nahled.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/model_listy/n_01_pudorys_2NP_nahled.jpg"
+   },
+   {
+    "nazev": "02 pohledy",
+    "typ": "list_ke_schvaleni",
+    "popisky_v_cene_na_prani": false,
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/model_listy/02_pohledy.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/model_listy/n_02_pohledy.jpg"
+   },
+   {
+    "nazev": "02 pohledy nahled",
+    "typ": "list_ke_schvaleni",
+    "popisky_v_cene_na_prani": false,
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/model_listy/02_pohledy_nahled.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/model_listy/n_02_pohledy_nahled.jpg"
+   },
+   {
+    "nazev": "03 axonometrie",
+    "typ": "list_ke_schvaleni",
+    "popisky_v_cene_na_prani": false,
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/model_listy/03_axonometrie.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/model_listy/n_03_axonometrie.jpg"
+   },
+   {
+    "nazev": "03 axonometrie nahled",
+    "typ": "list_ke_schvaleni",
+    "popisky_v_cene_na_prani": false,
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/model_listy/03_axonometrie_nahled.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/model_listy/n_03_axonometrie_nahled.jpg"
+   },
+   {
+    "nazev": "04 rozlozena podlazi",
+    "typ": "list_ke_schvaleni",
+    "popisky_v_cene_na_prani": false,
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/model_listy/04_rozlozena_podlazi.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/model_listy/n_04_rozlozena_podlazi.jpg"
+   },
+   {
+    "nazev": "04 rozlozena podlazi nahled",
+    "typ": "list_ke_schvaleni",
+    "popisky_v_cene_na_prani": false,
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/model_listy/04_rozlozena_podlazi_nahled.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/model_listy/n_04_rozlozena_podlazi_nahled.jpg"
+   }
+  ],
+  "dron": [
+   {
+    "nazev": "arch skupina1",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/extra/dron/arch_skupina1.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/extra/dron/n_arch_skupina1.jpg"
+   },
+   {
+    "nazev": "arch skupina2",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/extra/dron/arch_skupina2.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/extra/dron/n_arch_skupina2.jpg"
+   },
+   {
+    "nazev": "arch skupina3",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/extra/dron/arch_skupina3.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/extra/dron/n_arch_skupina3.jpg"
+   },
+   {
+    "nazev": "arch skupina4",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/extra/dron/arch_skupina4.jpg",
+    "nahled": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/extra/dron/n_arch_skupina4.jpg"
+   }
+  ],
+  "odkazy": {
+   "nastrel_webu": "https://frantisekdron.github.io/vyhlidky-podklady/web/",
+   "stranka_pro_sladka": "https://frantisekdron.github.io/vyhlidky-podklady/schvaleni-b.html",
+   "navrh_reklamy": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/reklama-q4m8/"
+  }
+ }
+}
