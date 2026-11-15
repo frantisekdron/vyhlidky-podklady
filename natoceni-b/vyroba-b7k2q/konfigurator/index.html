@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="cs"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Konfigurátor B – ukázka</title>
+<style>
+:root{--navy:#0C2749;--gold:#B8955A;--gold2:#E9D7AE;--bg:#f6f4ef;--line:#ddd6c8}
+*{box-sizing:border-box}body{margin:0;font:15px/1.45 -apple-system,Segoe UI,Roboto,sans-serif;background:var(--bg);color:#1d2430}
+header{padding:14px 16px;background:var(--navy);color:#fff}header b{color:var(--gold2)}header small{opacity:.7;margin-left:8px}
+.wrap{display:grid;grid-template-columns:minmax(0,1fr) 360px;gap:16px;padding:16px;max-width:1500px;margin:0 auto}
+@media(max-width:900px){.wrap{grid-template-columns:1fr}}
+.tabs{display:flex;gap:6px;margin-bottom:8px}.tabs button{flex:1;min-height:44px;border:1px solid var(--line);background:#fff;border-radius:8px;font-weight:600;cursor:pointer}
+.tabs button.on{background:var(--navy);color:#fff;border-color:var(--navy)}
+.stage{position:relative;aspect-ratio:1920/1200;background:#e9edf1;border-radius:10px;overflow:hidden}
+.stage img{position:absolute;inset:0;width:100%;height:100%;transition:opacity .35s}
+.stage img.vrstva{opacity:0}.stage img.vrstva.on{opacity:1}
+.pohled{display:none}.pohled.on{display:block}
+.pozn{font-size:13px;color:#667;margin-top:6px}
+.vcene{background:#fff;border:1px solid var(--line);border-radius:10px;padding:10px 12px;margin-bottom:10px;font-size:13px}
+ul{list-style:none;margin:0;padding:0}li{background:#fff;border:1px solid var(--line);border-radius:10px;margin-bottom:6px}
+li label{display:flex;gap:10px;align-items:flex-start;padding:10px 12px;cursor:pointer;min-height:44px}
+li input{margin-top:3px;width:20px;height:20px;accent-color:var(--gold)}
+li .n{font-weight:600}li .p{font-size:12.5px;color:#556}li .c{margin-left:auto;white-space:nowrap;font-size:13px;color:var(--navy);font-weight:600}
+li .ik{font-size:11px;color:#8a7650;border:1px solid var(--gold2);border-radius:4px;padding:0 4px;margin-left:4px}
+li.on{border-color:var(--gold);box-shadow:inset 3px 0 0 var(--gold)}
+.suma{background:var(--navy);color:#fff;border-radius:10px;padding:12px 14px;margin-top:10px}.suma .t{font-size:22px;font-weight:700;color:var(--gold2)}
+.btns{display:flex;gap:6px;margin:8px 0}.btns button{flex:1;min-height:40px;border:1px solid var(--line);background:#fff;border-radius:8px;cursor:pointer}
+</style></head><body>
+<header><b>Sestavte si dům B</b> <small>interní ukázka vrstev z 3D modelu – jen ke kontrole</small></header>
+<div class="wrap">
+ <div>
+  <div class="tabs" id="tabs"></div>
+  <div class="stage" id="stage"></div>
+  <div class="pozn">Vizualizace z 3D modelu. Zlatě = položky na přání. Rozmístění techniky je orientační.</div>
+ </div>
+ <div>
+  <div class="vcene"><b>V ceně:</b> <span id="vcene"></span></div>
+  <div class="btns"><button id="vse">Zapnout vše</button><button id="nic">Vypnout vše</button></div>
+  <ul id="seznam"></ul>
+  <div class="suma" id="suma"></div>
+ </div>
+</div>
+<script>
+const K = {"_pozn": "Konfigurátor domu B – položky na přání a ceny podle odpovědí p. Sládka z 9. 11. 2026 (odpovedi_sladek/2026-11-09_1020_n1m1tb.txt). Ceny zobrazit až po jeho souhlasu (otázka q7 na stránce ke schválení).", "zakladni_cena_kc": 23490000, "zobrazit_ceny": false, "pohledy": {"zahrada": {"nazev": "3D model ze zahrady (západ)", "zaklad": "vrstvy/zahrada_zaklad.png"}, "ulice": {"nazev": "3D model od ulice (východ)", "zaklad": "vrstvy/ulice_zaklad.png"}, "rez": {"nazev": "řez domem", "zaklad": "vrstvy/rez_zaklad.png"}}, "polozky": [{"id": "fve", "nazev": "Fotovoltaika 10 kW s baterií", "popis": "Panely na střeše, jedna baterie v ceně fotovoltaiky.", "cena_kc": 450000, "pohled": "zahrada", "vrstva": "vrstvy/zahrada_fve.png"}, {"id": "propojeni", "nazev": "Propojení s písečnou baterií a ohřevem vody", "popis": "Písečná baterie pod domem je v ceně – s fotovoltaikou začne dávat smysl.", "cena_kc": 25000, "pohled": "rez", "vyzaduje": "fve", "vrstva": "vrstvy/rez_propojeni.png"}, {"id": "baterie", "nazev": "Další baterie k fotovoltaice", "popis": "Každá další baterie.", "cena_kc": 35000, "pohled": null, "vyzaduje": "fve", "vrstva": null}, {"id": "tc", "nazev": "Tepelné čerpadlo 16 kW", "popis": "Vytápění a ohřev vody; plynový kotel zůstává jako záloha.", "cena_kc": 450000, "pohled": "zahrada", "vrstva": "vrstvy/zahrada_tc.png"}, {"id": "chlazeni", "nazev": "Chlazení rekuperací", "popis": "Rozvody rekuperace jsou v ceně, chlazení se doplní.", "cena_kc": 85000, "pohled": "rez", "vrstva": "vrstvy/rez_chlazeni.png"}, {"id": "zaluzie", "nazev": "Venkovní žaluzie", "popis": "Na všech oknech.", "cena_kc": 350000, "pohled": "zahrada", "vrstva": "vrstvy/zahrada_zaluzie.png"}, {"id": "zastreseni", "nazev": "Zastřešení bazénu", "popis": "Cena podle vybraného typu.", "cena_kc": 250000, "pohled": "zahrada", "cena_od": true, "vrstva": "vrstvy/zahrada_zastreseni.png"}, {"id": "ohrev", "nazev": "Vyhřívání a solná úprava bazénu", "popis": "Cena na dotaz.", "cena_kc": null, "pohled": "zahrada", "vrstva": "vrstvy/zahrada_ohrev.png"}, {"id": "zavlaha", "nazev": "Dokončení automatické závlahy", "popis": "Rozvody s tryskami jsou v ceně, doplní se ventily, řídicí jednotka a čerpadlo.", "cena_kc": 45000, "pohled": null, "vrstva": null}, {"id": "wallbox", "nazev": "Wallbox", "popis": "Nabíjení auta v garáži nebo na stání.", "cena_kc": 15000, "pohled": "ulice", "cena_cca": true, "vrstva": "vrstvy/ulice_wallbox.png"}, {"id": "infrasauna", "nazev": "Infrasauna pro dva", "popis": "Včetně instalace.", "cena_kc": 40000, "pohled": "rez", "cena_cca": true, "vrstva": "vrstvy/rez_infrasauna.png"}, {"id": "kuchyn", "nazev": "Kuchyňská linka a spotřebiče", "popis": "Podle výběru (např. Hanák, SIKO).", "cena_kc": null, "pohled": "rez", "vrstva": "vrstvy/rez_kuchyn.png"}, {"id": "dvere", "nazev": "Interiérové dveře", "popis": "Podle výběru.", "cena_kc": null, "pohled": null, "vrstva": null}, {"id": "svitidla", "nazev": "Svítidla", "popis": "Podle výběru.", "cena_kc": null, "pohled": null, "vrstva": null}, {"id": "schodiste", "nazev": "Schodiště z terasy na zahradu", "popis": "Přímý sestup z terasy k bazénu.", "cena_kc": 75000, "pohled": "zahrada", "vrstva": null}]};
+const VCENE = ["železobetonové obvodové zdi 20 cm + zateplení", "podlahové topení ve všech podlažích", "rekuperace (jednotka Licon + rozvody)", "chytré řízení Loxone – základní funkce", "písečná akumulační baterie pod domem (smysl dává v kombinaci s fotovoltaikou)", "plynový kotel jako záložní zdroj", "vinylové podlahy", "hotové koupelny (obklady, sanita)", "garážová vrata s pohonem", "venkovní stání na dvoře", "oplocení, branka", "trávník", "zábradlí teras a balkonů", "rozvody závlahy"];
+const CENY = K.zobrazit_ceny || new URLSearchParams(location.search).has('ceny');
+const fmt = n => n.toLocaleString('cs-CZ').replace(/ /g, ' ') + ' Kč';
+const zap = new Set(); let pohled = Object.keys(K.pohledy)[0];
+const tabs = document.getElementById('tabs'), stage = document.getElementById('stage'), seznam = document.getElementById('seznam');
+document.getElementById('vcene').textContent = VCENE.join(' · ');
+for (const [k, p] of Object.entries(K.pohledy)) {
+  const b = document.createElement('button'); b.textContent = p.nazev; b.dataset.p = k; b.onclick = () => { pohled = k; kresli(); }; tabs.appendChild(b);
+  const d = document.createElement('div'); d.className = 'pohled'; d.dataset.p = k;
+  d.innerHTML = '<img alt="" src="' + p.zaklad + '">';
+  for (const it of K.polozky) if (it.vrstva && it.pohled === k) {
+    const im = document.createElement('img'); im.className = 'vrstva'; im.alt = ''; im.src = it.vrstva; im.dataset.id = it.id; d.appendChild(im);
+  }
+  stage.appendChild(d);
+}
+function cena(it) {
+  if (!CENY) return 'cena na dotaz';
+  if (it.cena_kc == null) return 'cena na dotaz';
+  return (it.cena_od ? 'od ' : it.cena_cca ? 'cca ' : '') + fmt(it.cena_kc);
+}
+for (const it of K.polozky) {
+  const li = document.createElement('li'); li.dataset.id = it.id;
+  li.innerHTML = '<label><input type="checkbox" data-id="' + it.id + '"><span><span class="n"></span>' + (it.vrstva ? '' : '<span class="ik">bez obrázku</span>') +
+    '<br><span class="p"></span></span><span class="c"></span></label>';
+  li.querySelector('.n').textContent = it.nazev; li.querySelector('.p').textContent = it.popis; li.querySelector('.c').textContent = cena(it);
+  li.querySelector('input').onchange = e => prepni(it.id, e.target.checked, true);
+  seznam.appendChild(li);
+}
+function prepni(id, on, skok) {
+  const it = K.polozky.find(x => x.id === id);
+  if (on) { zap.add(id); if (it.vyzaduje) zap.add(it.vyzaduje); if (skok && it.vrstva && it.pohled) pohled = it.pohled; }
+  else { zap.delete(id); for (const x of K.polozky) if (x.vyzaduje === id) zap.delete(x.id); }
+  kresli();
+}
+document.getElementById('vse').onclick = () => { K.polozky.forEach(x => zap.add(x.id)); kresli(); };
+document.getElementById('nic').onclick = () => { zap.clear(); kresli(); };
+function kresli() {
+  tabs.querySelectorAll('button').forEach(b => b.classList.toggle('on', b.dataset.p === pohled));
+  stage.querySelectorAll('.pohled').forEach(d => d.classList.toggle('on', d.dataset.p === pohled));
+  stage.querySelectorAll('img.vrstva').forEach(im => im.classList.toggle('on', zap.has(im.dataset.id)));
+  seznam.querySelectorAll('li').forEach(li => { const on = zap.has(li.dataset.id); li.classList.toggle('on', on); li.querySelector('input').checked = on; });
+  const vyb = K.polozky.filter(x => zap.has(x.id));
+  let h = '<div>Základní cena ' + fmt(K.zakladni_cena_kc) + '</div>';
+  if (CENY) {
+    const s = vyb.reduce((a, x) => a + (x.cena_kc || 0), 0), dotaz = vyb.some(x => x.cena_kc == null);
+    h += '<div>Vybrané položky: ' + vyb.length + (vyb.length ? ' (+ ' + fmt(s) + ')' : '') + '</div>' +
+         '<div class="t" id="celkem">' + fmt(K.zakladni_cena_kc + s) + '</div><div style="font-size:12px;opacity:.8">orientačně' + (dotaz ? ', položky „na dotaz“ nezapočteny' : '') + '</div>';
+  } else {
+    h += '<div>Vybrané položky: ' + vyb.length + '</div><div class="t">' + (vyb.length ? 'cena na dotaz' : fmt(K.zakladni_cena_kc)) + '</div>';
+  }
+  document.getElementById('suma').innerHTML = h;
+}
+kresli();
+</script></body></html>

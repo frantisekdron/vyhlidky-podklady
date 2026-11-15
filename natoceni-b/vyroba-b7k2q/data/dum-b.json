@@ -757,5 +757,152 @@
    "stranka_pro_sladka": "https://frantisekdron.github.io/vyhlidky-podklady/schvaleni-b.html",
    "navrh_reklamy": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/reklama-q4m8/"
   }
+ },
+ "konfigurator": {
+  "_pozn": "Konfigurátor domu B – položky na přání a ceny podle odpovědí p. Sládka z 9. 11. 2026 (odpovedi_sladek/2026-11-09_1020_n1m1tb.txt). Ceny zobrazit až po jeho souhlasu (otázka q7 na stránce ke schválení).",
+  "zakladni_cena_kc": 23490000,
+  "zobrazit_ceny": false,
+  "pohledy": {
+   "zahrada": {
+    "nazev": "3D model ze zahrady (západ)",
+    "zaklad": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/konfigurator/zahrada_zaklad.jpg"
+   },
+   "ulice": {
+    "nazev": "3D model od ulice (východ)",
+    "zaklad": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/konfigurator/ulice_zaklad.jpg"
+   },
+   "rez": {
+    "nazev": "řez domem",
+    "zaklad": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/konfigurator/rez_zaklad.jpg"
+   }
+  },
+  "polozky": [
+   {
+    "id": "fve",
+    "nazev": "Fotovoltaika 10 kW s baterií",
+    "popis": "Panely na střeše, jedna baterie v ceně fotovoltaiky.",
+    "cena_kc": 450000,
+    "pohled": "zahrada",
+    "vrstva": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/konfigurator/zahrada_fve.png"
+   },
+   {
+    "id": "propojeni",
+    "nazev": "Propojení s písečnou baterií a ohřevem vody",
+    "popis": "Písečná baterie pod domem je v ceně – s fotovoltaikou začne dávat smysl.",
+    "cena_kc": 25000,
+    "pohled": "rez",
+    "vyzaduje": "fve",
+    "vrstva": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/konfigurator/rez_propojeni.png"
+   },
+   {
+    "id": "baterie",
+    "nazev": "Další baterie k fotovoltaice",
+    "popis": "Každá další baterie.",
+    "cena_kc": 35000,
+    "pohled": null,
+    "vyzaduje": "fve",
+    "vrstva": null
+   },
+   {
+    "id": "tc",
+    "nazev": "Tepelné čerpadlo 16 kW",
+    "popis": "Vytápění a ohřev vody; plynový kotel zůstává jako záloha.",
+    "cena_kc": 450000,
+    "pohled": "zahrada",
+    "vrstva": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/konfigurator/zahrada_tc.png"
+   },
+   {
+    "id": "chlazeni",
+    "nazev": "Chlazení rekuperací",
+    "popis": "Rozvody rekuperace jsou v ceně, chlazení se doplní.",
+    "cena_kc": 85000,
+    "pohled": "rez",
+    "vrstva": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/konfigurator/rez_chlazeni.png"
+   },
+   {
+    "id": "zaluzie",
+    "nazev": "Venkovní žaluzie",
+    "popis": "Na všech oknech.",
+    "cena_kc": 350000,
+    "pohled": "zahrada",
+    "vrstva": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/konfigurator/zahrada_zaluzie.png"
+   },
+   {
+    "id": "zastreseni",
+    "nazev": "Zastřešení bazénu",
+    "popis": "Cena podle vybraného typu.",
+    "cena_kc": 250000,
+    "pohled": "zahrada",
+    "cena_od": true,
+    "vrstva": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/konfigurator/zahrada_zastreseni.png"
+   },
+   {
+    "id": "ohrev",
+    "nazev": "Vyhřívání a solná úprava bazénu",
+    "popis": "Cena na dotaz.",
+    "cena_kc": null,
+    "pohled": "zahrada",
+    "vrstva": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/konfigurator/zahrada_ohrev.png"
+   },
+   {
+    "id": "zavlaha",
+    "nazev": "Dokončení automatické závlahy",
+    "popis": "Rozvody s tryskami jsou v ceně, doplní se ventily, řídicí jednotka a čerpadlo.",
+    "cena_kc": 45000,
+    "pohled": null,
+    "vrstva": null
+   },
+   {
+    "id": "wallbox",
+    "nazev": "Wallbox",
+    "popis": "Nabíjení auta v garáži nebo na stání.",
+    "cena_kc": 15000,
+    "pohled": "ulice",
+    "cena_cca": true,
+    "vrstva": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/konfigurator/ulice_wallbox.png"
+   },
+   {
+    "id": "infrasauna",
+    "nazev": "Infrasauna pro dva",
+    "popis": "Včetně instalace.",
+    "cena_kc": 40000,
+    "pohled": "rez",
+    "cena_cca": true,
+    "vrstva": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/konfigurator/rez_infrasauna.png"
+   },
+   {
+    "id": "kuchyn",
+    "nazev": "Kuchyňská linka a spotřebiče",
+    "popis": "Podle výběru (např. Hanák, SIKO).",
+    "cena_kc": null,
+    "pohled": "rez",
+    "vrstva": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/konfigurator/rez_kuchyn.png"
+   },
+   {
+    "id": "dvere",
+    "nazev": "Interiérové dveře",
+    "popis": "Podle výběru.",
+    "cena_kc": null,
+    "pohled": null,
+    "vrstva": null
+   },
+   {
+    "id": "svitidla",
+    "nazev": "Svítidla",
+    "popis": "Podle výběru.",
+    "cena_kc": null,
+    "pohled": null,
+    "vrstva": null
+   },
+   {
+    "id": "schodiste",
+    "nazev": "Schodiště z terasy na zahradu",
+    "popis": "Přímý sestup z terasy k bazénu.",
+    "cena_kc": 75000,
+    "pohled": "zahrada",
+    "vrstva": null
+   }
+  ],
+  "_pozn_vrstvy": "Obraz = pohledy[pohled].zaklad; zapnutá položka přidá svou vrstvu (PNG s průhledností, stejný rám 1920 × 1200) přes základ téhož pohledu, vrstvy skládat v pořadí pole polozky. vrstva null = položka bez obrázku (jen ikona)."
  }
 }
