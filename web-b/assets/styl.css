@@ -354,7 +354,7 @@ nav a:hover {
   color: #cfb98f;
 }
 .hero h1 {
-  font-size: clamp(78px, min(8.2vw, 13.2vh), 144px);
+  font-size: clamp(56px, 5.7vw, 86px);
   letter-spacing: -0.061em;
   line-height: 1.045;
   margin: 23px 0 19px;
@@ -1323,7 +1323,7 @@ dialog::backdrop {
       linear-gradient(90deg, #0a253c34, transparent 75%);
   }
   .hero h1 {
-    font-size: clamp(67px, 13.8vw, 93px);
+    font-size: clamp(36px, 9.8vw, 62px);
     margin: 14px 0;
     line-height: 1.035;
   }
