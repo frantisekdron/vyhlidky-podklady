@@ -1074,44 +1074,58 @@
     "stav": "ok"
    },
    {
+    "nazev": "Kolo 3 · Dům od ulice",
+    "skupina": "Kolo 3 – ulice",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/70_P1194804_k3_ulice.jpg",
+    "foto": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1194804.jpg",
+    "stav": "ok"
+   },
+   {
+    "nazev": "Kolo 3 · Dům od ulice – schodiště",
+    "skupina": "Kolo 3 – ulice",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/71_P1194761_k3_ulice.jpg",
+    "foto": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1194761.jpg",
+    "stav": "ok"
+   },
+   {
     "nazev": "Kolo 3 · Zahrada s bazénem · varianta A – Střídmá",
     "skupina": "Kolo 3 – vyber variantu: Zahrada s bazénem",
-    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/70_P1194788_k3_A.jpg",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/72_P1194788_k3_A.jpg",
     "foto": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1194788.jpg",
     "stav": "ok"
    },
    {
     "nazev": "Kolo 3 · Zahrada s bazénem · varianta B – Zabydlená",
     "skupina": "Kolo 3 – vyber variantu: Zahrada s bazénem",
-    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/71_P1194788_k3_B.jpg",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/73_P1194788_k3_B.jpg",
     "foto": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1194788.jpg",
     "stav": "ok"
    },
    {
     "nazev": "Kolo 3 · Zahrada s bazénem · varianta C – Zelená",
     "skupina": "Kolo 3 – vyber variantu: Zahrada s bazénem",
-    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/72_P1194788_k3_C.jpg",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/74_P1194788_k3_C.jpg",
     "foto": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1194788.jpg",
     "stav": "ok"
    },
    {
     "nazev": "Kolo 3 · Bazén zblízka · varianta A – Střídmá",
     "skupina": "Kolo 3 – vyber variantu: Bazén zblízka",
-    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/73_P1194790_k3_A.jpg",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/75_P1194790_k3_A.jpg",
     "foto": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1194790.jpg",
     "stav": "ok"
    },
    {
     "nazev": "Kolo 3 · Bazén zblízka · varianta B – Zabydlená",
     "skupina": "Kolo 3 – vyber variantu: Bazén zblízka",
-    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/74_P1194790_k3_B.jpg",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/76_P1194790_k3_B.jpg",
     "foto": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1194790.jpg",
     "stav": "ok"
    },
    {
     "nazev": "Kolo 3 · Bazén zblízka · varianta C – Zelená",
     "skupina": "Kolo 3 – vyber variantu: Bazén zblízka",
-    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/75_P1194790_k3_C.jpg",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/77_P1194790_k3_C.jpg",
     "foto": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1194790.jpg",
     "stav": "ok"
    }
