@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="cs"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow"><title>Dům B · 3D model a vizualizace ke schválení</title><style>@font-face{font-family:Switzer;src:url(schvaleni-b/font/Switzer-Variable.ttf) format("truetype");font-weight:100 900}
+:root{--ink:#16130f;--paper:#f6f1e8;--card:#fffdf8;--line:#e2d9c8;--mute:#6f675b;--wine:#7a1f2b;--gold:#b08a4a;--ok:#2f7a4f;--okbg:#e6f1e9}
+*{box-sizing:border-box}html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font:400 16px/1.45 Switzer,-apple-system,"Helvetica Neue",Arial,sans-serif;overflow-x:hidden}
+.wrap{max-width:980px;margin:0 auto;padding:0 16px 100px}
+.top{position:sticky;top:0;z-index:15;background:rgba(246,241,232,.96);border-bottom:1px solid var(--line);margin:0 -16px;padding:6px 16px;font-size:13.5px;font-weight:700;color:var(--ok)}
+.eyebrow{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--wine);font-weight:700;margin-top:14px}
+h1{font-size:30px;line-height:1.15;margin:4px 0 8px}h2{font-size:23px;margin:30px 0 4px}
+.lead{font-size:17px;margin:0 0 10px}.mute{color:var(--mute);font-size:14.5px;margin:2px 0 8px}
+.box{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:12px 16px;margin:10px 0}
+.box ul{margin:4px 0 0;padding-left:18px}.box li{margin:2px 0}
+.dl{display:inline-flex;align-items:center;min-height:44px;padding:0 16px;border:1.5px solid var(--ink);border-radius:10px;color:var(--ink);font-weight:700;text-decoration:none;background:#fff}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:10px 0}
+.card{background:var(--card);border:1px solid var(--line);border-radius:12px;overflow:hidden;min-width:0}
+.card.ok{border-color:#9cc7ab;background:#f4faf6}.card.up{border-color:var(--gold);background:#fff9ec}
+.pic{display:block;position:relative;background:#ece5d6;cursor:zoom-in}.pic img{width:100%;height:auto;display:block}
+.vz{position:absolute;left:8px;top:8px;background:rgba(22,19,15,.82);color:#fff;font-size:12.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:4px 9px;border-radius:99px;pointer-events:none}
+.cb{padding:9px 12px 12px}.cb h3{font-size:16.5px;margin:0 0 2px}.sub{margin:0 0 6px;color:var(--mute);font-size:14px}
+.qq{margin:8px 0}.qq .sub{color:var(--ink);font-size:15.5px}
+.bt{display:flex;gap:8px;margin:8px 0}
+.bt button{flex:1;font:inherit;font-weight:700;font-size:15.5px;min-height:46px;border:1.5px solid var(--line);background:#fff;border-radius:10px;cursor:pointer;color:var(--ink)}
+.bt button[aria-pressed=true][data-s=ok]{background:var(--ok);border-color:var(--ok);color:#fff}
+.bt button[aria-pressed=true][data-s=up]{background:var(--gold);border-color:var(--gold);color:#1a1712}
+textarea{font:inherit;font-size:16px;border:1.5px solid var(--line);border-radius:9px;padding:10px 11px;background:#fff;width:100%;resize:vertical;min-height:48px;display:block}
+textarea:focus{outline:none;border-color:var(--gold)}
+input[type=text]{font:inherit;font-size:16px;border:1.5px solid var(--line);border-radius:9px;padding:10px 11px;background:#fff;width:100%;min-height:46px}
+input[type=text]:focus{outline:none;border-color:var(--gold)}
+.bar{position:fixed;left:0;right:0;bottom:0;background:rgba(22,19,15,.96);color:#fff;padding:10px 16px;display:flex;gap:10px;align-items:center;justify-content:center;z-index:20}
+.bar button{font:inherit;font-weight:700;font-size:16px;background:var(--gold);color:#1a1712;border:0;border-radius:10px;padding:0 22px;min-height:46px;cursor:pointer}
+.bar button:disabled{opacity:.6}
+#stav{margin:10px 0;font-weight:600}#stav.ok{color:var(--ok)}#stav.err{color:var(--wine)}
+#odeslano .box{border-left:5px solid var(--ok)}#odeslano pre{white-space:pre-wrap;font:inherit;font-size:15px;margin:6px 0 0}
+#lb{position:fixed;inset:0;background:rgba(10,8,6,.95);display:none;z-index:50;touch-action:pan-y}
+#lb.on{display:block}#lbs{position:absolute;inset:0 0 44px 0;overflow:auto;display:flex;align-items:center;justify-content:center;padding:52px 52px 8px}
+#lbs img{max-width:100%;max-height:100%;object-fit:contain;cursor:zoom-in;border-radius:6px}
+#lbs.z{display:block;padding:52px 0 8px}#lbs.z img{max-width:none;max-height:none;width:220%;cursor:zoom-out}
+#lb button{position:absolute;z-index:2;width:48px;height:48px;border:0;border-radius:50%;background:rgba(255,255,255,.18);color:#fff;font-size:26px;line-height:1;cursor:pointer}
+#lbx{top:6px;right:6px}#lbp{left:4px;top:50%;margin-top:-24px}#lbn{right:4px;top:50%;margin-top:-24px}
+#lbc{position:absolute;left:0;right:0;bottom:0;height:44px;display:flex;align-items:center;justify-content:center;color:#fff;font-size:14px;gap:10px;padding:0 12px;text-align:center}
+#lbv{background:#fff;color:#16130f;font-weight:700;font-size:12px;letter-spacing:.06em;text-transform:uppercase;padding:3px 9px;border-radius:99px}
+footer{margin-top:30px;font-size:13px;color:var(--mute)}
+@media (max-width:760px){.grid{grid-template-columns:1fr}h1{font-size:26px}#lbs{padding:52px 6px 8px}#lbp{left:0;top:auto;bottom:48px;margin:0}#lbn{right:0;top:auto;bottom:48px;margin:0}}
+</style></head>
+<body><div class="wrap">
+<div class="top" id="cnt">Odsouhlaseno 0 z 15</div>
+<div class="eyebrow">Vyhlídky Suchdol · dům B · FrantišekDron × Eva Goldšmíd, RE/MAX</div>
+<h1>Dům B · 3D model a vizualizace ke schválení</h1>
+<p class="lead">Dobrý den, pane Sládku, posíláme 3D model domu B a vizualizace k videu. U každé části prosíme o souhlas, nebo napište, co upravit. Co je zatím náš odhad, je označené. Na konci klikněte na Odeslat.</p>
+<h2>1. 3D model domu</h2>
+<p><a class="dl" href="schvaleni-b/Schvaleni_dum_B.pdf" download>Stáhnout celé PDF</a></p>
+<div class="grid"><article class="card" data-id="pl1pp"><a class="pic" href="schvaleni-b/pl1pp.jpg" data-full="schvaleni-b/pl1pp.jpg" data-t="Půdorys 1.PP" data-viz="0"><img src="schvaleni-b/pl1pp_n.jpg" width="600" height="424" alt="Půdorys 1.PP" loading="lazy"></a><div class="cb"><h3>Půdorys 1.PP</h3><p class=sub>Nábytek podle Vašich výkresů.</p><div class="bt"><button type="button" data-s="ok">Souhlasí</button><button type="button" data-s="up">Upravit</button></div><textarea maxlength="3000" rows="2" placeholder="Připomínka" aria-label="Připomínka – Půdorys 1.PP"></textarea></div></article><article class="card" data-id="pl1np"><a class="pic" href="schvaleni-b/pl1np.jpg" data-full="schvaleni-b/pl1np.jpg" data-t="Půdorys 1.NP" data-viz="0"><img src="schvaleni-b/pl1np_n.jpg" width="600" height="424" alt="Půdorys 1.NP" loading="lazy"></a><div class="cb"><h3>Půdorys 1.NP</h3><p class=sub>Nábytek podle Vašich výkresů.</p><div class="bt"><button type="button" data-s="ok">Souhlasí</button><button type="button" data-s="up">Upravit</button></div><textarea maxlength="3000" rows="2" placeholder="Připomínka" aria-label="Připomínka – Půdorys 1.NP"></textarea></div></article><article class="card" data-id="pl2np"><a class="pic" href="schvaleni-b/pl2np.jpg" data-full="schvaleni-b/pl2np.jpg" data-t="Půdorys 2.NP" data-viz="0"><img src="schvaleni-b/pl2np_n.jpg" width="600" height="424" alt="Půdorys 2.NP" loading="lazy"></a><div class="cb"><h3>Půdorys 2.NP</h3><p class=sub>Nábytek podle Vašich výkresů.</p><div class="bt"><button type="button" data-s="ok">Souhlasí</button><button type="button" data-s="up">Upravit</button></div><textarea maxlength="3000" rows="2" placeholder="Připomínka" aria-label="Připomínka – Půdorys 2.NP"></textarea></div></article><article class="card" data-id="pohl"><a class="pic" href="schvaleni-b/pohl.jpg" data-full="schvaleni-b/pohl.jpg" data-t="Pohledy na fasády" data-viz="0"><img src="schvaleni-b/pohl_n.jpg" width="600" height="424" alt="Pohledy na fasády" loading="lazy"></a><div class="cb"><h3>Pohledy na fasády</h3><div class="bt"><button type="button" data-s="ok">Souhlasí</button><button type="button" data-s="up">Upravit</button></div><textarea maxlength="3000" rows="2" placeholder="Připomínka" aria-label="Připomínka – Pohledy na fasády"></textarea></div></article><article class="card" data-id="axon"><a class="pic" href="schvaleni-b/axon.jpg" data-full="schvaleni-b/axon.jpg" data-t="Axonometrie se zahradou" data-viz="0"><img src="schvaleni-b/axon_n.jpg" width="600" height="424" alt="Axonometrie se zahradou" loading="lazy"></a><div class="cb"><h3>Axonometrie se zahradou</h3><div class="bt"><button type="button" data-s="ok">Souhlasí</button><button type="button" data-s="up">Upravit</button></div><textarea maxlength="3000" rows="2" placeholder="Připomínka" aria-label="Připomínka – Axonometrie se zahradou"></textarea></div></article><article class="card" data-id="rozl"><a class="pic" href="schvaleni-b/rozl.jpg" data-full="schvaleni-b/rozl.jpg" data-t="Rozložená podlaží" data-viz="0"><img src="schvaleni-b/rozl_n.jpg" width="600" height="424" alt="Rozložená podlaží" loading="lazy"></a><div class="cb"><h3>Rozložená podlaží</h3><div class="bt"><button type="button" data-s="ok">Souhlasí</button><button type="button" data-s="up">Upravit</button></div><textarea maxlength="3000" rows="2" placeholder="Připomínka" aria-label="Připomínka – Rozložená podlaží"></textarea></div></article></div>
+<h2>2. Co je v ceně a co na přání</h2>
+<p class="mute">Takhle to ukážeme ve videu. Prosíme, zkontrolujte popisky.</p>
+<div class="grid"><article class="card" data-id="rez"><a class="pic" href="schvaleni-b/rez.jpg" data-full="schvaleni-b/rez.jpg" data-t="V ceně – řez domem" data-viz="0"><img src="schvaleni-b/rez_n.jpg" width="600" height="375" alt="V ceně – řez domem" loading="lazy"></a><div class="cb"><h3>V ceně – řez domem</h3><div class="bt"><button type="button" data-s="ok">Souhlasí</button><button type="button" data-s="up">Upravit</button></div><textarea maxlength="3000" rows="2" placeholder="Připomínka" aria-label="Připomínka – V ceně – řez domem"></textarea></div></article><article class="card" data-id="vcene"><a class="pic" href="schvaleni-b/vcene.jpg" data-full="schvaleni-b/vcene.jpg" data-t="V ceně" data-viz="0"><img src="schvaleni-b/vcene_n.jpg" width="600" height="375" alt="V ceně" loading="lazy"></a><div class="cb"><h3>V ceně</h3><div class="bt"><button type="button" data-s="ok">Souhlasí</button><button type="button" data-s="up">Upravit</button></div><textarea maxlength="3000" rows="2" placeholder="Připomínka" aria-label="Připomínka – V ceně"></textarea></div></article><article class="card" data-id="zahr"><a class="pic" href="schvaleni-b/zahr.jpg" data-full="schvaleni-b/zahr.jpg" data-t="Na přání – zahrada" data-viz="0"><img src="schvaleni-b/zahr_n.jpg" width="600" height="375" alt="Na přání – zahrada" loading="lazy"></a><div class="cb"><h3>Na přání – zahrada</h3><div class="bt"><button type="button" data-s="ok">Souhlasí</button><button type="button" data-s="up">Upravit</button></div><textarea maxlength="3000" rows="2" placeholder="Připomínka" aria-label="Připomínka – Na přání – zahrada"></textarea></div></article><article class="card" data-id="ulice"><a class="pic" href="schvaleni-b/ulice.jpg" data-full="schvaleni-b/ulice.jpg" data-t="Na přání – ulice" data-viz="0"><img src="schvaleni-b/ulice_n.jpg" width="600" height="375" alt="Na přání – ulice" loading="lazy"></a><div class="cb"><h3>Na přání – ulice</h3><div class="bt"><button type="button" data-s="ok">Souhlasí</button><button type="button" data-s="up">Upravit</button></div><textarea maxlength="3000" rows="2" placeholder="Připomínka" aria-label="Připomínka – Na přání – ulice"></textarea></div></article></div>
+<h2>3. Vizualizace</h2>
+<p class="mute">Vizualizace – návrh zařízení, není součástí dodávky.</p>
+<div class="grid"><article class="card" data-id="viz1"><a class="pic" href="schvaleni-b/viz1.jpg" data-full="schvaleni-b/viz1.jpg" data-t="Pokoj SV (ke schodišti)" data-viz="1"><img src="schvaleni-b/viz1_n.jpg" width="600" height="400" alt="Pokoj SV (ke schodišti)" loading="lazy"><span class="vz">Vizualizace</span></a><div class="cb"><h3>Pokoj SV (ke schodišti)</h3><div class="bt"><button type="button" data-s="ok">Souhlasí</button><button type="button" data-s="up">Upravit</button></div><textarea maxlength="3000" rows="2" placeholder="Připomínka" aria-label="Připomínka – Pokoj SV (ke schodišti)"></textarea></div></article><article class="card" data-id="viz2"><a class="pic" href="schvaleni-b/viz2.jpg" data-full="schvaleni-b/viz2.jpg" data-t="Pokoj JV (výhled na louky)" data-viz="1"><img src="schvaleni-b/viz2_n.jpg" width="600" height="399" alt="Pokoj JV (výhled na louky)" loading="lazy"><span class="vz">Vizualizace</span></a><div class="cb"><h3>Pokoj JV (výhled na louky)</h3><div class="bt"><button type="button" data-s="ok">Souhlasí</button><button type="button" data-s="up">Upravit</button></div><textarea maxlength="3000" rows="2" placeholder="Připomínka" aria-label="Připomínka – Pokoj JV (výhled na louky)"></textarea></div></article><article class="card" data-id="viz3"><a class="pic" href="schvaleni-b/viz3.jpg" data-full="schvaleni-b/viz3.jpg" data-t="Zahrada s bazénem – den" data-viz="1"><img src="schvaleni-b/viz3_n.jpg" width="600" height="399" alt="Zahrada s bazénem – den" loading="lazy"><span class="vz">Vizualizace</span></a><div class="cb"><h3>Zahrada s bazénem – den</h3><div class="bt"><button type="button" data-s="ok">Souhlasí</button><button type="button" data-s="up">Upravit</button></div><textarea maxlength="3000" rows="2" placeholder="Připomínka" aria-label="Připomínka – Zahrada s bazénem – den"></textarea></div></article><article class="card" data-id="viz4"><a class="pic" href="schvaleni-b/viz4.jpg" data-full="schvaleni-b/viz4.jpg" data-t="Zahrada s bazénem – soumrak" data-viz="1"><img src="schvaleni-b/viz4_n.jpg" width="600" height="399" alt="Zahrada s bazénem – soumrak" loading="lazy"><span class="vz">Vizualizace</span></a><div class="cb"><h3>Zahrada s bazénem – soumrak</h3><div class="bt"><button type="button" data-s="ok">Souhlasí</button><button type="button" data-s="up">Upravit</button></div><textarea maxlength="3000" rows="2" placeholder="Připomínka" aria-label="Připomínka – Zahrada s bazénem – soumrak"></textarea></div></article><article class="card" data-id="viz5"><a class="pic" href="schvaleni-b/viz5.jpg" data-full="schvaleni-b/viz5.jpg" data-t="Fasáda a bazén zblízka – den" data-viz="1"><img src="schvaleni-b/viz5_n.jpg" width="600" height="399" alt="Fasáda a bazén zblízka – den" loading="lazy"><span class="vz">Vizualizace</span></a><div class="cb"><h3>Fasáda a bazén zblízka – den</h3><div class="bt"><button type="button" data-s="ok">Souhlasí</button><button type="button" data-s="up">Upravit</button></div><textarea maxlength="3000" rows="2" placeholder="Připomínka" aria-label="Připomínka – Fasáda a bazén zblízka – den"></textarea></div></article></div>
+<h2>4. Několik upřesnění</h2>
+<div class="card qq" data-q="q1"><div class="cb"><h3>Sauna</h3><p class="sub">Je místo pro saunu v technickém koutě garáže vedle kotle?</p><textarea maxlength="3000" rows="2" placeholder="Odpověď" aria-label="Odpověď – Sauna"></textarea></div></div>
+<div class="card qq" data-q="q2"><div class="cb"><h3>Schodiště od ulice na balkon v 1.NP</h3><p class="sub">Bude u domu B? Kde a kdy?</p><textarea maxlength="3000" rows="2" placeholder="Odpověď" aria-label="Odpověď – Schodiště od ulice na balkon v 1.NP"></textarea></div></div>
+<div class="card qq" data-q="q3"><div class="cb"><h3>Písečná baterie</h3><p class="sub">Kde přesně pod domem je a jak je velká?</p><textarea maxlength="3000" rows="2" placeholder="Odpověď" aria-label="Odpověď – Písečná baterie"></textarea></div></div>
+<div class="card qq" data-q="q4"><div class="cb"><h3>Garsonka</h3><p class="sub">V podkladech je 13,7 m², z výkresu nám vychází menší. Která plocha platí?</p><textarea maxlength="3000" rows="2" placeholder="Odpověď" aria-label="Odpověď – Garsonka"></textarea></div></div>
+<div class="card qq" data-q="q5"><div class="cb"><h3>Modrá deska vedle bazénu</h3><p class="sub">Je to technický poklop, který zůstane?</p><textarea maxlength="3000" rows="2" placeholder="Odpověď" aria-label="Odpověď – Modrá deska vedle bazénu"></textarea></div></div>
+<div class="card qq" data-q="q6"><div class="cb"><h3>Kamerový systém v ceně</h3><p class="sub">Je to videotelefon u branky, nebo i kamery?</p><textarea maxlength="3000" rows="2" placeholder="Odpověď" aria-label="Odpověď – Kamerový systém v ceně"></textarea></div></div>
+<h2>5. Výkresy, které by nám pomohly</h2><div class="box"><p style="margin:0 0 4px">Stačí PDF, ideálně i DWG. Pošlete je prosím odpovědí na náš e-mail.</p><ul><li>půdorysy všech tří podlaží s kótami</li><li>řez domem s výškami a pohledy na fasády</li><li>situace se zahradou, bazénem a výškami terénu</li><li>kde je rekuperační jednotka, rozvaděč a Loxone</li><li>kam by přišla fotovoltaika a tepelné čerpadlo</li></ul></div>
+<div class="card qq"><div class="cb"><h3>Jiná poznámka</h3><textarea id="pozn" maxlength="3000" rows="4" aria-label="Jiná poznámka"></textarea></div></div>
+<p id="stav" role="status"></p>
+<label class="box" style="display:block"><b>Vyplnil</b><input type="text" id="kdo" name="kdo" value="Jiří Sládek" autocomplete="name"></label>
+<div id="odeslano"></div>
+<footer>Odpovědi vidí jen FrantišekDron a Eva Goldšmíd. Vyplněné se průběžně ukládá v tomto prohlížeči.</footer>
+</div>
+<div class="bar"><button type="button" id="se">Odeslat</button></div>
+<div id="lb" role="dialog" aria-modal="true" aria-label="Zvětšený obrázek"><div id="lbs"><img alt=""></div>
+<button type="button" id="lbx" aria-label="Zavřít">×</button><button type="button" id="lbp" aria-label="Předchozí">‹</button><button type="button" id="lbn" aria-label="Další">›</button>
+<div id="lbc"><span id="lbv">Vizualizace</span><span id="lbt"></span></div></div>
+<script>
+(function(){
+  var TOPIC=(new URLSearchParams(location.search).get('t'))||'fd-suchdol-b-cd888f2709', REAL='fd-suchdol-b-cd888f2709', FDB='fdboard-1698757f87bc', TEST=TOPIC!==REAL, ZAL=TOPIC+'-zaloha';
+  var D={"sekce": [["1. 3D model domu", [["pl1pp", "Půdorys 1.PP"], ["pl1np", "Půdorys 1.NP"], ["pl2np", "Půdorys 2.NP"], ["pohl", "Pohledy na fasády"], ["axon", "Axonometrie se zahradou"], ["rozl", "Rozložená podlaží"]]], ["2. Co je v ceně a co na přání", [["rez", "V ceně – řez domem"], ["vcene", "V ceně"], ["zahr", "Na přání – zahrada"], ["ulice", "Na přání – ulice"]]], ["3. Vizualizace", [["viz1", "Pokoj SV (ke schodišti)"], ["viz2", "Pokoj JV (výhled na louky)"], ["viz3", "Zahrada s bazénem – den"], ["viz4", "Zahrada s bazénem – soumrak"], ["viz5", "Fasáda a bazén zblízka – den"]]]], "otazky": [["q1", "Sauna", "Je místo pro saunu v technickém koutě garáže vedle kotle?"], ["q2", "Schodiště od ulice na balkon v 1.NP", "Bude u domu B? Kde a kdy?"], ["q3", "Písečná baterie", "Kde přesně pod domem je a jak je velká?"], ["q4", "Garsonka", "V podkladech je 13,7 m², z výkresu nám vychází menší. Která plocha platí?"], ["q5", "Modrá deska vedle bazénu", "Je to technický poklop, který zůstane?"], ["q6", "Kamerový systém v ceně", "Je to videotelefon u branky, nebo i kamery?"]]}, K='fd_suchdol_b_schvaleni_'+TOPIC;
+  var cards=[].slice.call(document.querySelectorAll('.card[data-id]')), qs=[].slice.call(document.querySelectorAll('.card[data-q]'));
+  var pozn=document.getElementById('pozn'), kdo=document.getElementById('kdo');
+  function get(){var o={i:{},q:{},pozn:pozn.value,kdo:kdo.value};
+    cards.forEach(function(c){var s=c.dataset.s||'',t=c.querySelector('textarea').value;if(s||t)o.i[c.dataset.id]={s:s,c:t}});
+    qs.forEach(function(c){var t=c.querySelector('textarea').value;if(t)o.q[c.dataset.q]=t});return o}
+  function save(){try{localStorage.setItem(K,JSON.stringify(get()))}catch(e){}}
+  function setS(c,s){c.dataset.s=s;c.classList.toggle('ok',s==='ok');c.classList.toggle('up',s==='up');
+    [].forEach.call(c.querySelectorAll('.bt button'),function(b){b.setAttribute('aria-pressed',b.dataset.s===s?'true':'false')})}
+  function upd(){var n=cards.filter(function(c){return c.dataset.s==='ok'}).length;document.getElementById('cnt').textContent='Odsouhlaseno '+n+' z '+cards.length}
+  (function load(){var o={};try{o=JSON.parse(localStorage.getItem(K)||'{}')}catch(e){}
+    cards.forEach(function(c){var x=(o.i||{})[c.dataset.id];if(x){setS(c,x.s||'');c.querySelector('textarea').value=x.c||''}else setS(c,'')});
+    qs.forEach(function(c){c.querySelector('textarea').value=(o.q||{})[c.dataset.q]||''});
+    if(o.pozn)pozn.value=o.pozn;if(o.kdo!=null)kdo.value=o.kdo;upd()})();
+  cards.forEach(function(c){[].forEach.call(c.querySelectorAll('.bt button'),function(b){b.addEventListener('click',function(){
+    var s=b.dataset.s;setS(c,c.dataset.s===s?'':s);if(s==='up'&&c.dataset.s==='up')c.querySelector('textarea').focus({preventScroll:false});upd();save()})})});
+  document.addEventListener('input',function(e){if(e.target.matches('textarea,#kdo')){save()}});
+  window.addEventListener('pageshow',function(){upd()});
+
+  /* tichá záloha: stejný uzávěr, takže ZAL je v dosahu */
+  var lastBk='';try{lastBk=localStorage.getItem(K+'_bk')||''}catch(e){}
+  var seq=0;
+  function backup(){
+    var o=get(),fresh={i:o.i,q:o.q,pozn:o.pozn,kdo:o.kdo},js=JSON.stringify(fresh);
+    if(js===lastBk)return;
+    var empty=!Object.keys(o.i).length&&!Object.keys(o.q).length&&!o.pozn;if(empty&&!lastBk){return}
+    lastBk=js;try{localStorage.setItem(K+'_bk',js)}catch(e){}
+    var id=Date.now().toString(36)+(seq++),parts=[],S=1500;for(var p=0;p<js.length;p+=S)parts.push(js.slice(p,p+S));
+    parts.forEach(function(pt,i){
+      var url='https://ntfy.sh/'+ZAL+'?priority=1&title='+encodeURIComponent('Zaloha B · '+(i+1)+'/'+parts.length+' · #'+id);
+      var ok=false;try{ok=navigator.sendBeacon&&navigator.sendBeacon(url,new Blob([pt],{type:'text/plain;charset=UTF-8'}))}catch(e){}
+      if(!ok){try{fetch(url,{method:'POST',body:pt,keepalive:true,headers:{'Content-Type':'text/plain;charset=UTF-8'}}).catch(function(){})}catch(e){}}
+    })}
+  document.addEventListener('visibilitychange',function(){if(document.visibilityState==='hidden')backup()});
+  window.addEventListener('pagehide',backup);
+  setInterval(backup,120000);
+  window.__backup=backup;
+
+  /* souhrn */
+  function text(){var o=get(),r=[];r.push('Vyplnil: '+(o.kdo.trim()||'p. Sládek'));
+    var n=cards.filter(function(c){return c.dataset.s==='ok'}).length;r.push('Odsouhlaseno '+n+' z '+cards.length);
+    D.sekce.forEach(function(s){r.push('','## '+s[0]);s[1].forEach(function(it){var x=o.i[it[0]]||{s:'',c:''},c=(x.c||'').trim();
+      r.push('- '+it[1]+' – '+(x.s==='ok'?'Souhlasí':x.s==='up'?'Upravit':'bez vyjádření')+(c?' – '+c:''))})});
+    r.push('','## 4. Upřesnění');D.otazky.forEach(function(q,i){var a=(o.q[q[0]]||'').trim();r.push((i+1)+'. '+q[1]+': '+(a||'bez odpovědi'))});
+    var pz=o.pozn.trim();r.push('','## Jiná poznámka',pz||'–');return r.join('\n')}
+  function post(topic,title,msg,tags){return fetch('https://ntfy.sh/',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({topic:topic,title:title,message:msg,tags:tags,priority:4})}).then(function(r){if(!r.ok)throw new Error('HTTP '+r.status)})}
+  function blen(s){return new TextEncoder().encode(s).length}
+  function split(t){var parts=[],cur='';t.split('\n').forEach(function(l){while(l.length>1200){var h=l.slice(0,1200);l=l.slice(1200);cur=add(cur,h,parts)}cur=add(cur,l,parts)});if(cur)parts.push(cur);return parts}
+  function add(cur,l,parts){if(blen(cur+'\n'+l)>3600){parts.push(cur);cur=''}return cur+(cur?'\n':'')+l}
+  var se=document.getElementById('se');
+  se.addEventListener('click',function(){
+    var t=text(),id=Math.random().toString(36).slice(2,8),parts=split(t),b=this,st=document.getElementById('stav');
+    b.disabled=true;st.className='';st.textContent='Odesílám…';
+    var chain=Promise.resolve();parts.forEach(function(p,i){chain=chain.then(function(){return post(TOPIC,'Schválení B · '+(i+1)+'/'+parts.length+' · #'+id,p,['house'])})});
+    chain.then(function(){if(FDB&&!TEST)return post(FDB,'Suchdol B · p. Sládek odeslal schválení','Odpovědi: https://frantisekdron.github.io/vyhlidky-podklady/schvaleni-b.html#odeslano',['house','white_check_mark']).catch(function(){})})
+    .then(function(){st.className='ok';st.textContent='Odesláno. Děkujeme! Odpovědi vidíte dole v části „Odesláno“ a můžete je kdykoli doplnit a poslat znovu.';
+      try{localStorage.setItem(K+'_sent',JSON.stringify({cas:new Date().toLocaleString('cs-CZ'),text:t}))}catch(e){};show();var bt=b.textContent;b.textContent='✓ Odesláno';setTimeout(function(){b.textContent=bt;b.disabled=false},15000)})
+    .catch(function(e){st.className='err';st.textContent='Nepodařilo se odeslat ('+e.message+'). Zkuste to prosím znovu, vyplněné zůstává uložené.';b.disabled=false});
+  });
+  function render(list){var el=document.getElementById('odeslano');if(!list.length){el.innerHTML='';return}
+    el.innerHTML='<h2>Odesláno</h2>'+list.map(function(s){return '<div class="box"><b>'+s.cas+'</b><pre></pre></div>'}).join('');
+    [].forEach.call(el.querySelectorAll('pre'),function(p,i){p.textContent=list[i].text})}
+  function show(){var loc=null;try{loc=JSON.parse(localStorage.getItem(K+'_sent')||'null')}catch(e){}
+    fetch('https://ntfy.sh/'+TOPIC+'/json?poll=1&since=12h').then(function(r){return r.text()}).then(function(tx){
+      var g={};tx.split('\n').forEach(function(l){if(!l.trim())return;var m;try{m=JSON.parse(l)}catch(e){return}if(m.event!=='message')return;
+        var mm=/(\d+)\/(\d+) · #(\w+)/.exec(m.title||'');if(!mm)return;var k=mm[3];g[k]=g[k]||{n:+mm[2],p:{},t:m.time};g[k].p[+mm[1]]=m.message});
+      var list=Object.keys(g).map(function(k){var x=g[k],a=[];for(var i=1;i<=x.n;i++)a.push(x.p[i]||'[chybí část '+i+']');return {t:x.t,cas:new Date(x.t*1000).toLocaleString('cs-CZ'),text:a.join('\n')}}).sort(function(a,b){return b.t-a.t});
+      var vid={};list=list.filter(function(x){if(vid[x.text])return false;vid[x.text]=1;return true});if(!list.length&&loc)list=[loc];render(list.slice(0,3))}).catch(function(){if(loc)render([loc])})}
+  show();
+
+  /* lupa */
+  var pics=[].slice.call(document.querySelectorAll('a.pic')),lb=document.getElementById('lb'),lbs=document.getElementById('lbs'),li=lbs.querySelector('img'),cur=-1;
+  function open(i){cur=(i+pics.length)%pics.length;var a=pics[cur];lbs.classList.remove('z');li.src=a.dataset.full;li.alt=a.dataset.t;lb.classList.add('on');document.body.style.overflow='hidden';
+    document.getElementById('lbt').textContent=a.dataset.t+' ('+(cur+1)+'/'+pics.length+')';document.getElementById('lbv').style.display=a.dataset.viz==='1'?'':'none';
+    [1,-1].forEach(function(d){var n=pics[(cur+d+pics.length)%pics.length];(new Image()).src=n.dataset.full})}
+  function close(){lb.classList.remove('on');li.removeAttribute('src');document.body.style.overflow='';cur=-1}
+  pics.forEach(function(a,i){a.addEventListener('click',function(e){e.preventDefault();open(i)})});
+  document.getElementById('lbx').addEventListener('click',close);
+  document.getElementById('lbp').addEventListener('click',function(){open(cur-1)});
+  document.getElementById('lbn').addEventListener('click',function(){open(cur+1)});
+  li.addEventListener('click',function(e){e.stopPropagation();lbs.classList.toggle('z')});
+  lbs.addEventListener('click',function(e){if(e.target===lbs)close()});
+  document.addEventListener('keydown',function(e){if(cur<0)return;if(e.key==='Escape')close();else if(e.key==='ArrowLeft')open(cur-1);else if(e.key==='ArrowRight')open(cur+1)});
+  var sx=null,sy=0;lb.addEventListener('touchstart',function(e){sx=e.touches.length===1?e.touches[0].clientX:null;sy=e.touches[0].clientY},{passive:true});
+  lb.addEventListener('touchend',function(e){if(sx==null||lbs.classList.contains('z'))return;var dx=e.changedTouches[0].clientX-sx,dy=e.changedTouches[0].clientY-sy;sx=null;
+    if(Math.abs(dx)>50&&Math.abs(dx)>Math.abs(dy)*1.5)open(cur+(dx<0?1:-1))},{passive:true});
+})();
+</script>
+</body></html>
