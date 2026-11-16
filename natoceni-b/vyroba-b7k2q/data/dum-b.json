@@ -591,15 +591,6 @@
   ],
   "vizualizace": [
    {
-    "nazev": "Obývací prostor",
-    "skupina": "Interiér",
-    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/80_P1194937.jpg",
-    "foto": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1194937.jpg",
-    "stav": "ok",
-    "id": "P1194937",
-    "audit": "2026-11-16 02:35"
-   },
-   {
     "nazev": "Obývací prostor – ke schodišti",
     "skupina": "Interiér",
     "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/26_P1194950_viz2.jpg",
@@ -611,7 +602,7 @@
    {
     "nazev": "Obývací prostor – od kuchyně",
     "skupina": "Interiér",
-    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/81_P1194931.jpg",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/80_P1194931.jpg",
     "foto": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1194931.jpg",
     "stav": "ok",
     "id": "P1194931",
@@ -620,7 +611,7 @@
    {
     "nazev": "Ložnice",
     "skupina": "Interiér",
-    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/82_P1194836.jpg",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/81_P1194836.jpg",
     "foto": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1194836.jpg",
     "stav": "ok",
     "id": "P1194836",
@@ -663,9 +654,54 @@
     "audit": "2026-11-16 01:07"
    },
    {
+    "nazev": "Zahrada s bazénem",
+    "skupina": "Exteriér",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/83_P1194788.jpg",
+    "foto": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1194788.jpg",
+    "stav": "ok",
+    "id": "P1194788",
+    "audit": "2026-11-16 02:51"
+   },
+   {
+    "nazev": "Bazén a terasy",
+    "skupina": "Exteriér",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/84_P1194790.jpg",
+    "foto": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1194790.jpg",
+    "stav": "ok",
+    "id": "P1194790",
+    "audit": "2026-11-16 02:51"
+   },
+   {
+    "nazev": "Dům se zahradou z dronu",
+    "skupina": "Exteriér",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/86_dron_0741.jpg",
+    "foto": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/86_foto.jpg",
+    "stav": "ok",
+    "id": "dron_0741",
+    "audit": "2026-11-16 02:51"
+   },
+   {
+    "nazev": "Dům v okolí z dronu",
+    "skupina": "Exteriér",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/87_dron_0743.jpg",
+    "foto": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/87_foto.jpg",
+    "stav": "ok",
+    "id": "dron_0743",
+    "audit": "2026-11-16 02:51"
+   },
+   {
+    "nazev": "Dům a Praha v dálce z dronu",
+    "skupina": "Exteriér",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/88_dron_0724.jpg",
+    "foto": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/88_foto.jpg",
+    "stav": "ok",
+    "id": "dron_0724",
+    "audit": "2026-11-16 02:51"
+   },
+   {
     "nazev": "Dům od ulice",
     "skupina": "Exteriér",
-    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/79_P1194804.jpg",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/78_P1194804.jpg",
     "foto": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1194804.jpg",
     "stav": "ok",
     "id": "P1194804",
