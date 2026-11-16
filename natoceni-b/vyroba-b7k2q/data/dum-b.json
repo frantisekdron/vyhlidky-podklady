@@ -681,6 +681,15 @@
     "audit": "2026-11-16 12:31"
    },
    {
+    "nazev": "Bazén a terasy",
+    "skupina": "Exteriér",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/83_P1194790.jpg",
+    "foto": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1194790.jpg",
+    "stav": "ok",
+    "id": "P1194790",
+    "audit": "2026-11-16 12:31"
+   },
+   {
     "nazev": "Dům se zahradou z dronu",
     "skupina": "Exteriér",
     "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/84_dron_0741.jpg",
@@ -706,6 +715,15 @@
     "stav": "ok",
     "id": "dron_0724",
     "audit": "2026-11-16 02:51"
+   },
+   {
+    "nazev": "Dům od ulice",
+    "skupina": "Exteriér",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/78_P1194804.jpg",
+    "foto": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1194804.jpg",
+    "stav": "ok",
+    "id": "P1194804",
+    "audit": "2026-11-16 12:31"
    },
    {
     "nazev": "Dům od vjezdu se schodištěm",
