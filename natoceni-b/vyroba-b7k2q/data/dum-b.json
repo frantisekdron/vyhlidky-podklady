@@ -593,11 +593,11 @@
    {
     "nazev": "Obývací prostor",
     "skupina": "Interiér",
-    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/46_P1194937_k3_E.jpg",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/80_P1194937.jpg",
     "foto": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1194937.jpg",
     "stav": "ok",
-    "id": "P1194937_k3_E",
-    "audit": "2026-11-16 01:40"
+    "id": "P1194937",
+    "audit": "2026-11-16 02:35"
    },
    {
     "nazev": "Obývací prostor – ke schodišti",
@@ -611,20 +611,20 @@
    {
     "nazev": "Obývací prostor – od kuchyně",
     "skupina": "Interiér",
-    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/57_P1194931_k3_S2.jpg",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/81_P1194931.jpg",
     "foto": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1194931.jpg",
     "stav": "ok",
-    "id": "P1194931_k3_S2",
-    "audit": "2026-11-16 01:40"
+    "id": "P1194931",
+    "audit": "2026-11-16 02:35"
    },
    {
     "nazev": "Ložnice",
     "skupina": "Interiér",
-    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/61_P1194836_k3_S2.jpg",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/82_P1194836.jpg",
     "foto": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1194836.jpg",
     "stav": "ok",
-    "id": "P1194836_k3_S2",
-    "audit": "2026-11-16 01:40"
+    "id": "P1194836",
+    "audit": "2026-11-16 02:35"
    },
    {
     "nazev": "Pokoj",
