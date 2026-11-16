@@ -602,7 +602,7 @@
    {
     "nazev": "Obývací prostor – ke schodišti",
     "skupina": "Interiér",
-    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/89_P1194950.jpg",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/87_P1194950.jpg",
     "foto": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1194950.jpg",
     "stav": "ok",
     "id": "P1194950",
@@ -665,16 +665,25 @@
    {
     "nazev": "Zahrada s bazénem",
     "skupina": "Exteriér",
-    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/83_P1194788.jpg",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/82_P1194788.jpg",
     "foto": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1194788.jpg",
     "stav": "ok",
     "id": "P1194788",
     "audit": "2026-11-16 02:51"
    },
    {
+    "nazev": "Zahrada s bazénem – večer",
+    "skupina": "Exteriér",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/89_P1194788_vecer.jpg",
+    "foto": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1194788.jpg",
+    "stav": "ok",
+    "id": "P1194788_vecer",
+    "audit": "2026-11-16 03:24"
+   },
+   {
     "nazev": "Bazén a terasy",
     "skupina": "Exteriér",
-    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/84_P1194790.jpg",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/83_P1194790.jpg",
     "foto": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1194790.jpg",
     "stav": "ok",
     "id": "P1194790",
@@ -683,8 +692,8 @@
    {
     "nazev": "Dům se zahradou z dronu",
     "skupina": "Exteriér",
-    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/86_dron_0741.jpg",
-    "foto": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/86_foto.jpg",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/84_dron_0741.jpg",
+    "foto": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/84_foto.jpg",
     "stav": "ok",
     "id": "dron_0741",
     "audit": "2026-11-16 02:51"
@@ -692,8 +701,8 @@
    {
     "nazev": "Dům v okolí z dronu",
     "skupina": "Exteriér",
-    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/87_dron_0743.jpg",
-    "foto": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/87_foto.jpg",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/85_dron_0743.jpg",
+    "foto": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/85_foto.jpg",
     "stav": "ok",
     "id": "dron_0743",
     "audit": "2026-11-16 02:51"
@@ -701,8 +710,8 @@
    {
     "nazev": "Dům a Praha v dálce z dronu",
     "skupina": "Exteriér",
-    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/88_dron_0724.jpg",
-    "foto": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/88_foto.jpg",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/86_dron_0724.jpg",
+    "foto": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/86_foto.jpg",
     "stav": "ok",
     "id": "dron_0724",
     "audit": "2026-11-16 02:51"
@@ -715,6 +724,15 @@
     "stav": "ok",
     "id": "P1194804",
     "audit": "2026-11-16 01:40"
+   },
+   {
+    "nazev": "Dům od vjezdu se schodištěm",
+    "skupina": "Exteriér",
+    "url": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/viz/88_P1194761.jpg",
+    "foto": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/foto/P1194761.jpg",
+    "stav": "ok",
+    "id": "P1194761",
+    "audit": "2026-11-16 03:24"
    }
   ],
   "model3d": [
