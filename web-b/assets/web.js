@@ -124,7 +124,11 @@ function vykresliUvod(f, fotky, viz) {
   el("cena").textContent = mena(f.cena_kc);
   kontaktniOdkaz("hero-tel", f.makler.telefon);
   const staty = [
-    ["layout", f.typ.match(/\d+\s*\+\s*(?:kk|\d+)/i)?.[0], "Dispozice"],
+    [
+      "layout",
+      f.dispozice || f.typ.match(/\d+\s*\+\s*(?:kk|\d+)/i)?.[0],
+      "Dispozice",
+    ],
     ["area", f.plochy.uzitna_m2 + " m²", "Užitná plocha"],
     ["land", f.plochy.pozemek_m2 + " m²", "Pozemek"],
     [
