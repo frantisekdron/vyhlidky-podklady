@@ -25,12 +25,12 @@
   },
   "bazen": "venkovní zapuštěný 3 × 6 m",
   "v_cene": [
-   "železobetonové obvodové zdi 20 cm + zateplení",
+   "železobetonové obvodové zdi 20 cm + zateplení 16 cm (šedý fasádní polystyren)",
    "podlahové topení ve všech podlažích",
-   "rekuperace (jednotka Licon + rozvody)",
-   "chytré řízení Loxone – základní funkce",
-   "písečná akumulační baterie pod domem (smysl dává v kombinaci s fotovoltaikou)",
-   "plynový kotel jako záložní zdroj",
+   "rekuperace (jednotka ve výklenku v garáži + rozvody)",
+   "chytrá domácnost Loxone v základním provedení (světla, garážová vrata, vrátný k vrátkům, venkovní žaluzie, pokud budou objednány); nadstavby za příplatek",
+   "podzemní akumulační nádrž pod domem (husté potrubí s vodou v pískovém loži, tepelně izolované; aktivuje se po instalaci fotovoltaiky a zlevní ohřev teplé vody)",
+   "plynový kotel jako hlavní zdroj tepla (záložním se stane až po instalaci tepelného čerpadla)",
    "vinylové podlahy",
    "hotové koupelny (obklady, sanita)",
    "garážová vrata s pohonem",
@@ -43,14 +43,15 @@
   "na_prani": [
    "fotovoltaika 10 kW s baterií",
    "tepelné čerpadlo",
-   "chlazení rekuperací",
+   "přídavná chladicí jednotka k rekuperaci",
    "venkovní žaluzie",
    "kuchyňská linka a spotřebiče (např. Hanák, SIKO)",
    "interiérové dveře",
    "svítidla",
    "infrasauna",
    "zastřešení bazénu",
-   "vyhřívání bazénu",
+   "přihřívání bazénu tepelným čerpadlem, solnička, protiproud",
+   "markýzy nad balkony ve 2.NP",
    "dokončení automatické závlahy",
    "wallbox",
    "schodiště z terasy do zahrady"
@@ -997,8 +998,8 @@
    },
    {
     "id": "propojeni",
-    "nazev": "Propojení s písečnou baterií a ohřevem vody",
-    "popis": "Písečná baterie pod domem je v ceně – s fotovoltaikou začne dávat smysl.",
+    "nazev": "Propojení FVE s podzemní akumulační nádrží",
+    "popis": "Podzemní akumulační nádrž pod domem je v ceně – aktivuje se po instalaci fotovoltaiky a zlevní ohřev teplé vody.",
     "cena_kc": 25000,
     "pohled": "rez",
     "vyzaduje": "fve",
@@ -1016,14 +1017,14 @@
    {
     "id": "tc",
     "nazev": "Tepelné čerpadlo 16 kW",
-    "popis": "Vytápění a ohřev vody; plynový kotel zůstává jako záloha.",
+    "popis": "Vytápění a ohřev vody; plynový kotel (dnes hlavní zdroj) se stane zálohou. Přibude akumulační nádrž.",
     "cena_kc": 450000,
     "pohled": "zahrada",
     "vrstva": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/konfigurator/zahrada_tc.png"
    },
    {
     "id": "chlazeni",
-    "nazev": "Chlazení rekuperací",
+    "nazev": "Přídavná chladicí jednotka k rekuperaci",
     "popis": "Rozvody rekuperace jsou v ceně, chlazení se doplní.",
     "cena_kc": 85000,
     "pohled": "rez",
@@ -1048,7 +1049,7 @@
    },
    {
     "id": "ohrev",
-    "nazev": "Vyhřívání a solná úprava bazénu",
+    "nazev": "Přihřívání bazénu tepelným čerpadlem, solnička, protiproud",
     "popis": "Cena na dotaz.",
     "cena_kc": null,
     "pohled": "zahrada",
@@ -1107,7 +1108,7 @@
    {
     "id": "schodiste",
     "nazev": "Schodiště z terasy do zahrady",
-    "popis": "Ocelové schodiště se skleněným zábradlím ze severního konce terasy do zahrady.",
+    "popis": "Ocelové schodiště se skleněným zábradlím z terasy na podestu a podél domu k bazénu.",
     "cena_kc": 75000,
     "pohled": "zahrada",
     "vrstva": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/konfigurator/zahrada_schodiste.png"
