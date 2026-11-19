@@ -2,7 +2,7 @@
  "aktualizace": "15. 11. 2026 pozdě večer",
  "poznamka": "Datový balíček domu B (Vyhlídky Suchdol, Bažantní 1380/3). Všechny url jsou absolutní a veřejně stažitelné. Fakta jsou jediný zdroj pravdy.",
  "fakta": {
-  "_pozn": "Ověřená fakta o domě B – jediný zdroj pravdy pro web, reklamu a titulky. Upravuje řídicí relace. Stav 15. 11. 2026.",
+  "_pozn": "Ověřená fakta o domě B – jediný zdroj pravdy pro web, reklamu a titulky. Upravuje řídicí relace. Stav 15. 11. 2026, doplněno podle odpovědí p. Sládka 18.–19. 11. 2026.",
   "nazev": "Vyhlídky Suchdol – dům B",
   "adresa": "Bažantní 1380/3, 165 00 Praha 6 – Suchdol",
   "typ": "rodinný dům 5+kk, polovina dvojdomu (severní), hotový a zkolaudovaný",
@@ -21,7 +21,7 @@
    ],
    "koupelna_2np_m2": 6.6,
    "garaz_m2": 28.7,
-   "garsonka_1pp_m2": "13,7 (podle podkladů developera; ověřuje se)"
+   "garsonka_1pp_m2": "13,7 (potvrzeno developerem podle výkresu v AutoCADu, 19. 11. 2026)"
   },
   "bazen": "venkovní zapuštěný 3 × 6 m",
   "v_cene": [
@@ -29,7 +29,8 @@
    "podlahové topení ve všech podlažích",
    "rekuperace (jednotka ve výklenku v garáži + rozvody)",
    "chytrá domácnost Loxone v základním provedení (světla, garážová vrata, vrátný k vrátkům, venkovní žaluzie, pokud budou objednány); nadstavby za příplatek",
-   "podzemní akumulační nádrž pod domem (husté potrubí s vodou v pískovém loži, tepelně izolované; aktivuje se po instalaci fotovoltaiky a zlevní ohřev teplé vody)",
+   "videotelefon u branky a monitor uvnitř domu",
+   "podzemní akumulační nádrž pod domem (cca 8 × 5,5 × 0,6 m) – písek s potrubím s vodou v tepelné izolaci dlouho drží teplo pro ohřev teplé vody; zapojí se po instalaci fotovoltaiky a tepelného čerpadla",
    "plynový kotel jako hlavní zdroj tepla (záložním se stane až po instalaci tepelného čerpadla)",
    "vinylové podlahy",
    "hotové koupelny (obklady, sanita)",
@@ -51,13 +52,25 @@
    "infrasauna",
    "zastřešení bazénu",
    "přihřívání bazénu tepelným čerpadlem, solnička, protiproud",
+   "propojení fotovoltaiky s podzemní akumulační nádrží",
+   "kamery a zabezpečovací systém (EZS) jako přídavné moduly Loxone",
    "markýzy nad balkony ve 2.NP",
    "dokončení automatické závlahy",
    "wallbox",
    "schodiště z terasy do zahrady"
   ],
+  "na_prani_podminky": "Nadstandardy na přání se vždy předem přesně vyspecifikují a zaplatí – před objednáním, případně před zahájením příslušných prací.",
+  "akumulacni_nadrz": {
+   "kratce": "Podzemní akumulační nádrž pod domem uchová teplo pro ohřev teplé vody. Zapojí se po instalaci fotovoltaiky a tepelného čerpadla.",
+   "technicky": "Nádrž je pod půdorysem suterénu mezi základovými pasy, rozměry cca 8 × 5,5 × 0,6 m. V tepelné izolaci z extrudovaného polystyrenu je nasypaný písek, v němž je uloženo několik stovek metrů potrubí naplněného vodou. Vodu ohřívá tepelné čerpadlo podporované fotovoltaickou elektrárnou; voda ohřívá okolní písek, který teplo akumuluje a díky tepelné izolaci ho dlouho uchová (velká setrvačnost). Teplo pak předává jako médium pro ohřev teplé užitkové vody (TUV). Nádrž bude aktivována až po instalaci fotovoltaiky a tepelného čerpadla.",
+   "zdroj": "p. Sládek – formulář 19. 11. 2026 (Upřesnění 1), aktivace po FVE a TČ (18. 11.); výkres řezu: „Zemní zásobník topné vody, využitelný po instalaci FV“",
+   "nepouzivat": "písečná / písková baterie"
+  },
   "nikdy_netvrdit": [
    "že fotovoltaika, tepelné čerpadlo, wallbox, žaluzie, kuchyň nebo dveře jsou v ceně",
+   "že kamery nebo zabezpečovací systém jsou v ceně (v ceně je jen videotelefon u branky s monitorem)",
+   "že podzemní akumulační nádrž je už v provozu (aktivuje se až po instalaci FVE a TČ)",
+   "že garsonka je samostatný byt nebo že se v ní dá přihlásit k trvalému pobytu",
    "název developerské firmy",
    "slovo investor / výnos",
    "den otevřených dveří"
@@ -74,7 +87,8 @@
      "15 min"
     ]
    ],
-   "genius_loci": "„Kdybyste nevěděli, že jste v Praze, nepoznáte to.“ – kraj Prahy 6, kde město končí a začíná údolí"
+   "genius_loci": "„Kdybyste nevěděli, že jste v Praze, nepoznáte to.“ – kraj Prahy 6, kde město končí a začíná údolí",
+   "cyklostezka": "cyklostezkou dojedete do Únětic k Únětickému pivovaru"
   },
   "developer": "36 let ve stavebnictví, rodinné domy 10 let (název firmy neuvádět)",
   "makler": {
@@ -970,7 +984,8 @@
   }
  },
  "konfigurator": {
-  "_pozn": "Konfigurátor domu B – položky na přání a ceny podle odpovědí p. Sládka z 9. 11. 2026 (odpovedi_sladek/2026-11-09_1020_n1m1tb.txt). Ceny zobrazit až po jeho souhlasu (otázka q7 na stránce ke schválení).",
+  "_pozn": "Konfigurátor domu B – položky na přání a ceny podle odpovědí p. Sládka z 9. 11. 2026 (odpovedi_sladek/2026-11-09_1020_n1m1tb.txt). Ceny zobrazit až po jeho souhlasu (otázka q7 na stránce ke schválení). 19. 11. 2026 (formulář #pytt40): zastřešení bazénu 150 000 (dřív 250 000), vyhřívání a solná úprava bazénu 75 000, kuchyň 150 000, interiérové dveře 150 000. Další baterie k FVE: p. Sládek napsal „55 000 120 000 Kč“ – nejasné, zatím ponecháno 35 000, čeká na ověření.",
+  "podminky_priplatku": "Nadstandardy na přání se vždy předem přesně vyspecifikují a zaplatí – před objednáním, případně před zahájením příslušných prací.",
   "zakladni_cena_kc": 23490000,
   "zobrazit_ceny": false,
   "pohledy": {
@@ -999,7 +1014,7 @@
    {
     "id": "propojeni",
     "nazev": "Propojení FVE s podzemní akumulační nádrží",
-    "popis": "Podzemní akumulační nádrž pod domem je v ceně – aktivuje se po instalaci fotovoltaiky a zlevní ohřev teplé vody.",
+    "popis": "Podzemní akumulační nádrž pod domem je v ceně – teplo uložené v písku ohřívá teplou vodu. Zapojí se po instalaci fotovoltaiky a tepelného čerpadla.",
     "cena_kc": 25000,
     "pohled": "rez",
     "vyzaduje": "fve",
@@ -1017,7 +1032,7 @@
    {
     "id": "tc",
     "nazev": "Tepelné čerpadlo 16 kW",
-    "popis": "Vytápění a ohřev vody; plynový kotel (dnes hlavní zdroj) se stane zálohou. Přibude akumulační nádrž.",
+    "popis": "Vytápění a ohřev vody; plynový kotel (dnes hlavní zdroj) se stane zálohou. Přibude ještě akumulační nádrž k TČ (jako bojler).",
     "cena_kc": 450000,
     "pohled": "zahrada",
     "vrstva": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/konfigurator/zahrada_tc.png"
@@ -1042,18 +1057,26 @@
     "id": "zastreseni",
     "nazev": "Zastřešení bazénu",
     "popis": "Cena podle vybraného typu.",
-    "cena_kc": 250000,
+    "cena_kc": 150000,
     "pohled": "zahrada",
     "cena_od": true,
     "vrstva": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/konfigurator/zahrada_zastreseni.png"
    },
    {
     "id": "ohrev",
-    "nazev": "Přihřívání bazénu tepelným čerpadlem, solnička, protiproud",
-    "popis": "Cena na dotaz.",
-    "cena_kc": null,
+    "nazev": "Vyhřívání a solná úprava bazénu",
+    "popis": "Přihřívání bazénu tepelným čerpadlem a solnička.",
+    "cena_kc": 75000,
     "pohled": "zahrada",
     "vrstva": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/konfigurator/zahrada_ohrev.png"
+   },
+   {
+    "id": "protiproud",
+    "nazev": "Protiproud v bazénu",
+    "popis": "Cena na dotaz.",
+    "cena_kc": null,
+    "pohled": null,
+    "vrstva": null
    },
    {
     "id": "zavlaha",
@@ -1085,7 +1108,7 @@
     "id": "kuchyn",
     "nazev": "Kuchyňská linka a spotřebiče",
     "popis": "Podle výběru (např. Hanák, SIKO).",
-    "cena_kc": null,
+    "cena_kc": 150000,
     "pohled": "rez",
     "vrstva": "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/img/konfigurator/rez_kuchyn.png"
    },
@@ -1093,6 +1116,14 @@
     "id": "dvere",
     "nazev": "Interiérové dveře",
     "popis": "Podle výběru.",
+    "cena_kc": 150000,
+    "pohled": null,
+    "vrstva": null
+   },
+   {
+    "id": "kamery",
+    "nazev": "Kamery a zabezpečení (EZS)",
+    "popis": "Přídavné moduly Loxone. Videotelefon u branky s monitorem uvnitř je v ceně.",
     "cena_kc": null,
     "pohled": null,
     "vrstva": null

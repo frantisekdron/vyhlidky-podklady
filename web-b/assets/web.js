@@ -567,6 +567,11 @@ function vykresliKonfigurator(k, f) {
   const nazvy = { zahrada: "Zahrada", ulice: "Ulice", rez: "Řez domem" };
   const povoleno = k.zobrazit_ceny === true;
   el("zaklad").replaceChildren(...bodySeznamu(f.v_cene));
+  const podminky = el("podminky");
+  if (podminky && k.podminky_priplatku) {
+    podminky.textContent = k.podminky_priplatku;
+    podminky.hidden = false;
+  }
   const taby = new Map();
   el("pohledy").replaceChildren(
     ...pohledy.map((p) => {
@@ -603,10 +608,10 @@ function vykresliKonfigurator(k, f) {
   }
   const skupiny = [
     ["Energie a vytápění", ["fve", "propojeni", "baterie", "tc", "chlazeni"]],
-    ["Zahrada a bazén", ["zastreseni", "ohrev", "zavlaha", "schodiste"]],
+    ["Zahrada a bazén", ["zastreseni", "ohrev", "protiproud", "zavlaha", "schodiste"]],
     [
       "Vybavení a stínění",
-      ["zaluzie", "kuchyn", "dvere", "svitidla", "infrasauna", "wallbox"],
+      ["zaluzie", "kuchyn", "dvere", "svitidla", "infrasauna", "wallbox", "kamery"],
     ],
   ];
   const ostatni = k.polozky
@@ -690,7 +695,10 @@ function vykresliLokalitu(f, misto, filmUrl) {
     " kousek za domem",
     " začíná kousek za domem",
   );
-  el("priroda").textContent = priroda + ".";
+  const cyklo = f.lokalita.cyklostezka
+    ? " " + prvniVelke(f.lokalita.cyklostezka) + "."
+    : "";
+  el("priroda").textContent = priroda + "." + cyklo;
   const frame = el("film-ramecek");
   if (filmUrl) {
     const video = prvek("video");
