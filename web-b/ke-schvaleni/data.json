@@ -1,0 +1,761 @@
+{
+  "aktualizace": "25. 11. 2026",
+  "fakta": {
+    "nazev": "Vyhlídky Suchdol – dům B",
+    "adresa": "Bažantní 1380/3, 165 00 Praha 6 – Suchdol",
+    "typ": "rodinný dům 4+kk + garsonka, polovina dvojdomu (severní), hotový a zkolaudovaný",
+    "dispozice": "4+kk + garsonka",
+    "cena_kc": 22900000,
+    "bazen": "venkovní zapuštěný 3 × 6 m",
+    "v_cene": [
+      "Vinylové podlahy (4 mm, click) a dokončené koupelny s obklady a sanitou",
+      "Podlahové topení ve všech podlažích a plynový kotel jako hlavní zdroj tepla",
+      "Větrací jednotka Licon ve výklenku garáže a rozvody rekuperace s vyústkami",
+      "Základní systém Loxone pro světla, garážová vrata a videotelefon u branky. Ovládá také venkovní žaluzie, pokud si je objednáte.",
+      "Videotelefon u branky a monitor v domě",
+      "Podzemní akumulační nádrž pro ohřev teplé vody. Zapojí se po instalaci fotovoltaiky a tepelného čerpadla.",
+      "Železobetonové obvodové stěny 20 cm a 16 cm šedého fasádního polystyrenu",
+      "Garážová vrata s pohonem a venkovní stání na dvoře",
+      "Oplocení, branka, schůdky u branky a zábradlí teras a balkonů",
+      "Venkovní zapuštěný bazén 3 × 6 m, stávající trávník a rozvody závlahy s tryskami a šachtou"
+    ],
+    "na_prani": [
+      "fotovoltaika 10 kW s baterií",
+      "tepelné čerpadlo",
+      "přídavná chladicí jednotka k rekuperaci",
+      "venkovní žaluzie",
+      "kuchyňská linka a spotřebiče (např. Hanák, SIKO)",
+      "interiérové dveře",
+      "svítidla",
+      "infrasauna",
+      "zastřešení bazénu",
+      "přihřívání bazénu tepelným čerpadlem, solnička, protiproud",
+      "propojení fotovoltaiky s podzemní akumulační nádrží",
+      "kamery a zabezpečovací systém (EZS) jako přídavné moduly Loxone",
+      "markýzy nad balkony ve 2.NP",
+      "dokončení automatické závlahy",
+      "wallbox",
+      "schodiště z terasy do zahrady"
+    ],
+    "lokalita": {
+      "priroda": "přírodní rezervace Údolí Únětického potoka kousek za domem",
+      "dojezdy": [
+        [
+          "Dejvice",
+          "12 min"
+        ],
+        [
+          "letiště Václava Havla",
+          "15 min"
+        ]
+      ],
+      "genius_loci": "„Kdybyste nevěděli, že jste v Praze, nepoznáte to.“ – kraj Prahy 6, kde město končí a začíná údolí",
+      "cyklostezka": "cyklostezkou dojedete do Únětic k Únětickému pivovaru"
+    },
+    "makler": {
+      "jmeno": "Ing. Eva Goldšmíd",
+      "firma": "RE/MAX Partner",
+      "telefon": "+420 737 766 030",
+      "email": "eva.goldsmid@remax-czech.cz",
+      "web": "maklerkaeva.cz"
+    },
+    "plochy": {
+      "uzitna_m2": 178,
+      "obyvaci_prostor_m2": 48.5,
+      "pozemek_m2": 491,
+      "garaz_m2": 28.7,
+      "prostor_u_bazenu_m2": 13.7
+    },
+    "nastehovani": "Prodávající počítá s nastěhováním do 31. ledna 2027. Termín závisí na výběru kuchyně, dveří a technologií."
+  },
+  "galerie": [
+    {
+      "id": "vyber-01",
+      "poradi": 1,
+      "nazev": "Dům a zahrada od údolí",
+      "patro": "Venku",
+      "url": "assets/vyber/01-dnes.webp",
+      "nahled": "assets/vyber/01-dnes-640.webp",
+      "sirka": 1700,
+      "alt": "Letecká fotografie domu B s bazénem a sousedními zahradami.",
+      "poznamka": "Bazén a stávající trávník patří k domu. Nová výsadba a zahradní nábytek jsou návrhem.",
+      "navrhy": [
+        {
+          "nazev": "Navržená podoba zahrady",
+          "alt": "Vizualizace domu se zahradou po výsadbě, pohled z dronu.",
+          "url": "assets/vyber/01-vizualizace.webp",
+          "nahled": "assets/vyber/01-vizualizace-640.webp",
+          "sirka": 1700
+        }
+      ]
+    },
+    {
+      "id": "vyber-02",
+      "poradi": 2,
+      "nazev": "Zahrada s bazénem",
+      "patro": "Venku",
+      "navrhy": [
+        {
+          "nazev": "Zahrada s bazénem",
+          "alt": "Vizualizace. Zahrada s bazénem 3 × 6 m a zadní fasáda domu",
+          "url": "assets/vyber/02-vizualizace.webp",
+          "nahled": "assets/vyber/02-vizualizace-640.webp",
+          "sirka": 1700
+        }
+      ],
+      "url": "assets/vyber/02-dnes.webp",
+      "nahled": "assets/vyber/02-dnes-640.webp",
+      "sirka": 1700,
+      "alt": "Zahrada před výsadbou, zakrytý bazén a fasáda domu.",
+      "poznamka": "Výsadba a zahradní nábytek jsou návrhem. V ceně je bazén a stávající trávník."
+    },
+    {
+      "id": "vyber-03",
+      "poradi": 3,
+      "nazev": "Bazén a terasy",
+      "patro": "Venku",
+      "navrhy": [
+        {
+          "nazev": "Bazén a terasy",
+          "alt": "Vizualizace. Bazén, dlážděná plocha u bazénu, balkony",
+          "url": "assets/vyber/03-vizualizace.webp",
+          "nahled": "assets/vyber/03-vizualizace-640.webp",
+          "sirka": 1700
+        }
+      ],
+      "url": "assets/vyber/03-dnes.webp",
+      "nahled": "assets/vyber/03-dnes-640.webp",
+      "sirka": 1700,
+      "alt": "Bazén s krycí plachtou a terasy domu B.",
+      "poznamka": "Bazén a terasy patří k domu. Výsadba a zahradní nábytek jsou návrhem."
+    },
+    {
+      "id": "vyber-04",
+      "poradi": 4,
+      "nazev": "Obývací prostor s kuchyní",
+      "patro": "1.NP",
+      "navrhy": [
+        {
+          "nazev": "Obývací prostor s kuchyní",
+          "alt": "Vizualizace. Obývací prostor s kuchyňským ostrůvkem a jídelnou",
+          "url": "assets/vyber/04-vizualizace.webp",
+          "nahled": "assets/vyber/04-vizualizace-640.webp",
+          "sirka": 1656
+        }
+      ],
+      "url": "assets/vyber/04-dnes.webp",
+      "nahled": "assets/vyber/04-dnes-640.webp",
+      "sirka": 1656,
+      "alt": "Nezařízený obývací pokoj a místo pro kuchyň v pohledu od schodiště.",
+      "poznamka": "Vyobrazená kuchyň a nábytek jsou návrhem a objednávají se zvlášť."
+    },
+    {
+      "id": "vyber-05",
+      "poradi": 5,
+      "nazev": "Obývací prostor ke schodišti",
+      "patro": "1.NP",
+      "navrhy": [
+        {
+          "nazev": "Obývací prostor ke schodišti",
+          "alt": "Vizualizace. Sedací část, schodiště se skleněným zábradlím, jídelna",
+          "url": "assets/vyber/05-vizualizace.webp",
+          "nahled": "assets/vyber/05-vizualizace-640.webp",
+          "sirka": 1700
+        }
+      ],
+      "url": "assets/vyber/05-dnes.webp",
+      "nahled": "assets/vyber/05-dnes-640.webp",
+      "sirka": 1700,
+      "alt": "Prázdný obývací pokoj se schodištěm do patra.",
+      "poznamka": "Vyobrazená kuchyň a nábytek jsou návrhem a objednávají se zvlášť."
+    },
+    {
+      "id": "vyber-06",
+      "poradi": 6,
+      "nazev": "Jídelna a obývací část",
+      "patro": "1.NP",
+      "navrhy": [
+        {
+          "nazev": "Jídelna a obývací část",
+          "alt": "Vizualizace. Kuchyňská linka s ostrůvkem a jídelní část",
+          "url": "assets/vyber/06-vizualizace.webp",
+          "nahled": "assets/vyber/06-vizualizace-640.webp",
+          "sirka": 1700
+        }
+      ],
+      "url": "assets/vyber/06-dnes.webp",
+      "nahled": "assets/vyber/06-dnes-640.webp",
+      "sirka": 1700,
+      "alt": "Prostor pro kuchyň a jídelní stůl před zařízením.",
+      "poznamka": "Vyobrazená kuchyň a nábytek jsou návrhem a objednávají se zvlášť."
+    },
+    {
+      "id": "vyber-07",
+      "poradi": 7,
+      "nazev": "Ložnice",
+      "patro": "2.NP",
+      "navrhy": [
+        {
+          "nazev": "Ložnice",
+          "alt": "Vizualizace. Ložnice s francouzským oknem na balkon",
+          "url": "assets/vyber/07-vizualizace.webp",
+          "nahled": "assets/vyber/07-vizualizace-640.webp",
+          "sirka": 1700
+        }
+      ],
+      "url": "assets/vyber/07-dnes.webp",
+      "nahled": "assets/vyber/07-dnes-640.webp",
+      "sirka": 1700,
+      "alt": "Nezařízená ložnice s dveřmi na balkon.",
+      "poznamka": "Zařízení pokoje je návrh. Nábytek není součástí dodávky."
+    },
+    {
+      "id": "vyber-08",
+      "poradi": 8,
+      "nazev": "Pokoj",
+      "patro": "2.NP",
+      "navrhy": [
+        {
+          "nazev": "Pokoj",
+          "alt": "Vizualizace. Dětský pokoj s psacím stolem a knihovnou",
+          "url": "assets/vyber/08-vizualizace.webp",
+          "nahled": "assets/vyber/08-vizualizace-640.webp",
+          "sirka": 1700
+        }
+      ],
+      "url": "assets/vyber/08-dnes.webp",
+      "nahled": "assets/vyber/08-dnes-640.webp",
+      "sirka": 1700,
+      "alt": "Současná podoba dětského pokoje.",
+      "poznamka": "Zařízení pokoje je návrh. Nábytek není součástí dodávky."
+    },
+    {
+      "id": "vyber-09",
+      "poradi": 9,
+      "nazev": "Pokoj s výhledem",
+      "patro": "2.NP",
+      "navrhy": [
+        {
+          "nazev": "Pokoj s výhledem",
+          "alt": "Vizualizace. Pokoj s psacím stolem u okna",
+          "url": "assets/vyber/09-vizualizace.webp",
+          "nahled": "assets/vyber/09-vizualizace-640.webp",
+          "sirka": 1700
+        }
+      ],
+      "url": "assets/vyber/09-dnes.webp",
+      "nahled": "assets/vyber/09-dnes-640.webp",
+      "sirka": 1700,
+      "alt": "Nezařízený pokoj s výhledem z patra.",
+      "poznamka": "Zařízení pokoje je návrh. Nábytek není součástí dodávky."
+    },
+    {
+      "id": "vyber-10",
+      "poradi": 10,
+      "nazev": "Koupelna s vanou",
+      "patro": "2.NP",
+      "navrhy": [
+        {
+          "nazev": "Koupelna v patře",
+          "alt": "Vizualizace. Koupelna s vanou, sprchou a umyvadlem",
+          "url": "assets/vyber/23-vizualizace.webp",
+          "nahled": "assets/vyber/23-vizualizace-640.webp",
+          "sirka": 1700
+        }
+      ],
+      "url": "assets/vyber/10-foto.webp",
+      "nahled": "assets/vyber/10-foto-640.webp",
+      "sirka": 1700,
+      "alt": "Koupelna s vanou a oknem – skutečný stav před dokončením",
+      "druh": "Fotografie",
+      "poznamka": "Obklady a sanita jsou v ceně při předání. Vizualizace ukazuje možnou podobu dokončené koupelny.",
+      "zacatek": 85
+    },
+    {
+      "id": "vyber-11",
+      "poradi": 11,
+      "nazev": "Koupelna",
+      "patro": "2.NP",
+      "navrhy": [],
+      "url": "assets/vyber/11-foto.webp",
+      "nahled": "assets/vyber/11-foto-640.webp",
+      "sirka": 1700,
+      "alt": "Koupelna – obklady a příprava sanity, skutečný stav",
+      "druh": "Fotografie"
+    },
+    {
+      "id": "vyber-12",
+      "poradi": 12,
+      "nazev": "Samostatný prostor u terasy (1.PP)",
+      "patro": "1.PP",
+      "navrhy": [
+        {
+          "nazev": "Samostatný prostor u terasy (1.PP)",
+          "alt": "Vizualizace. Samostatný prostor 13,7 m² s vlastním vstupem na terasu k bazénu",
+          "url": "assets/vyber/12-vizualizace.webp",
+          "nahled": "assets/vyber/12-vizualizace-640.webp",
+          "sirka": 1700
+        }
+      ],
+      "url": "assets/vyber/12-dnes.webp",
+      "nahled": "assets/vyber/12-dnes-640.webp",
+      "sirka": 1700,
+      "alt": "Samostatný prostor ve spodním podlaží před zařízením.",
+      "poznamka": "Návrh zařízení spodního podlaží. Kuchyň i nábytek se řeší samostatně."
+    },
+    {
+      "id": "wellness-u-bazenu",
+      "poradi": 31,
+      "nazev": "Wellness u bazénu",
+      "patro": "1.PP",
+      "navrhy": [
+        {
+          "nazev": "Wellness se saunou",
+          "alt": "Vizualizace wellness s prosklenou saunou ve spodním podlaží.",
+          "url": "assets/vyber/wellness-vizualizace.webp",
+          "nahled": "assets/vyber/wellness-vizualizace-640.webp",
+          "sirka": 1536
+        }
+      ],
+      "url": "assets/vyber/12-dnes.webp",
+      "nahled": "assets/vyber/12-dnes-640.webp",
+      "sirka": 1700,
+      "alt": "Samostatný prostor ve spodním podlaží před zařízením.",
+      "poznamka": "Místo garsonky může u bazénu vzniknout soukromé wellness. Sauna, osvětlení a vybavení se řeší samostatně.",
+      "kratce": "Možná úprava garsonky na přání."
+    },
+    {
+      "id": "dolni-koupelna",
+      "poradi": 32,
+      "nazev": "Dolní koupelna se sprchou",
+      "patro": "1.PP",
+      "kratce": "Obklady a sanita jsou součástí předání.",
+      "poznamka": "V ceně je dokončení koupelny včetně obkladů a sanity. Vizualizace ukazuje jednu možnost vybavení a osvětlení.",
+      "alt": "Současný stav dolní koupelny před dokončením.",
+      "url": "assets/vyber/koupelna-dole-dnes.webp",
+      "nahled": "assets/vyber/koupelna-dole-dnes-640.webp",
+      "sirka": 1700,
+      "navrhy": [
+        {
+          "nazev": "Dolní koupelna po dokončení",
+          "alt": "Vizualizace dolní koupelny se skleněným sprchovým koutem a dřevěnou skříňkou.",
+          "url": "assets/vyber/koupelna-dole-vizualizace.webp",
+          "nahled": "assets/vyber/koupelna-dole-vizualizace-640.webp",
+          "sirka": 1541
+        }
+      ]
+    },
+    {
+      "id": "vyber-13",
+      "poradi": 13,
+      "nazev": "Garáž s pohonem vrat",
+      "patro": "1.PP",
+      "navrhy": [],
+      "url": "assets/vyber/13-foto.webp",
+      "nahled": "assets/vyber/13-foto-640.webp",
+      "sirka": 1700,
+      "alt": "Garáž 28,7 m² s vraty s pohonem",
+      "druh": "Fotografie"
+    },
+    {
+      "id": "vyber-14",
+      "poradi": 14,
+      "nazev": "Balkon s výhledem do krajiny",
+      "patro": "Venku",
+      "navrhy": [],
+      "url": "assets/vyber/14-foto.webp",
+      "nahled": "assets/vyber/14-foto-640.webp",
+      "sirka": 1700,
+      "alt": "Balkon se skleněným zábradlím a výhledem do krajiny",
+      "druh": "Fotografie"
+    },
+    {
+      "id": "vyber-16",
+      "poradi": 16,
+      "nazev": "Dům a Praha v dálce z dronu",
+      "patro": "Venku",
+      "navrhy": [
+        {
+          "nazev": "Dům a Praha v dálce z dronu",
+          "alt": "Vizualizace. Dům B, za ním údolí a v dálce Praha",
+          "url": "assets/vyber/16-vizualizace.webp",
+          "nahled": "assets/vyber/16-vizualizace-640.webp",
+          "sirka": 1700
+        }
+      ],
+      "url": "assets/vyber/16-dnes.webp",
+      "nahled": "assets/vyber/16-dnes-640.webp",
+      "sirka": 1700,
+      "alt": "Dům a zahrada na skutečné letecké fotografii.",
+      "poznamka": "Vizualizace ukazuje také úpravu sousedních zahrad."
+    },
+    {
+      "id": "vyber-17",
+      "poradi": 17,
+      "nazev": "Dům od vjezdu",
+      "patro": "Venku",
+      "navrhy": [
+        {
+          "nazev": "Dům od vjezdu",
+          "alt": "Vizualizace. Dům od vjezdu: dvůr, garáž, venkovní schodiště na balkon 1.NP",
+          "url": "assets/vyber/17-vizualizace.webp",
+          "nahled": "assets/vyber/17-vizualizace-640.webp",
+          "sirka": 1700
+        }
+      ],
+      "url": "assets/vyber/17-dnes.webp",
+      "nahled": "assets/vyber/17-dnes-640.webp",
+      "sirka": 1700,
+      "alt": "Dvůr a vstupní strana domu při pohledu od vjezdu.",
+      "poznamka": "Možné další stavební úpravy – vizualizace. Venkovní schodiště na balkon je na přání za příplatek."
+    },
+    {
+      "id": "vyber-18",
+      "poradi": 18,
+      "nazev": "Dům od ulice",
+      "patro": "Venku",
+      "navrhy": [],
+      "url": "assets/vyber/18-foto.webp",
+      "nahled": "assets/vyber/18-foto-640.webp",
+      "sirka": 1700,
+      "alt": "Dům od příjezdové ulice, plot a brána",
+      "druh": "Fotografie"
+    },
+    {
+      "id": "vyber-19",
+      "poradi": 19,
+      "nazev": "Severní strana se zahradou",
+      "patro": "Venku",
+      "navrhy": [],
+      "url": "assets/vyber/19-foto.webp",
+      "nahled": "assets/vyber/19-foto-640.webp",
+      "sirka": 1700,
+      "alt": "Severní strana domu, trávník a bazén",
+      "druh": "Fotografie"
+    },
+    {
+      "id": "vyber-20",
+      "poradi": 20,
+      "nazev": "Dům se zahradou a bazénem",
+      "patro": "Venku",
+      "navrhy": [],
+      "url": "assets/vyber/20-foto.webp",
+      "nahled": "assets/vyber/20-foto-640.webp",
+      "sirka": 1700,
+      "alt": "Dům se zahradou a bazénem (bazén zakrytý plachtou)",
+      "druh": "Fotografie"
+    },
+    {
+      "id": "vyber-21",
+      "poradi": 21,
+      "nazev": "Dům z dronu od ulice",
+      "patro": "Venku",
+      "navrhy": [],
+      "url": "assets/vyber/21-foto.webp",
+      "nahled": "assets/vyber/21-foto-640.webp",
+      "sirka": 1700,
+      "alt": "Dvojdům od ulice se zahradami",
+      "druh": "Fotografie"
+    },
+    {
+      "id": "vyber-22",
+      "poradi": 22,
+      "nazev": "Dům a krajina za domem z dronu",
+      "patro": "Venku",
+      "navrhy": [],
+      "url": "assets/vyber/22-foto.webp",
+      "nahled": "assets/vyber/22-foto-640.webp",
+      "sirka": 1700,
+      "alt": "Dům a krajina za domem",
+      "druh": "Fotografie"
+    },
+    {
+      "id": "vyber-23",
+      "poradi": 23,
+      "nazev": "Koupelna v patře",
+      "patro": "2.NP",
+      "navrhy": [
+        {
+          "nazev": "Koupelna v patře",
+          "alt": "Vizualizace. Koupelna s vanou, sprchou a umyvadlem",
+          "url": "assets/vyber/23-vizualizace.webp",
+          "nahled": "assets/vyber/23-vizualizace-640.webp",
+          "sirka": 1700
+        }
+      ],
+      "url": "assets/vyber/10-foto.webp",
+      "nahled": "assets/vyber/10-foto-640.webp",
+      "alt": "Koupelna s vanou, obklady a sanitou před dokončením montáže.",
+      "poznamka": "Obklady a sanita jsou v ceně při předání. Vizualizace ukazuje možnou podobu dokončené koupelny."
+    },
+    {
+      "id": "vyber-24",
+      "poradi": 24,
+      "nazev": "Balkon v patře s výhledem",
+      "patro": "Venku",
+      "navrhy": [],
+      "url": "assets/vyber/24-foto.webp",
+      "nahled": "assets/vyber/24-foto-640.webp",
+      "sirka": 1700,
+      "alt": "Balkon v patře s výhledem",
+      "druh": "Fotografie"
+    },
+    {
+      "id": "vyber-25",
+      "poradi": 25,
+      "nazev": "Údolí Únětického potoka hned za domem",
+      "patro": "Venku",
+      "navrhy": [],
+      "url": "assets/vyber/25-foto.webp",
+      "nahled": "assets/vyber/25-foto-640.webp",
+      "sirka": 1700,
+      "alt": "Poloha domu B u údolí Únětického potoka (popisky)",
+      "druh": "Fotografie s popisky"
+    },
+    {
+      "id": "vyber-26",
+      "poradi": 26,
+      "nazev": "Výhled z balkonu do údolí a polí",
+      "patro": "Venku",
+      "navrhy": [],
+      "url": "assets/vyber/26-foto.webp",
+      "nahled": "assets/vyber/26-foto-640.webp",
+      "sirka": 1700,
+      "alt": "Výhled z balkonu do údolí a polí",
+      "druh": "Fotografie"
+    },
+    {
+      "id": "vyber-27",
+      "poradi": 27,
+      "nazev": "Skály a údolí v okolí",
+      "patro": "Venku",
+      "navrhy": [],
+      "url": "assets/vyber/27-foto.webp",
+      "nahled": "assets/vyber/27-foto-640.webp",
+      "sirka": 1700,
+      "alt": "Skály a údolí v okolí",
+      "druh": "Fotografie"
+    },
+    {
+      "id": "vyber-28",
+      "poradi": 28,
+      "nazev": "Dům a okolí z dronu",
+      "patro": "Venku",
+      "navrhy": [],
+      "url": "assets/vyber/28-foto.webp",
+      "nahled": "assets/vyber/28-foto-640.webp",
+      "sirka": 1700,
+      "alt": "Dům v krajině na okraji Prahy",
+      "druh": "Fotografie"
+    },
+    {
+      "id": "vyber-29",
+      "poradi": 29,
+      "nazev": "Příroda hned za domem",
+      "patro": "Venku",
+      "navrhy": [],
+      "url": "assets/vyber/29-foto.webp",
+      "nahled": "assets/vyber/29-foto-640.webp",
+      "sirka": 1700,
+      "alt": "Příroda hned za domem – údolí Únětického potoka",
+      "druh": "Fotografie"
+    },
+    {
+      "id": "vyber-30",
+      "poradi": 30,
+      "nazev": "Údolí a krajina v okolí",
+      "patro": "Venku",
+      "navrhy": [],
+      "url": "assets/vyber/30-foto.webp",
+      "nahled": "assets/vyber/30-foto-640.webp",
+      "sirka": 1700,
+      "alt": "Údolí a krajina, v dálce Praha",
+      "druh": "Fotografie"
+    }
+  ],
+  "modely": [
+    {
+      "nazev": "rez domem",
+      "popisky_v_cene_na_prani": true,
+      "url": "assets/model/rez_domem_popisky.webp"
+    },
+    {
+      "nazev": "v cene",
+      "popisky_v_cene_na_prani": true,
+      "url": "assets/model/v_cene_popisky.webp"
+    },
+    {
+      "nazev": "na prani zahrada",
+      "popisky_v_cene_na_prani": true,
+      "url": "assets/model/na_prani_zahrada_popisky.webp"
+    },
+    {
+      "nazev": "na prani ulice",
+      "popisky_v_cene_na_prani": true,
+      "url": "assets/model/na_prani_ulice_popisky.webp"
+    },
+    {
+      "nazev": "Půdorys 1PP",
+      "url": "assets/model/01_pudorys_1PP.webp"
+    },
+    {
+      "nazev": "Půdorys 1NP",
+      "url": "assets/model/01_pudorys_1NP.webp"
+    },
+    {
+      "nazev": "Půdorys 2NP",
+      "url": "assets/model/01_pudorys_2NP.webp"
+    }
+  ],
+  "konfigurator": {
+    "zakladni_cena_kc": 22900000,
+    "zobrazit_ceny": false,
+    "pohledy": {
+      "zahrada": {
+        "nazev": "3D model ze zahrady (západ)",
+        "zaklad": "assets/konfigurator/zahrada_zaklad.webp"
+      },
+      "ulice": {
+        "nazev": "3D model od ulice (východ)",
+        "zaklad": "assets/konfigurator/ulice_zaklad.webp"
+      },
+      "rez": {
+        "nazev": "řez domem",
+        "zaklad": "assets/konfigurator/rez_zaklad.webp"
+      }
+    },
+    "polozky": [
+      {
+        "id": "fve",
+        "nazev": "Fotovoltaika 10 kW s baterií",
+        "popis": "Panely na střeše, jedna baterie v ceně fotovoltaiky.",
+        "pohled": "zahrada",
+        "vrstva": "assets/konfigurator/zahrada_fve.webp"
+      },
+      {
+        "id": "propojeni",
+        "nazev": "Propojení FVE s podzemní akumulační nádrží",
+        "popis": "Pro ohřev teplé vody se nádrž v základech propojí s fotovoltaikou a tepelným čerpadlem. Výběrem přidáte obě technologie.",
+        "pohled": "rez",
+        "vyzaduje": [
+          "fve",
+          "tc"
+        ],
+        "vrstva": "assets/konfigurator/rez_propojeni.webp"
+      },
+      {
+        "id": "baterie",
+        "nazev": "Další baterie k fotovoltaice",
+        "popis": "Rozšíření úložiště nad jednu baterii dodávanou s fotovoltaikou.",
+        "pohled": null,
+        "vyzaduje": "fve",
+        "vrstva": null
+      },
+      {
+        "id": "tc",
+        "nazev": "Tepelné čerpadlo 16 kW",
+        "popis": "Po instalaci čerpadla převezme plynový kotel úlohu záložního zdroje.",
+        "pohled": "zahrada",
+        "vrstva": "assets/konfigurator/zahrada_tc.webp"
+      },
+      {
+        "id": "chlazeni",
+        "nazev": "Přídavná chladicí jednotka k rekuperaci",
+        "popis": "Rozvody rekuperace jsou v ceně, chlazení se doplní.",
+        "pohled": "rez",
+        "vrstva": "assets/konfigurator/rez_chlazeni.webp"
+      },
+      {
+        "id": "zaluzie",
+        "nazev": "Venkovní žaluzie",
+        "popis": "Na všech oknech.",
+        "pohled": "zahrada",
+        "vrstva": "assets/konfigurator/zahrada_zaluzie.webp"
+      },
+      {
+        "id": "zastreseni",
+        "nazev": "Zastřešení bazénu",
+        "popis": "Provedení a cenu zastřešení zvolíte při domluvě.",
+        "pohled": "zahrada",
+        "vrstva": "assets/konfigurator/zahrada_zastreseni.webp"
+      },
+      {
+        "id": "ohrev",
+        "nazev": "Vyhřívání a solná úprava bazénu",
+        "popis": "Přihřívání bazénu tepelným čerpadlem a solnička.",
+        "pohled": "zahrada",
+        "vrstva": "assets/konfigurator/zahrada_ohrev.webp"
+      },
+      {
+        "id": "protiproud",
+        "nazev": "Protiproud v bazénu",
+        "popis": "Samostatně objednávané vybavení zapuštěného bazénu.",
+        "pohled": null,
+        "vrstva": null
+      },
+      {
+        "id": "zavlaha",
+        "nazev": "Dokončení automatické závlahy",
+        "popis": "Rozvody s tryskami jsou v ceně, doplní se ventily, řídicí jednotka a čerpadlo.",
+        "pohled": null,
+        "vrstva": null
+      },
+      {
+        "id": "wallbox",
+        "nazev": "Wallbox",
+        "popis": "Nabíjení auta v garáži nebo na stání.",
+        "pohled": "ulice",
+        "vrstva": "assets/konfigurator/ulice_wallbox.webp"
+      },
+      {
+        "id": "infrasauna",
+        "nazev": "Infrasauna pro dva",
+        "popis": "Kompaktní sauna pro dvě osoby včetně instalace. Umístění se domluví předem.",
+        "pohled": "rez",
+        "vrstva": "assets/konfigurator/rez_infrasauna.webp"
+      },
+      {
+        "id": "kuchyn",
+        "nazev": "Kuchyňská linka a spotřebiče",
+        "popis": "Podle výběru (např. Hanák, SIKO).",
+        "pohled": "rez",
+        "vrstva": "assets/konfigurator/rez_kuchyn.webp"
+      },
+      {
+        "id": "dvere",
+        "nazev": "Interiérové dveře",
+        "popis": "Podle výběru.",
+        "pohled": null,
+        "vrstva": null
+      },
+      {
+        "id": "kamery",
+        "nazev": "Kamery a zabezpečení (EZS)",
+        "popis": "Přídavné moduly Loxone. Videotelefon u branky s monitorem uvnitř je v ceně.",
+        "pohled": null,
+        "vrstva": null
+      },
+      {
+        "id": "svitidla",
+        "nazev": "Svítidla",
+        "popis": "Podle výběru.",
+        "pohled": null,
+        "vrstva": null
+      },
+      {
+        "id": "schodiste",
+        "nazev": "Schodiště z terasy do zahrady",
+        "popis": "Ocelové schodiště se skleněným zábradlím z terasy na podestu a podél domu k bazénu.",
+        "pohled": "zahrada",
+        "vrstva": "assets/konfigurator/zahrada_schodiste.webp"
+      },
+      {
+        "id": "markyzy",
+        "nazev": "Markýzy nad balkony ve 2. NP",
+        "popis": "Stínění horních balkonů podle zvoleného provedení.",
+        "pohled": "zahrada",
+        "vrstva": null
+      }
+    ]
+  }
+}
