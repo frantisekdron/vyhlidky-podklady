@@ -1739,33 +1739,41 @@ dialog::backdrop {
 }
 .place-film {
   border-top: 1px solid #bec6bb;
-  padding-top: 13px;
+  padding-top: 22px;
+  scroll-margin-top: 84px;
 }
-.place-film p {
+.film-heading {
   display: flex;
-  gap: 10px 22px;
+  gap: 8px 24px;
+  justify-content: space-between;
   align-items: baseline;
   flex-wrap: wrap;
 }
-.place-film p span {
-  font: 400 17px var(--serif);
+.film-heading h3 {
+  margin: 0;
+  font: 400 clamp(1.5rem, 2.9vw, 2.3rem)/1.2 var(--serif);
 }
-.place-film small {
-  color: var(--muted);
-  font-size: 12px;
+.film-heading a {
+  color: var(--navy);
+  font-size: .86rem;
+  text-underline-offset: .24em;
 }
+.film-heading a:hover, .film-heading a:focus-visible { text-decoration: underline; }
 .film-frame {
-  width: min(900px, 100%);
-  margin: 16px auto 0;
+  width: 100%;
+  margin: 16px 0 0;
   aspect-ratio: 16/9;
-  background: var(--navy);
+  background: #101a22;
+  border-radius: 3px;
+  overflow: hidden;
 }
-.film-frame video {
+.film-frame video, .film-frame iframe {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  border: 0;
 }
+.film-frame video { object-fit: contain; }
 @media (max-width: 960px) {
   .travel {
     display: grid;

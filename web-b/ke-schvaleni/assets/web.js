@@ -1,7 +1,7 @@
 // Produkce na GitHub Pages: přepište data.json novým balíčkem, případně sem vložte jeho veřejnou URL.
 const ZDROJ_DAT = "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/data/dum-b.json";
 const ADRESA_POPTAVKY = document.querySelector('meta[name="prijem-poptavek"]')?.content || "";
-const FILM_16_9 = ""; // Adresa hotového filmu MP4. Po vyplnění se pod panoramatem zpřístupní přehrávač.
+const FILM_16_9 = document.getElementById("film-odkaz")?.getAttribute("href");
 
 function meritGA4(udalost) {
   // Doplní správce měření po nastavení souhlasů. Událost neobsahuje osobní údaje.
@@ -724,6 +724,45 @@ function vykresliSmery(f) {
   }));
   el("dojezdy").parentElement.hidden = !el("dojezdy").children.length;
 }
+function zobrazFilm(filmUrl, plakat) {
+  if (!filmUrl) return;
+  let url;
+  try { url = new URL(filmUrl, document.baseURI); } catch { return; }
+  const mistniSoubor = ["http:", "file:"].includes(url.protocol) && url.origin === location.origin;
+  if (url.protocol !== "https:" && !mistniSoubor) return;
+  const ramecek = el("film-ramecek");
+  const odkaz = el("film-odkaz");
+  const vimeo = url.hostname === "player.vimeo.com"
+    ? url.pathname.match(/^\/video\/(\d+)\/?$/)
+    : /^(www\.)?vimeo\.com$/.test(url.hostname) && url.pathname.match(/^\/(\d+)(?:\/([a-zA-Z0-9]+))?\/?$/);
+  if (vimeo) {
+    const prehravac = new URL("https://player.vimeo.com/video/" + vimeo[1] + "?title=0&byline=0&portrait=0&dnt=1");
+    const hash = vimeo[2] || url.searchParams.get("h");
+    if (hash) prehravac.searchParams.set("h", hash);
+    const iframe = prvek("iframe");
+    iframe.title = "Videoprohlídka domu B v Suchdole";
+    iframe.loading = "lazy";
+    iframe.allow = "autoplay; fullscreen; picture-in-picture; encrypted-media";
+    iframe.allowFullscreen = true;
+    iframe.referrerPolicy = "strict-origin-when-cross-origin";
+    iframe.src = prehravac.href;
+    ramecek.replaceChildren(iframe);
+    odkaz.href = "https://vimeo.com/" + vimeo[1] + (hash ? "/" + encodeURIComponent(hash) : "");
+    odkaz.textContent = "Otevřít na Vimeu ↗";
+  } else {
+    const video = prvek("video");
+    video.controls = true;
+    video.playsInline = true;
+    video.preload = "none";
+    video.src = url.href;
+    if (plakat) video.poster = plakat;
+    video.setAttribute("aria-label", "Videoprohlídka domu B");
+    ramecek.replaceChildren(video);
+    odkaz.href = url.href;
+    odkaz.textContent = "Otevřít video ↗";
+  }
+  ramecek.hidden = false;
+}
 function vykresliLokalitu(f, misto, filmUrl) {
   const [citat] = (f.lokalita.genius_loci || "").split(/\s+–\s+/);
   el("genius").textContent = citat || "";
@@ -732,23 +771,7 @@ function vykresliLokalitu(f, misto, filmUrl) {
     " začíná kousek za domem",
   );
   el("priroda").textContent = priroda + ".";
-  const frame = el("film-ramecek");
-  if (filmUrl) {
-    const video = prvek("video");
-    video.controls = true;
-    video.playsInline = true;
-    video.preload = "none";
-    video.src = filmUrl;
-    if (misto?.foto) video.poster = misto.foto;
-    video.setAttribute("aria-label", "Videoprohlídka domu B");
-    frame.replaceChildren(video);
-    frame.hidden = false;
-    el("film-stav").hidden = true;
-  } else {
-    frame.replaceChildren();
-    frame.hidden = true;
-    el("film-stav").hidden = false;
-  }
+  zobrazFilm(filmUrl, misto?.foto);
   el("adresa").textContent = f.adresa;
   vykresliSmery(f);
 }
@@ -910,14 +933,14 @@ window.addEventListener("hashchange", otevriRozsah);
 otevriRozsah();
 
 // Fotografie a vizualizace tvoří uzavřený výběr. Vzdálený zdroj může doplnit jen hotovou videoprohlídku.
-async function aktualizujFilm(fakta) {
-  if (!/^https?:$/.test(location.protocol)) return;
+async function aktualizujFilm() {
+  if (el("film-ramecek").childElementCount || !/^https?:$/.test(location.protocol)) return;
   try {
     const odpoved = await fetch(ZDROJ_DAT, {credentials:"omit", signal: AbortSignal.timeout(3500)});
     if (!odpoved.ok) return;
     const film = (await odpoved.json()).video?.url;
-    if (film && new URL(film).protocol === "https:" && !el("film-ramecek").querySelector("video")) {
-      vykresliLokalitu(fakta, null, film);
+    if (film && new URL(film).protocol === "https:" && !el("film-ramecek").childElementCount) {
+      zobrazFilm(film);
     }
   } catch { /* Film může být ještě ve výrobě. */ }
 }
@@ -931,7 +954,7 @@ async function nacti() {
     const mistni = document.getElementById("mistni-podklady");
     const balicek = mistni ? JSON.parse(mistni.textContent) : await nactiBalicek("data.json");
     vykresli(balicek);
-    void aktualizujFilm(balicek.fakta);
+    void aktualizujFilm();
   } catch {
     const chyba = document.querySelector(".loading-error");
     chyba.hidden = false;
