@@ -225,7 +225,6 @@ function kartaGalerie(foto, zvetsit) {
   const caption = prvek("figcaption", "foto-popisek");
   caption.append(prvek("span", "", popisPatra(foto.patro)), prvek("strong", "", foto.nazev));
   if (foto.kratce) caption.append(prvek("small", "", foto.kratce));
-  if (foto.poradi === 17) caption.append(prvek("small", "", "Venkovní schodiště je na přání za příplatek."));
   obsah.append(ram, caption);
   karta.append(obsah);
   return karta;
