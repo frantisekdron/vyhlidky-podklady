@@ -10,6 +10,22 @@
   font-weight: 400;
   font-display: swap;
 }
+@font-face {
+  font-family: "Prata fallback";
+  src: local("Georgia");
+  size-adjust: 110%;
+  ascent-override: 90.3%;
+  descent-override: 32.9%;
+  line-gap-override: 0%;
+}
+@font-face {
+  font-family: "Montserrat fallback";
+  src: local("Arial"), local("ArialMT"), local("Liberation Sans");
+  size-adjust: 113.8%;
+  ascent-override: 85.1%;
+  descent-override: 22.1%;
+  line-gap-override: 0%;
+}
 :root {
   --navy: #0c2749;
   --gold: #b8955a;
@@ -19,8 +35,8 @@
   --paper: #fbfaf6;
   --wash: #f1f1eb;
   --line: #d8dbd5;
-  --serif: Prata, Georgia, serif;
-  --sans: Montserrat, Arial, sans-serif;
+  --serif: Prata, "Prata fallback", Georgia, serif;
+  --sans: Montserrat, "Montserrat fallback", Arial, sans-serif;
 }
 * {
   box-sizing: border-box;

@@ -91,11 +91,15 @@ function tlacitko(text, klik) {
   b.addEventListener("click", klik);
   return b;
 }
-function obrazek(url, alt, lazy = true) {
+function obrazek(url, alt, lazy = true, zdroje, velikosti) {
   const img = new Image();
   img.alt = alt;
   img.decoding = "async";
   img.loading = lazy ? "lazy" : "eager";
+  if (zdroje && velikosti) {
+    img.sizes = velikosti;
+    img.srcset = zdroje;
+  }
   img.src = url;
   return img;
 }
@@ -145,7 +149,7 @@ function vykresliUvod(f) {
       return box;
     }),
   );
-  el("stav").textContent = "Zkolaudováno · PENB B";
+  el("stav").textContent = "Zkolaudováno v roce 2025 · PENB B";
   el("termin").textContent = f.nastehovani;
 }
 function jeExterier(foto) {
@@ -153,11 +157,12 @@ function jeExterier(foto) {
 }
 
 function galerieObrazek(polozka, popis, nahled) {
-  const img = obrazek(nahled && polozka.nahled ? polozka.nahled : polozka.url, popis, nahled);
-  if (nahled && polozka.nahled) {
-    img.srcset = polozka.nahled + " 640w, " + polozka.url + " " + (polozka.sirka || 1700) + "w";
-    img.sizes = "(max-width: 600px) 93vw, (max-width: 980px) 46vw, 32vw";
-  }
+  const miniatura = nahled && polozka.nahled;
+  const vetsi = polozka.stredni ? polozka.stredni + " 960w" : polozka.url + " " + (polozka.sirka || 1700) + "w";
+  const img = miniatura
+    ? obrazek(miniatura, popis, true, miniatura + " 640w, " + vetsi,
+        "auto, (max-width: 600px) 92vw, (max-width: 980px) 46vw, 30vw")
+    : obrazek(polozka.url, popis, false);
   img.draggable = false;
   return img;
 }
@@ -236,9 +241,14 @@ function vykresliGalerii(vse) {
   let vybrane = [];
   let zobrazeno = 0;
   const resize = typeof ResizeObserver === "function" ? new ResizeObserver(entries => {
-    for (const {target, contentRect} of entries) {
-      target.parentElement.style.gridRowEnd = "span " + Math.ceil((contentRect.height + 22) / 6);
-    }
+    requestAnimationFrame(() => {
+      for (const {target, contentRect} of entries) {
+        const karta = target.parentElement;
+        if (!karta?.isConnected) continue;
+        const radky = "span " + Math.ceil((contentRect.height + 22) / 6);
+        if (karta.style.gridRowEnd !== radky) karta.style.gridRowEnd = radky;
+      }
+    });
   }) : null;
   if (resize) galerie.classList.add("merena");
   function ukazDalsi(pocet) {
@@ -303,7 +313,7 @@ for (const serie of document.querySelectorAll("[data-foto-serie]")) {
   const fotky = odkazy.map(odkaz => {
     const popisek = odkaz.closest("figure").querySelector("figcaption");
     return {
-      druh: "Fotografie domu B",
+      druh: "Fotografie současného stavu",
       nazev: (popisek.firstElementChild || popisek).textContent.trim(),
       alt: odkaz.querySelector("img").alt,
       url: odkaz.getAttribute("href"),
@@ -327,7 +337,7 @@ function poznamkaKeSnimku(foto) {
   if (foto.poznamka) return foto.poznamka;
   if (jeExterier(foto)) return "Bazén a stávající trávník jsou v ceně. Výsadba a zahradní nábytek na návrhu jsou pro představu.";
   if (/koupelna/i.test(foto.nazev)) return "Obklady a sanita jsou v ceně. Zobrazené zařízení a dekorace jsou návrhem.";
-  return "Návrh zařízení. Vyobrazený nábytek ani kuchyň nejsou v základní ceně domu.";
+  return "Návrh zařízení. Vyobrazený nábytek ani kuchyň nejsou v základní ceně mezonetu.";
 }
 function vykresliDialog() {
   const foto = kolekce[aktivni];
@@ -425,8 +435,8 @@ el("lb-frame").addEventListener(
 function tabule(x, pole, i) {
   const b = tlacitko("", () => otevri(pole, i));
   b.className = "board";
-  b.setAttribute("aria-label", "Zvětšit – " + x.nazev);
-  b.append(obrazek(x.url, x.druh + ": " + x.nazev), stitek(x.druh), zvetseni());
+  b.setAttribute("aria-label", x.druh + " – " + x.nazev + ". Zvětšit obrázek.");
+  b.append(obrazek(x.nahled || x.url, ""), stitek(x.druh), zvetseni());
   return b;
 }
 function vykresliModely(f, model) {
@@ -539,7 +549,7 @@ function cenaPolozky(it, povoleno) {
 function sumarizace(k, polozky) {
   if (k.zobrazit_ceny !== true)
     return {
-      radky: ["Základní cena domu " + mena(k.zakladni_cena_kc) + " včetně DPH"],
+      radky: ["Základní cena mezonetu " + mena(k.zakladni_cena_kc) + " včetně DPH"],
       celkem: polozky.length ? "Vybrané doplňky: " + polozky.length + " · cena na dotaz" : "Bez vybraných příplatků",
     };
   const priplatky = polozky.reduce(
@@ -670,10 +680,10 @@ function vykresliKonfigurator(k, f) {
       ? pole.value.replace(posledniSestava, "").trim()
       : pole.value.trim();
     const sestava = [
-      "Mám zájem o prohlídku domu B. Prosím o upřesnění rozsahu předání a případné nacenění vybraných doplňků.",
+      "Mám zájem o prohlídku mezonetu. Prosím o upřesnění rozsahu předání a případné nacenění vybraných doplňků.",
       ...vyber.map((it) => "• " + it.nazev + " – " + cenaPolozky(it, povoleno)),
     ];
-    if (!vyber.length) sestava.push("Dům v základním vybavení.");
+    if (!vyber.length) sestava.push("Mezonet v základním provedení.");
     if (povoleno) {
       const s = sumarizace(k, vyber);
       sestava.push(s.celkem);
@@ -711,7 +721,6 @@ function vykresliSmery(f) {
     link.target = "_blank";
     link.rel = "noopener noreferrer";
     link.title = "Trasa od domu " + popis + " · Google Maps";
-    link.setAttribute("aria-label", nadpis + " – " + detail + ". Otevřít trasu od domu " + popis + " v Google Maps.");
     const napis = prvek("span", "cil-text");
     napis.append(prvek("strong", "", nadpis), prvek("small", "", detail));
     link.append(ikona("smer-" + id), napis);
@@ -740,7 +749,7 @@ function zobrazFilm(filmUrl, plakat) {
     const hash = vimeo[2] || url.searchParams.get("h");
     if (hash) prehravac.searchParams.set("h", hash);
     const iframe = prvek("iframe");
-    iframe.title = "Videoprohlídka domu B v Suchdole";
+    iframe.title = "Videoprohlídka mezonetu v Suchdole";
     iframe.loading = "lazy";
     iframe.allow = "autoplay; fullscreen; picture-in-picture; encrypted-media";
     iframe.allowFullscreen = true;
@@ -756,7 +765,7 @@ function zobrazFilm(filmUrl, plakat) {
     video.preload = "none";
     video.src = url.href;
     if (plakat) video.poster = plakat;
-    video.setAttribute("aria-label", "Videoprohlídka domu B");
+    video.setAttribute("aria-label", "Videoprohlídka mezonetu");
     ramecek.replaceChildren(video);
     odkaz.href = url.href;
     odkaz.textContent = "Otevřít video ↗";
@@ -843,7 +852,7 @@ function nastavKontakt(f) {
     try {
       if (!ADRESA_POPTAVKY) {
         const body = [
-          text("zprava") || "Mám zájem o prohlídku domu B.",
+          text("zprava") || "Mám zájem o prohlídku mezonetu.",
           data.jmeno,
           data.telefon,
           data.email,
@@ -917,8 +926,22 @@ menu.onclick = () => {
   menu.setAttribute("aria-expanded", "true");
   menu.setAttribute("aria-label", "Zavřít navigaci");
   el("nav").classList.add("open");
+  el("nav").querySelector("a").focus();
 };
-el("nav").addEventListener("click", zavriMenu);
+el("nav").addEventListener("click", e => {
+  const link = e.target.closest("a");
+  if (link && menu.getAttribute("aria-expanded") === "true") {
+    zavriMenu();
+    const cil = document.getElementById(link.hash.slice(1));
+    if (cil) {
+      cil.tabIndex = -1;
+      cil.focus({ preventScroll: true });
+    }
+  }
+});
+document.addEventListener("focusin", e => {
+  if (menu.getAttribute("aria-expanded") === "true" && e.target !== menu && !el("nav").contains(e.target)) zavriMenu();
+});
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape" && menu.getAttribute("aria-expanded") === "true") {
     zavriMenu();

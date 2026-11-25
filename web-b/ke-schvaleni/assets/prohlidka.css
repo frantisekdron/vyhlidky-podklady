@@ -1,11 +1,33 @@
+.hero-media picture, .hero-media picture img { display: block; width: 100%; height: 100%; }
 .hero-media img { object-position: 61% 52%; }
-.hero-copy { max-width: min(670px, 57vw); }
+.hero-copy { max-width: min(720px, 55vw); }
+.hero h1 { max-width: 17ch; font-size: clamp(48px, 4.9vw, 78px); line-height: 1.09; letter-spacing: -.052em; text-wrap: balance; }
+.hero-sub { max-width: 47ch; font-size: clamp(15px, 1.12vw, 18px); line-height: 1.62; }
 .hero-media::after {
-  background: linear-gradient(90deg, #071924d6 0%, #0b2337a3 32%, #11232e20 65%, transparent 84%),
-    linear-gradient(180deg, #10253763, transparent 28%, transparent 75%, #08182170);
+  background: linear-gradient(90deg, #071924e3 0%, #0b2032b5 32%, #12253387 48%, #11232e20 68%, transparent 84%),
+    linear-gradient(180deg, #081b33b8, transparent 24%, transparent 73%, #08182191);
 }
 .stat:first-child b { font-size: clamp(1.35rem, 2.2vw, 2.25rem); }
+.pravni-stav { max-width: 93ch; margin: 0; padding: 18px 0 8px; font-size: .97rem; line-height: 1.65; color: var(--ink); }
+.availability { align-items: flex-start; }
+.availability > div { display: grid; gap: .22rem; }
 .availability > div > p + p { margin-top: .32rem; }
+.handover-terms article p, .config-intro { line-height: 1.68; }
+.handover-terms article p { max-width: 48ch; }
+.option-row, .plan-grid article { min-width: 0; }
+.option-row small, .field-hint { font-size: .82rem; }
+.switch { width: 38px; height: 24px; border-color: #526373; background: #e5e8e5; }
+.switch::before { background: #536373; top: 4px; }
+.switch:checked::before { background: white; transform: translateX(16px); }
+.btn.outline { border-color: #74818b; }
+#formular :is(input:not([type=checkbox]),textarea) { border-color: #74818b; }
+#formular :is(input,textarea)::placeholder { color: #536170; opacity: 1; }
+:is(a, button, summary, input, textarea, select):focus-visible,
+.config-visual :is(button,model-viewer):focus-visible, .poi a:focus-visible,
+.compare:has(input:focus-visible) .compare-handle {
+  outline: 3px solid #143e60; outline-offset: 2px; box-shadow: 0 0 0 2px white, 0 0 0 6px white;
+}
+.foto-zoom:focus-visible { outline-offset: -4px; box-shadow: inset 0 0 0 2px white; }
 .gallery-actions .gallery-count { margin-right: auto; align-self: center; font-size: .88rem; color: #415969; }
 #galerie .gallery-actions { justify-content: flex-end; }
 #galerie .aside-copy { max-width: 49ch; }
@@ -71,22 +93,43 @@
 .poi-detail .cil-trasy:hover strong { text-decoration:underline; }
 .poi-detail .travel { margin-top:18px; display:block; }
 .poi-detail .travel[hidden] { display:none; }
-.poi-detail .travel-title { margin-bottom:7px; display:block; }
+.poi-detail .travel-title { margin-bottom:7px; display:block; color:#475847; font-size:.78rem; }
+.poi-detail #dojezdy { color:var(--navy); }
+.poi-detail #dojezdy small { color:#526361; }
 .poi-detail #dojezdy { gap:8px 12px; flex-wrap:wrap; }
 @media(max-width:980px) {
   .foto-kolaz { grid-template-columns:repeat(2,minmax(0,1fr)); }
   .hero-copy { max-width:min(640px,74vw); }
+  .hero-media::after {
+    background:linear-gradient(90deg,#081b2dd6 0%,#0b2032c4 45%,#0b2032a8 68%,#11232e25 96%),
+      linear-gradient(180deg,#081b3380,transparent 26%,transparent 76%,#08182191);
+  }
 }
 @media(max-width:760px) {
-  .hero-copy { max-width:100%; }
+  .hero-copy { position:relative; isolation:isolate; max-width:100%; }
+  .hero-copy::before {
+    content:""; position:absolute; z-index:-1; pointer-events:none;
+    inset:-3rem calc((100% - 100vw) / 2) -4rem;
+    background:linear-gradient(180deg,transparent,#0a1c3080 3rem,#091d2e63 70%,transparent);
+  }
+  .hero-loc span { color:#f2e7d2; }
+  .hero h1 { font-size:clamp(32px,8.5vw,49px); max-width:17ch; }
+  .hero-sub { max-width:44ch; font-size:.94rem; }
+  .hero-inner { padding-top:clamp(142px,25svh,230px); padding-bottom:88px; }
   .hero-media img { object-position:64% 48%; }
-  .hero-media::after { background:linear-gradient(180deg,#0e233a35 0%,#0e233a11 20%,#081b2a75 47%,#081b2edb 96%); }
+  .hero-media::after { background:linear-gradient(180deg,#081c357d,#081b2a15 20%,#091c2d80 36%,#081b2cbf 55%,#081b2ee0 88%); }
+  .hero-actions .btn { min-height:46px; }
+  .hero-rail > a { min-height:44px; }
+  .pravni-stav { font-size:.93rem; }
   .poi { grid-template-columns:1fr; }
   .config-scene { aspect-ratio:1.23; }
   .scene-caption { align-items:flex-start; }
   .scene-switch { padding-top:0; }
 }
 @media (max-width: 600px) {
+  .nav-inner nav.open { flex-direction:column; align-items:stretch; flex-wrap:nowrap; max-height:calc(100svh - 72px); overflow:auto; }
+  .nav-inner nav a { display:flex; align-items:center; min-height:44px; }
+  .availability { flex-wrap:wrap; row-gap:12px; padding-bottom:22px; }
   .foto-kolaz { grid-template-columns: minmax(0,1fr); }
   .foto-karta:nth-child(n) .foto-obraz { aspect-ratio: 1.5; }
   .foto-karta[data-foto="vyber-25"] .foto-obraz { aspect-ratio: 1.334; }
