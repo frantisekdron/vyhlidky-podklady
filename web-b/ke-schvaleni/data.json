@@ -1,5 +1,5 @@
 {
-  "aktualizace": "25. 11. 2026",
+  "aktualizace": "26. 11. 2026",
   "fakta": {
     "nazev": "Vyhlídky Suchdol – vilový mezonet",
     "adresa": "Bažantní 1380/3, 165 00 Praha 6 – Suchdol",
@@ -16,7 +16,7 @@
       "Podzemní akumulační nádrž. Pro ohřev teplé vody se zapojí po doplnění fotovoltaiky a tepelného čerpadla",
       "Garáž se sekčními vraty s pohonem a venkovní stání na dvoře",
       "Oplocení, branka a automatická posuvná vjezdová brána",
-      "Vstupní schodiště, schůdky na dvůr, zábradlí a dlažba na terasách a balkonech",
+      "Venkovní schodiště u garáže mezi dvorem a terasou, vstupní schodiště a schůdky na dvůr, zábradlí a dlažba na terasách a balkonech",
       "Zapuštěný bazén 3 × 6 m, stávající trávník a rozvody závlahy s tryskami a šachtou"
     ],
     "na_prani": [
@@ -35,7 +35,7 @@
       "markýzy nad balkony ve 2.NP",
       "dokončení automatické závlahy včetně ventilů, řídicí jednotky a čerpadla",
       "wallbox",
-      "schodiště z terasy do zahrady"
+      "druhé venkovní schodiště z terasy k bazénu"
     ],
     "lokalita": {
       "priroda": "přírodní rezervace Údolí Únětického potoka kousek za domem",
@@ -428,7 +428,7 @@
       "navrhy": [
         {
           "nazev": "Dům od vjezdu",
-          "alt": "Vizualizace. Dům od vjezdu: dvůr, garáž, venkovní schodiště na balkon 1.NP",
+          "alt": "Vizualizace dvora, garáže a venkovního schodiště na terasu. Schodiště u garáže je v ceně.",
           "url": "assets/vyber/17-vizualizace.webp",
           "nahled": "assets/vyber/17-vizualizace-640.webp",
           "sirka": 1700,
@@ -439,8 +439,8 @@
       "nahled": "assets/vyber/17-dnes-640.webp",
       "sirka": 1700,
       "alt": "Dvůr a vstupní strana domu při pohledu od vjezdu.",
-      "kratce": "Schodiště z dvora na balkon je na přání.",
-      "poznamka": "Vizualizace ukazuje možnost přidat schodiště z dvora na balkon v obytném podlaží. Tato úprava se nacení zvlášť.",
+      "kratce": "Schodiště u garáže je v ceně při předání.",
+      "poznamka": "Venkovní schodiště u garáže spojuje dvůr s terasou a je v ceně při předání. Druhé schodiště z terasy k bazénu lze objednat za příplatek.",
       "stredni": "assets/vyber/17-dnes-960.webp"
     },
     {
@@ -799,8 +799,8 @@
       },
       {
         "id": "schodiste",
-        "nazev": "Schodiště z terasy do zahrady",
-        "popis": "Ocelové schodiště se skleněným zábradlím z terasy na podestu a podél domu k bazénu.",
+        "nazev": "Druhé schodiště z terasy k bazénu",
+        "popis": "Volitelné ocelové schodiště se skleněným zábradlím z terasy směrem k bazénu. Samostatné venkovní schodiště u garáže je v základní ceně.",
         "pohled": "zahrada",
         "vrstva": "assets/konfigurator/zahrada_schodiste.webp"
       },

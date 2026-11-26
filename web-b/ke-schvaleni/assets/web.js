@@ -1,3 +1,46 @@
+const anglicky = document.documentElement.lang === "en";
+const textProJazyk = (cesky, english) => anglicky ? english : cesky;
+const prepinacJazyka = document.querySelector(".language-link");
+if (prepinacJazyka) {
+  const druhaVerze = new URL(prepinacJazyka.href);
+  function nastavOdkazJazyka() {
+    druhaVerze.hash = location.hash;
+    prepinacJazyka.href = druhaVerze.href;
+  }
+  nastavOdkazJazyka();
+  window.addEventListener("hashchange", nastavOdkazJazyka);
+}
+
+function anglickePodklady(data, preklad) {
+  function cestaObrazku(url) {
+    const soubor = url.slice("assets/".length);
+    const original = soubor.replace(/-(640|960)\.webp$/, ".webp");
+    return preklad.obrazky.includes(original) ? "graphics/" + soubor : "../" + url;
+  }
+  function obrazek(item) {
+    for (const pole of ["url", "nahled", "stredni", "zaklad", "vrstva"]) {
+      if (item[pole]?.startsWith("assets/")) item[pole] = cestaObrazku(item[pole]);
+    }
+    return item;
+  }
+  const fakta = {
+    ...data.fakta, ...preklad.fakta,
+    lokalita: { ...data.fakta.lokalita, ...preklad.fakta.lokalita },
+  };
+  const galerie = data.galerie.map(foto => {
+    const popis = preklad.galerie[foto.id];
+    const navrhy = foto.navrhy.map((navrh, i) => obrazek({ ...navrh, ...popis.navrhy[i] }));
+    const druh = foto.druh === "Fotografie s popisky" ? "Annotated photograph" : foto.druh ? "Photograph" : undefined;
+    return obrazek({ ...foto, ...popis, exterier: jeExterier(foto), druh, navrhy });
+  });
+  const modely = data.modely.map(m => obrazek({ ...m }));
+  const konfigurator = { ...data.konfigurator };
+  konfigurator.pohledy = Object.fromEntries(Object.entries(konfigurator.pohledy).map(([id, view]) =>
+    [id, obrazek({ ...view, nazev: preklad.pohledy[id] })]));
+  konfigurator.polozky = konfigurator.polozky.map(item => obrazek({ ...item, ...preklad.polozky[item.id] }));
+  return { ...data, fakta, galerie, modely, konfigurator };
+}
+
 // Produkce na GitHub Pages: přepište data.json novým balíčkem, případně sem vložte jeho veřejnou URL.
 const ZDROJ_DAT = "https://frantisekdron.github.io/vyhlidky-podklady/natoceni-b/vyroba-b7k2q/data/dum-b.json";
 const ADRESA_POPTAVKY = document.querySelector('meta[name="prijem-poptavek"]')?.content || "";
@@ -36,10 +79,10 @@ async function odeslatPoptavku(data) {
       signal: controller.signal,
       body: JSON.stringify({...data, id}),
     });
-    if (!response.ok) throw Error("Příjem poptávek neodpovídá.");
+    if (!response.ok) throw Error(textProJazyk("Příjem poptávek neodpovídá.", "The enquiry service is unavailable."));
     const potvrzeni = await response.json();
     if (potvrzeni.ok !== true || potvrzeni.id !== id || !["odeslano","ulozeno"].includes(potvrzeni.stav)) {
-      throw Error("Přijetí nebylo potvrzeno.");
+      throw Error(textProJazyk("Přijetí nebylo potvrzeno.", "Receipt could not be confirmed."));
     }
     return potvrzeni;
   } finally { clearTimeout(timeout); }
@@ -49,17 +92,18 @@ const el = (id) => document.getElementById(id);
 const dialog = el("prohlizec");
 const menu = document.querySelector(".menu");
 const mena = (castka) =>
-  new Intl.NumberFormat("cs-CZ", { maximumFractionDigits: 0 }).format(castka) +
-  " Kč";
+  new Intl.NumberFormat(anglicky ? "en-GB" : "cs-CZ", {
+    style: "currency", currency: "CZK", maximumFractionDigits: 0, minimumFractionDigits: 0,
+  }).format(castka);
 const bezDiakritiky = (s) =>
   String(s || "")
     .normalize("NFD")
     .replace(/[\u0300-\u036f]/g, "")
     .toLowerCase();
 const prvniVelke = (s) =>
-  s ? s.charAt(0).toLocaleUpperCase("cs-CZ") + s.slice(1) : "";
+  s ? s.charAt(0).toLocaleUpperCase(anglicky ? "en-GB" : "cs-CZ") + s.slice(1) : "";
 const popisPatra = (patro) =>
-  ({ Venku: "Exteriér", "1.NP": "1. NP", "2.NP": "2. NP", "1.PP": "1. PP" })[
+  ({ Venku: textProJazyk("Exteriér", "Exterior"), "1.NP": textProJazyk("1. NP", "Ground floor"), "2.NP": textProJazyk("2. NP", "First floor"), "1.PP": textProJazyk("1. PP", "Lower ground floor") })[
     patro
   ] || patro;
 let seznamPoptavky = [];
@@ -131,13 +175,13 @@ function vykresliUvod(f) {
   el("cena").textContent = mena(f.cena_kc);
   kontaktniOdkaz("hero-tel", f.makler.telefon);
   const staty = [
-    ["layout", f.dispozice, "Dispozice"],
-    ["area", f.plochy.uzitna_m2 + " m²", "Užitná plocha"],
-    ["land", f.plochy.pozemek_m2 + " m²", "Pozemek"],
+    ["layout", f.dispozice, textProJazyk("Dispozice", "Layout")],
+    ["area", f.plochy.uzitna_m2 + " m²", textProJazyk("Užitná plocha", "Usable floor area")],
+    ["land", f.plochy.pozemek_m2 + " m²", textProJazyk("Pozemek", "Plot")],
     [
       "pool",
       f.bazen.match(/[\d.,]+\s*[×x]\s*[\d.,]+\s*m/i)?.[0] || f.bazen,
-      "Bazén",
+      textProJazyk("Bazén", "Pool"),
     ],
   ];
   el("cisla").replaceChildren(
@@ -149,11 +193,11 @@ function vykresliUvod(f) {
       return box;
     }),
   );
-  el("stav").textContent = "Zkolaudováno v roce 2025 · PENB B";
+  el("stav").textContent = textProJazyk("Zkolaudováno v roce 2025 · PENB B", "Approved for occupancy in 2025 · Energy rating B");
   el("termin").textContent = f.nastehovani;
 }
 function jeExterier(foto) {
-  return foto.patro === "Venku" || /balkon|terasa/i.test(foto.mistnost || foto.nazev);
+  return foto.exterier ?? (foto.patro === "Venku" || /balkon|terasa/i.test(foto.mistnost || foto.nazev));
 }
 
 function galerieObrazek(polozka, popis, nahled) {
@@ -173,8 +217,8 @@ function porovnaniFotografie(foto, navrh, nahled) {
   const pred = prvek("div", "compare-layer compare-before");
   const poObrazek = galerieObrazek(navrh, navrh.alt || navrh.nazev, nahled);
   const predObrazek = galerieObrazek(foto, foto.alt || foto.nazev, nahled);
-  potom.append(poObrazek, prvek("span", "compare-label", "Vizualizace"));
-  pred.append(predObrazek, prvek("span", "compare-label", "Dnes"));
+  potom.append(poObrazek, prvek("span", "compare-label", textProJazyk("Vizualizace", "Visualisation")));
+  pred.append(predObrazek, prvek("span", "compare-label", textProJazyk("Dnes", "Today")));
 
   const cara = prvek("span", "divider");
   cara.setAttribute("aria-hidden", "true");
@@ -187,11 +231,11 @@ function porovnaniFotografie(foto, navrh, nahled) {
   posuv.min = "0";
   posuv.max = "100";
   posuv.value = String(foto.zacatek || 42);
-  posuv.setAttribute("aria-label", "Porovnat fotografii a vizualizaci – " + foto.nazev);
+  posuv.setAttribute("aria-label", textProJazyk("Porovnat fotografii a vizualizaci – ", "Compare photograph and visualisation – ") + foto.nazev);
   function nastavPodil() {
     const pred = Number(posuv.value);
     plocha.style.setProperty("--split", pred + "%");
-    posuv.setAttribute("aria-valuetext", "Fotografie " + pred + " %, vizualizace " + (100 - pred) + " %");
+    posuv.setAttribute("aria-valuetext", textProJazyk("Fotografie ", "Photograph ") + pred + textProJazyk(" %, vizualizace ", "%, visualisation ") + (100 - pred) + textProJazyk(" %", "%"));
   }
   posuv.addEventListener("input", () => {
     nastavPodil();
@@ -219,7 +263,7 @@ function kartaGalerie(foto, zvetsit) {
   ram.append(navrh ? porovnaniFotografie(foto, navrh, true) : galerieObrazek(foto, foto.alt, true));
   const btn = tlacitko("", zvetsit);
   btn.className = navrh ? "foto-zoom" : "foto-zoom foto-odkaz";
-  btn.setAttribute("aria-label", "Zvětšit " + (navrh ? "porovnání" : "fotografii") + " – " + foto.nazev);
+  btn.setAttribute("aria-label", textProJazyk("Zvětšit ", "Enlarge ") + (navrh ? textProJazyk("porovnání", "comparison") : textProJazyk("fotografii", "photograph")) + " – " + foto.nazev);
   btn.append(ikona("expand"));
   ram.append(btn);
   const caption = prvek("figcaption", "foto-popisek");
@@ -235,8 +279,8 @@ function vykresliGalerii(vse) {
   const galerie = el("nahledy");
   const dalsi = el("dalsi-fotky");
   const cele = el("cela-galerie");
-  const filtry = ["Vše", "Interiér", "Exteriér", "Okolí"];
-  let filtr = "Vše";
+  const filtry = [textProJazyk("Vše", "All"), textProJazyk("Interiér", "Interior"), textProJazyk("Exteriér", "Exterior"), textProJazyk("Okolí", "Surroundings")];
+  let filtr = textProJazyk("Vše", "All");
   let vybrane = [];
   let zobrazeno = 0;
   const resize = typeof ResizeObserver === "function" ? new ResizeObserver(entries => {
@@ -258,18 +302,18 @@ function vykresliGalerii(vse) {
     if (resize) for (const karta of nove) resize.observe(karta.firstElementChild);
     const zbyva = vybrane.length - zobrazeno;
     dalsi.hidden = !zbyva;
-    dalsi.textContent = "Zobrazit zbývající snímky (" + zbyva + ")";
-    el("pocet-fotek").textContent = zobrazeno + " z " + vybrane.length + " záběrů";
+    dalsi.textContent = textProJazyk("Zobrazit zbývající snímky (", "Show remaining images (") + zbyva + ")";
+    el("pocet-fotek").textContent = zobrazeno + textProJazyk(" z ", " of ") + vybrane.length + textProJazyk(" záběrů", " images");
     return nove[0];
   }
   function zobraz() {
     resize?.disconnect();
     galerie.replaceChildren();
-    const kategorie = f => [22,25,26,27,28,29,30].includes(f.poradi) ? "Okolí" : jeExterier(f) ? "Exteriér" : "Interiér";
+    const kategorie = f => [22,25,26,27,28,29,30].includes(f.poradi) ? textProJazyk("Okolí", "Surroundings") : jeExterier(f) ? textProJazyk("Exteriér", "Exterior") : textProJazyk("Interiér", "Interior");
     const kandidati = vse.filter(f => !filtrViz.checked || f.navrhy.length);
-    const dostupne = filtry.filter(k => k === "Vše" || kandidati.some(f => kategorie(f) === k));
-    if (!dostupne.includes(filtr)) filtr = "Vše";
-    vybrane = kandidati.filter(f => filtr === "Vše" || kategorie(f) === filtr);
+    const dostupne = filtry.filter(k => k === textProJazyk("Vše", "All") || kandidati.some(f => kategorie(f) === k));
+    if (!dostupne.includes(filtr)) filtr = textProJazyk("Vše", "All");
+    vybrane = kandidati.filter(f => filtr === textProJazyk("Vše", "All") || kategorie(f) === filtr);
     zobrazeno = 0;
     el("filtry").replaceChildren(...dostupne.map(k => {
       const btn = tlacitko(k, () => {
@@ -312,7 +356,7 @@ for (const serie of document.querySelectorAll("[data-foto-serie]")) {
   const fotky = odkazy.map(odkaz => {
     const popisek = odkaz.closest("figure").querySelector("figcaption");
     return {
-      druh: "Fotografie současného stavu",
+      druh: textProJazyk("Fotografie současného stavu", "Current photograph"),
       nazev: (popisek.firstElementChild || popisek).textContent.trim(),
       alt: odkaz.querySelector("img").alt,
       url: odkaz.getAttribute("href"),
@@ -330,19 +374,19 @@ function posun(krok) {
   if (kolekce.length) vyberSnimek((aktivni + krok + kolekce.length) % kolekce.length);
 }
 function poznamkaKeSnimku(foto) {
-  if (foto.druh === "Půdorys") return "Dispozice podlaží. Zakreslené vybavení je pouze návrh.";
-  if (foto.druh === "3D model") return "Schéma rozsahu při předání a volitelných doplňků.";
+  if (foto.druh === textProJazyk("Půdorys", "Floor plan")) return textProJazyk("Dispozice podlaží. Zakreslené vybavení je pouze návrh.", "Floor layout. Furnishings are shown as a suggested arrangement.");
+  if (foto.druh === "3D model") return textProJazyk("Schéma rozsahu při předání a volitelných doplňků.", "Diagram showing the handover specification and optional extras.");
   if (rezim === "dnes" || rezim === "obrazek") return foto.uprava || "";
   if (foto.poznamka) return foto.poznamka;
-  if (jeExterier(foto)) return "Bazén a stávající trávník jsou v ceně. Výsadba a zahradní nábytek na návrhu jsou pro představu.";
-  if (/koupelna/i.test(foto.nazev)) return "Obklady a sanita jsou v ceně. Zobrazené zařízení a dekorace jsou návrhem.";
-  return "Návrh zařízení. Vyobrazený nábytek ani kuchyň nejsou v základní ceně mezonetu.";
+  if (jeExterier(foto)) return textProJazyk("Bazén a stávající trávník jsou v ceně. Výsadba a zahradní nábytek na návrhu jsou pro představu.", "The pool and existing lawn are included. The planting and garden furniture are design suggestions.");
+  if (/koupelna|bathroom/i.test(foto.nazev)) return textProJazyk("Obklady a sanita jsou v ceně. Zobrazené zařízení a dekorace jsou návrhem.", "Tiling and sanitaryware are included. Furnishings and decorations are shown as suggestions.");
+  return textProJazyk("Návrh zařízení. Vyobrazený nábytek ani kuchyň nejsou v základní ceně mezonetu.", "Suggested layout. The furniture and kitchen shown are priced separately.");
 }
 function vykresliDialog() {
   const foto = kolekce[aktivni];
   const navrh = foto.navrhy?.[aktivniNavrh];
-  const popisRezimu = { porovnat: "Dnes / Vizualizace", viz: "Vizualizace", dnes: "Fotografie" };
-  const druh = popisRezimu[rezim] || foto.druh || "Fotografie";
+  const popisRezimu = { porovnat: textProJazyk("Dnes / Vizualizace", "Today / Visualisation"), viz: textProJazyk("Vizualizace", "Visualisation"), dnes: textProJazyk("Fotografie", "Photograph") };
+  const druh = popisRezimu[rezim] || foto.druh || textProJazyk("Fotografie", "Photograph");
   el("lb-kind").textContent = [popisPatra(foto.patro), druh].filter(Boolean).join(" · ");
   el("lb-title").textContent = foto.popis || foto.nazev;
   el("lb-vysvetleni").textContent = poznamkaKeSnimku(foto);
@@ -357,7 +401,7 @@ function vykresliDialog() {
   const modes = el("lb-modes");
   modes.replaceChildren();
   if (navrh) {
-    for (const [mode, label] of [["dnes", "Dnes"], ["porovnat", "Porovnat"], ["viz", "Vizualizace"]]) {
+    for (const [mode, label] of [["dnes", textProJazyk("Dnes", "Today")], ["porovnat", textProJazyk("Porovnat", "Compare")], ["viz", textProJazyk("Vizualizace", "Visualisation")]]) {
       const tl = tlacitko(label, () => {
         rezim = mode;
         vykresliDialog();
@@ -368,7 +412,7 @@ function vykresliDialog() {
     }
     if (foto.navrhy.length > 1) {
       const varianty = prvek("select", "vyber-navrhu");
-      varianty.setAttribute("aria-label", "Vybrat variantu vizualizace");
+      varianty.setAttribute("aria-label", textProJazyk("Vybrat variantu vizualizace", "Choose a visualisation"));
       foto.navrhy.forEach((varianta, i) => {
         const option = prvek("option", "", varianta.nazev);
         option.value = String(i);
@@ -384,7 +428,7 @@ function vykresliDialog() {
       modes.append(varianty);
     }
   } else if (foto.druh) {
-    const odkaz = prvek("a", "zoom-link", "Otevřít v plném rozlišení ↗");
+    const odkaz = prvek("a", "zoom-link", textProJazyk("Otevřít v plném rozlišení ↗", "Open full-size image ↗"));
     odkaz.href = foto.url;
     odkaz.target = "_blank";
     odkaz.rel = "noopener";
@@ -434,7 +478,7 @@ el("lb-frame").addEventListener(
 function tabule(x, pole, i) {
   const b = tlacitko("", () => otevri(pole, i));
   b.className = "board";
-  b.setAttribute("aria-label", x.druh + " – " + x.nazev + ". Zvětšit obrázek.");
+  b.setAttribute("aria-label", x.druh + " – " + x.nazev + textProJazyk(". Zvětšit obrázek.", ". Enlarge image."));
   b.append(obrazek(x.nahled || x.url, ""), stitek(x.druh), zvetseni());
   return b;
 }
@@ -443,19 +487,19 @@ function vykresliModely(f, model) {
   const najdi = (re) => popis.find((m) => re.test(bezDiakritiky(m.nazev)));
   const skupiny = [
     {
-      nadpis: "V ceně při předání",
+      nadpis: textProJazyk("V ceně při předání", "Included at handover"),
       seznam: f.v_cene,
       obrazy: [
-        [najdi(/rez.*dom/), "Řez domem"],
-        [najdi(/v cene/), "Přehled podlaží"],
+        [najdi(/rez.*dom/), textProJazyk("Řez domem", "Building cross-section")],
+        [najdi(/v cene/), textProJazyk("Přehled podlaží", "Floor overview")],
       ],
     },
     {
-      nadpis: "Na přání za příplatek",
+      nadpis: textProJazyk("Na přání za příplatek", "Optional extras"),
       seznam: f.na_prani,
       obrazy: [
-        [najdi(/na prani.*zahrad/), "Pohled ze zahrady"],
-        [najdi(/na prani.*ulic/), "Pohled od ulice"],
+        [najdi(/na prani.*zahrad/), textProJazyk("Pohled ze zahrady", "Garden view")],
+        [najdi(/na prani.*ulic/), textProJazyk("Pohled od ulice", "Street view")],
       ],
     },
   ];
@@ -479,7 +523,7 @@ function vykresliModely(f, model) {
           zbytek = prvek("ul", "equips");
         zbytek.append(...bodySeznamu(g.seznam.slice(4)));
         detail.append(
-          prvek("summary", "", "Všechny položky (" + g.seznam.length + ")"),
+          prvek("summary", "", textProJazyk("Všechny položky (", "All items (") + g.seznam.length + ")"),
           zbytek,
         );
         div.append(detail);
@@ -488,9 +532,9 @@ function vykresliModely(f, model) {
     }),
   );
   const patra = [
-    ["1PP", "Spodní podlaží", "1. PP"],
-    ["1NP", "Obytné podlaží", "1. NP"],
-    ["2NP", "Horní podlaží", "2. NP"],
+    ["1PP", textProJazyk("Spodní podlaží", "Garage and poolside studio"), textProJazyk("1. PP", "Lower ground floor")],
+    ["1NP", textProJazyk("Obytné podlaží", "Living space"), textProJazyk("1. NP", "Ground floor")],
+    ["2NP", textProJazyk("Horní podlaží", "Bedrooms and bathroom"), textProJazyk("2. NP", "First floor")],
   ];
   const plany = patra.flatMap(([kod, t, patro]) => {
     const m = model.find((x) => {
@@ -507,7 +551,7 @@ function vykresliModely(f, model) {
             ...m,
             nazev: t,
             patro,
-            druh: "Půdorys",
+            druh: textProJazyk("Půdorys", "Floor plan"),
           },
         ]
       : [];
@@ -542,14 +586,14 @@ function upravVyber(polozky, vybrane, id, zapnout) {
   }
 }
 function cenaPolozky(it, povoleno) {
-  if (!povoleno || !Number.isFinite(it.cena_kc)) return "cena na dotaz";
-  return (it.cena_od ? "od " : it.cena_cca ? "cca " : "") + mena(it.cena_kc);
+  if (!povoleno || !Number.isFinite(it.cena_kc)) return textProJazyk("cena na dotaz", "price on request");
+  return (it.cena_od ? textProJazyk("od ", "from ") : it.cena_cca ? textProJazyk("cca ", "approx. ") : "") + mena(it.cena_kc);
 }
 function sumarizace(k, polozky) {
   if (k.zobrazit_ceny !== true)
     return {
-      radky: ["Základní cena mezonetu " + mena(k.zakladni_cena_kc) + " včetně DPH"],
-      celkem: polozky.length ? "Vybrané doplňky: " + polozky.length + " · cena na dotaz" : "Bez vybraných příplatků",
+      radky: [textProJazyk("Základní cena mezonetu ", "Maisonette base price ") + mena(k.zakladni_cena_kc) + textProJazyk(" včetně DPH", " including VAT")],
+      celkem: polozky.length ? textProJazyk("Vybrané doplňky: ", "Selected extras: ") + polozky.length + textProJazyk(" · cena na dotaz", " · price on request") : textProJazyk("Bez vybraných příplatků", "No extras selected"),
     };
   const priplatky = polozky.reduce(
     (sum, it) => sum + (Number.isFinite(it.cena_kc) ? it.cena_kc : 0),
@@ -558,15 +602,15 @@ function sumarizace(k, polozky) {
   const naDotaz = polozky.some((it) => !Number.isFinite(it.cena_kc));
   const od = polozky.some((it) => it.cena_od);
   const radky = [
-    "Základní cena " + mena(k.zakladni_cena_kc),
-    "Vybrané příplatky + " + (od ? "od " : "") + mena(priplatky),
+    textProJazyk("Základní cena ", "Base price ") + mena(k.zakladni_cena_kc),
+    textProJazyk("Vybrané příplatky + ", "Selected extras + ") + (od ? textProJazyk("od ", "from ") : "") + mena(priplatky),
   ];
   return {
     radky,
     celkem:
-      "Orientačně " + (od ? "od " : "") + mena(k.zakladni_cena_kc + priplatky),
+      textProJazyk("Orientačně ", "Estimated total ") + (od ? textProJazyk("od ", "from ") : "") + mena(k.zakladni_cena_kc + priplatky),
     poznamka: naDotaz
-      ? "Položky s cenou na dotaz nejsou v součtu zahrnuty."
+      ? textProJazyk("Položky s cenou na dotaz nejsou v součtu zahrnuty.", "The total excludes items priced on request.")
       : "",
   };
 }
@@ -575,7 +619,28 @@ function vykresliKonfigurator(k, f) {
   const vstupy = new Map();
   const pohledy = Object.keys(k.pohledy);
   let pohled = pohledy.includes("zahrada") ? "zahrada" : pohledy[0];
-  const nazvy = { zahrada: "Zahrada", ulice: "Ulice", rez: "Řez domem" };
+  const prenos = "suchdol-b-prepnuti";
+  let poptavkaPredPrepnutim;
+  try {
+    const ulozene = JSON.parse(sessionStorage.getItem(prenos));
+    if (ulozene?.jazyk === document.documentElement.lang) {
+      sessionStorage.removeItem(prenos);
+      if (Date.now() - ulozene.cas < 120000 && Array.isArray(ulozene.volby)) {
+        for (const id of ulozene.volby) upravVyber(k.polozky, vybrane, id, true);
+        if (pohledy.includes(ulozene.pohled)) pohled = ulozene.pohled;
+        if (Array.isArray(ulozene.poptavka)) poptavkaPredPrepnutim = ulozene.poptavka;
+      }
+    }
+  } catch { /* Soukromý režim může vypnout úložiště. */ }
+  prepinacJazyka?.addEventListener("click", () => {
+    try {
+      sessionStorage.setItem(prenos, JSON.stringify({
+        jazyk: prepinacJazyka.hreflang, cas: Date.now(), pohled, volby: [...vybrane],
+        poptavka: posledniSestava ? seznamPoptavky.map(it => it.id) : null,
+      }));
+    } catch { /* Odkaz funguje i bez úložiště. */ }
+  });
+  const nazvy = { zahrada: textProJazyk("Zahrada", "Garden"), ulice: textProJazyk("Ulice", "Street"), rez: textProJazyk("Řez domem", "Building cross-section") };
   const povoleno = k.zobrazit_ceny === true;
   el("zaklad").replaceChildren(...bodySeznamu(f.v_cene));
   const taby = new Map();
@@ -614,17 +679,17 @@ function vykresliKonfigurator(k, f) {
     );
   }
   const skupiny = [
-    ["Energie a vytápění", ["fve", "propojeni", "baterie", "tc", "chlazeni"]],
-    ["Zahrada a bazén", ["zastreseni", "ohrev", "protiproud", "zavlaha", "schodiste"]],
+    [textProJazyk("Energie a vytápění", "Energy and heating"), ["fve", "propojeni", "baterie", "tc", "chlazeni"]],
+    [textProJazyk("Zahrada a bazén", "Garden and pool"), ["zastreseni", "ohrev", "protiproud", "zavlaha", "schodiste"]],
     [
-      "Vybavení a stínění",
+      textProJazyk("Vybavení a stínění", "Fittings and shading"),
       ["zaluzie", "markyzy", "kuchyn", "dvere", "svitidla", "infrasauna", "wallbox", "kamery"],
     ],
   ];
   const ostatni = k.polozky
     .filter((it) => !skupiny.some(([, ids]) => ids.includes(it.id)))
     .map((it) => it.id);
-  if (ostatni.length) skupiny.push(["Další možnosti", ostatni]);
+  if (ostatni.length) skupiny.push([textProJazyk("Další možnosti", "Other options"), ostatni]);
   function obnov() {
     for (const [id, input] of vstupy) input.checked = vybrane.has(id);
     model();
@@ -671,18 +736,17 @@ function vykresliKonfigurator(k, f) {
       return [detail];
     }),
   );
-  el("poslat-sestavu").onclick = () => {
-    const vyber = k.polozky.filter((it) => vybrane.has(it.id));
+  function pripravTextPoptavky(vyber) {
     seznamPoptavky = vyber.map((it) => ({ id: it.id, nazev: it.nazev }));
     const pole = el("zprava");
     const vlastni = posledniSestava
       ? pole.value.replace(posledniSestava, "").trim()
       : pole.value.trim();
     const sestava = [
-      "Mám zájem o prohlídku mezonetu. Prosím o upřesnění rozsahu předání a případné nacenění vybraných doplňků.",
+      textProJazyk("Mám zájem o prohlídku mezonetu. Prosím o upřesnění rozsahu předání a případné nacenění vybraných doplňků.", "I would like to view the maisonette. Please confirm the handover specification and provide prices for any extras listed below."),
       ...vyber.map((it) => "• " + it.nazev + " – " + cenaPolozky(it, povoleno)),
     ];
-    if (!vyber.length) sestava.push("Mezonet v základním provedení.");
+    if (!vyber.length) sestava.push(textProJazyk("Mezonet v základním provedení.", "Maisonette with the base specification."));
     if (povoleno) {
       const s = sumarizace(k, vyber);
       sestava.push(s.celkem);
@@ -690,6 +754,12 @@ function vykresliKonfigurator(k, f) {
     }
     posledniSestava = sestava.join("\n");
     pole.value = [vlastni, posledniSestava].filter(Boolean).join("\n\n");
+  }
+  if (poptavkaPredPrepnutim) {
+    pripravTextPoptavky(k.polozky.filter(it => poptavkaPredPrepnutim.includes(it.id)));
+  }
+  el("poslat-sestavu").onclick = () => {
+    pripravTextPoptavky(k.polozky.filter(it => vybrane.has(it.id)));
     location.hash = "kontakt";
     el("jmeno").focus({ preventScroll: true });
   };
@@ -699,27 +769,27 @@ function vykresliKonfigurator(k, f) {
 function vykresliSmery(f) {
   const dojezdy = f.lokalita.dojezdy || [];
   const kam = [
-    { id: "centrum", nadpis: "Centrum Prahy", cil: "Staroměstská, Kaprova, Praha 1",
-      popis: "ke Staroměstské", klic: /staromestsk|centrum prahy|praha.{0,5}centrum/ },
-    { id: "letiste", nadpis: "Letiště Václava Havla", cil: "Letiště Václava Havla Praha, Terminál 2",
-      popis: "na letiště", klic: /letiste/ },
-    { id: "udoli", nadpis: "Únětické údolí", cil: "Trojanův mlýn, Suchdol, Praha",
-      popis: "k Trojanovu mlýnu v údolí", klic: /trojanuv mlyn|unetic.{0,8}udoli|udoli|unetickeho potoka/ },
+    { id: "centrum", nadpis: textProJazyk("Centrum Prahy", "Prague city centre"), cil: "Staroměstská, Kaprova, Praha 1",
+      popis: textProJazyk("ke Staroměstské", "to Staroměstská in the Old Town"), klic: /staromestsk|centrum prahy|praha.{0,5}centrum/ },
+    { id: "letiste", nadpis: textProJazyk("Letiště Václava Havla", "Václav Havel Airport"), cil: "Letiště Václava Havla Praha, Terminál 2",
+      popis: textProJazyk("na letiště", "to the airport"), klic: /letiste/ },
+    { id: "udoli", nadpis: textProJazyk("Únětické údolí", "Únětice Valley"), cil: "Trojanův mlýn, Suchdol, Praha",
+      popis: textProJazyk("k Trojanovu mlýnu v údolí", "to Trojanův mlýn in the valley"), klic: /trojanuv mlyn|unetic.{0,8}udoli|udoli|unetickeho potoka/ },
   ];
   const pouzite = new Set();
   el("panorama-cile").replaceChildren(...kam.map(({id, nadpis, cil, popis, klic}) => {
     const pesky = id === "udoli";
-    const druh = pesky ? "pěšky" : "autem";
+    const druh = pesky ? textProJazyk("pěšky", "on foot") : textProJazyk("autem", "by car");
     const cas = dojezdy.find(([nazev]) => klic.test(bezDiakritiky(nazev)));
     const delka = cas?.[1]?.trim();
     if (delka) pouzite.add(cas);
-    const detail = delka ? (/autem|pěšky|MHD|metrem|busem|minut chůze/i.test(delka) ? delka : delka + " " + druh) : "Zjistit čas " + druh;
+    const detail = delka ? (/autem|pěšky|MHD|metrem|busem|minut chůze/i.test(delka) ? delka : delka + " " + druh) : textProJazyk("Zjistit čas ", "Check time ") + druh;
     const link = prvek("a", "cil-trasy cil-" + id);
     const params = new URLSearchParams({api:"1", origin:f.adresa, destination:cil, travelmode:pesky ? "walking" : "driving"});
     link.href = "https://www.google.com/maps/dir/?" + params;
     link.target = "_blank";
     link.rel = "noopener noreferrer";
-    link.title = "Trasa od domu " + popis + " · Google Maps";
+    link.title = textProJazyk("Trasa od domu ", "Directions from the villa ") + popis + " · Google Maps";
     const napis = prvek("span", "cil-text");
     napis.append(prvek("strong", "", nadpis), prvek("small", "", detail));
     link.append(ikona("smer-" + id), napis);
@@ -748,7 +818,7 @@ function zobrazFilm(filmUrl, plakat) {
     const hash = vimeo[2] || url.searchParams.get("h");
     if (hash) prehravac.searchParams.set("h", hash);
     const iframe = prvek("iframe");
-    iframe.title = "Videoprohlídka mezonetu v Suchdole";
+    iframe.title = textProJazyk("Videoprohlídka mezonetu v Suchdole", "Video tour of the Suchdol maisonette");
     iframe.loading = "lazy";
     iframe.allow = "autoplay; fullscreen; picture-in-picture; encrypted-media";
     iframe.allowFullscreen = true;
@@ -756,7 +826,7 @@ function zobrazFilm(filmUrl, plakat) {
     iframe.src = prehravac.href;
     ramecek.replaceChildren(iframe);
     odkaz.href = "https://vimeo.com/" + vimeo[1] + (hash ? "/" + encodeURIComponent(hash) : "");
-    odkaz.textContent = "Otevřít na Vimeu ↗";
+    odkaz.textContent = textProJazyk("Otevřít na Vimeu ↗", "Open on Vimeo ↗");
   } else {
     const video = prvek("video");
     video.controls = true;
@@ -764,10 +834,10 @@ function zobrazFilm(filmUrl, plakat) {
     video.preload = "none";
     video.src = url.href;
     if (plakat) video.poster = plakat;
-    video.setAttribute("aria-label", "Videoprohlídka mezonetu");
+    video.setAttribute("aria-label", textProJazyk("Videoprohlídka mezonetu", "Maisonette video tour"));
     ramecek.replaceChildren(video);
     odkaz.href = url.href;
-    odkaz.textContent = "Otevřít video ↗";
+    odkaz.textContent = textProJazyk("Otevřít video ↗", "Open video ↗");
   }
   ramecek.hidden = false;
 }
@@ -795,10 +865,10 @@ function nastavKontakt(f) {
     submit = el("odeslat");
   submit.disabled = false;
   el("prijemci-poptavky").hidden = false;
-  if (ADRESA_POPTAVKY) el("prijemci-poptavky").textContent = "Poptávku obdrží Eva Goldšmíd, Jiří Sládek a FD Studio.";
+  if (ADRESA_POPTAVKY) el("prijemci-poptavky").textContent = textProJazyk("Poptávku obdrží Eva Goldšmíd, Jiří Sládek a FD Studio.", "Your enquiry will reach Eva Goldšmíd, Jiří Sládek and FD Studio.");
   if (!ADRESA_POPTAVKY)
     submit.replaceChildren(
-      document.createTextNode("Připravit poptávku e-mailem"),
+      document.createTextNode(textProJazyk("Připravit poptávku e-mailem", "Prepare email enquiry")),
       ikona("ne"),
     );
   for (const input of [form.elements.jmeno, form.elements.email, form.elements.telefon])
@@ -815,24 +885,24 @@ function nastavKontakt(f) {
     const hodnoty = new FormData(form);
     const text = (k) => String(hodnoty.get(k) || "").trim();
     if (!text("jmeno")) {
-      form.elements.jmeno.setCustomValidity("Napište prosím své jméno.");
+      form.elements.jmeno.setCustomValidity(textProJazyk("Napište prosím své jméno.", "Please enter your name."));
       form.elements.jmeno.reportValidity();
       return;
     }
     if (!text("telefon") && !text("email")) {
       form.elements.telefon.setCustomValidity(
-        "Uveďte prosím telefon nebo e-mail.",
+        textProJazyk("Uveďte prosím telefon nebo e-mail.", "Please provide a phone number or an email address."),
       );
       form.elements.telefon.reportValidity();
       return;
     }
     if (text("telefon") && !/^\+?[\d\s()./-]{3,40}$/.test(text("telefon"))) {
-      form.elements.telefon.setCustomValidity("Zkontrolujte prosím telefonní číslo včetně případné předvolby.");
+      form.elements.telefon.setCustomValidity(textProJazyk("Zkontrolujte prosím telefonní číslo včetně případné předvolby.", "Please check your phone number, including the country code if needed."));
       form.elements.telefon.reportValidity();
       return;
     }
     if (text("email") && !/^[^\s@,;<>]+@[^\s@,;<>]+\.[^\s@,;<>]+$/.test(text("email"))) {
-      form.elements.email.setCustomValidity("Zkontrolujte prosím e-mailovou adresu.");
+      form.elements.email.setCustomValidity(textProJazyk("Zkontrolujte prosím e-mailovou adresu.", "Please check your email address."));
       form.elements.email.reportValidity();
       return;
     }
@@ -847,31 +917,31 @@ function nastavKontakt(f) {
       web: text("web"),
     };
     submit.disabled = true;
-    status.textContent = ADRESA_POPTAVKY ? "Odesílám poptávku…" : "";
+    status.textContent = ADRESA_POPTAVKY ? textProJazyk("Odesílám poptávku…", "Sending enquiry…") : "";
     try {
       if (!ADRESA_POPTAVKY) {
         const body = [
-          text("zprava") || "Mám zájem o prohlídku mezonetu.",
+          text("zprava") || textProJazyk("Mám zájem o prohlídku mezonetu.", "I would like to arrange a viewing of the maisonette."),
           data.jmeno,
           data.telefon,
           data.email,
         ]
           .filter(Boolean)
           .join("\n\n");
-        const a = prvek("a", "", "Otevřít připravený e-mail ↗");
+        const a = prvek("a", "", textProJazyk("Otevřít připravený e-mail ↗", "Open prepared email ↗"));
         a.href =
           "mailto:" +
           m.email +
           "?cc=" + encodeURIComponent("honza@frantisekdron.cz,j.sladek@seznam.cz") +
           "&subject=" +
-          encodeURIComponent("Prohlídka | " + f.nazev) +
+          encodeURIComponent(textProJazyk("Prohlídka | ", "Viewing enquiry | ") + f.nazev) +
           "&body=" +
           encodeURIComponent(body);
         status.append(
           prvek(
             "p",
             "",
-            "Poptávka je připravená. Odešlete ji ze své e-mailové aplikace.",
+            textProJazyk("Poptávka je připravená. Odešlete ji ze své e-mailové aplikace.", "Your enquiry is ready. Send it from your email app."),
           ),
           a,
         );
@@ -879,8 +949,8 @@ function nastavKontakt(f) {
       } else {
         const potvrzeni = await odeslatPoptavku(data);
         status.textContent = potvrzeni.stav === "odeslano"
-          ? "Děkujeme, poptávku jsme přijali a předali k vyřízení."
-          : "Děkujeme, poptávku máme uloženou. K vyřízení ji předáme automaticky.";
+          ? textProJazyk("Děkujeme, poptávku jsme přijali a předali k vyřízení.", "Thank you. We’ve received your enquiry and forwarded it to the team.")
+          : textProJazyk("Děkujeme, poptávku máme uloženou. K vyřízení ji předáme automaticky.", "Thank you. Your enquiry has been saved and will be forwarded automatically.");
         posledniPokus = null;
         try { sessionStorage.removeItem("suchdol-b-pokus"); } catch {}
         const aktualni = new FormData(form);
@@ -894,7 +964,7 @@ function nastavKontakt(f) {
       }
     } catch {
       status.textContent =
-        "Přijetí se nepodařilo potvrdit. Vyplněné údaje tu zůstaly. Zkuste odeslat znovu nebo zavolejte na " +
+        textProJazyk("Přijetí se nepodařilo potvrdit. Vyplněné údaje tu zůstaly. Zkuste odeslat znovu nebo zavolejte na ", "We couldn’t confirm receipt. Your details are still here. Try sending again or call ") +
         m.telefon +
         ".";
     } finally {
@@ -903,18 +973,19 @@ function nastavKontakt(f) {
   };
 }
 function vykresli(data) {
+  if (anglicky) data = anglickePodklady(data, prekladWebu);
   const { fakta: f, galerie, modely, konfigurator: k } = data;
   vykresliUvod(f);
   vykresliGalerii(galerie);
   vykresliModely(f, modely);
   vykresliKonfigurator(k, f);
-  vykresliLokalitu(f, null, data.video?.url || FILM_16_9);
+  vykresliLokalitu(f, null, FILM_16_9 || data.video?.url);
   nastavKontakt(f);
   document.querySelector(".loading-error").hidden = true;
 }
 function zavriMenu() {
   menu.setAttribute("aria-expanded", "false");
-  menu.setAttribute("aria-label", "Otevřít navigaci");
+  menu.setAttribute("aria-label", textProJazyk("Otevřít navigaci", "Open navigation"));
   el("nav").classList.remove("open");
 }
 menu.onclick = () => {
@@ -923,7 +994,7 @@ menu.onclick = () => {
     return;
   }
   menu.setAttribute("aria-expanded", "true");
-  menu.setAttribute("aria-label", "Zavřít navigaci");
+  menu.setAttribute("aria-label", textProJazyk("Zavřít navigaci", "Close navigation"));
   el("nav").classList.add("open");
   el("nav").querySelector("a").focus();
 };
@@ -970,11 +1041,12 @@ async function nacti() {
   try {
     async function nactiBalicek(url, signal) {
       const odpoved = await fetch(url, { cache: "no-cache", signal });
-      if (!odpoved.ok) throw new Error("Chybí datový balíček.");
+      if (!odpoved.ok) throw new Error(textProJazyk("Chybí datový balíček.", "The property data could not be found."));
       return odpoved.json();
     }
     const mistni = document.getElementById("mistni-podklady");
-    const balicek = mistni ? JSON.parse(mistni.textContent) : await nactiBalicek("data.json");
+    const balicek = mistni ? JSON.parse(mistni.textContent)
+      : await nactiBalicek(anglicky ? "../data.json" : "data.json");
     vykresli(balicek);
     void aktualizujFilm();
   } catch {
@@ -988,7 +1060,7 @@ async function nacti() {
       const label = prvek(
         "label",
         "",
-        "Pro náhled z disku vyberte soubor data.json z této složky. ",
+        textProJazyk("Pro náhled z disku vyberte soubor data.json z této složky. ", "To preview from disk, select the property data file. "),
       );
       label.append(input);
       chyba.replaceChildren(label);
@@ -999,14 +1071,14 @@ async function nacti() {
           vykresli(JSON.parse(await input.files[0].text()));
         } catch {
           label.firstChild.textContent =
-            "Tento soubor nelze načíst. Vyberte prosím data.json. ";
+            textProJazyk("Tento soubor nelze načíst. Vyberte prosím data.json. ", "This file could not be loaded. Please choose the property data file. ");
         }
       };
     } else {
       chyba.replaceChildren(
-        document.createTextNode("Podklady se nepodařilo načíst. "),
+        document.createTextNode(textProJazyk("Podklady se nepodařilo načíst. ", "The property details could not be loaded. ")),
       );
-      const znovu = tlacitko("Zkusit znovu", nacti);
+      const znovu = tlacitko(textProJazyk("Zkusit znovu", "Try again"), nacti);
       chyba.append(znovu);
     }
   }

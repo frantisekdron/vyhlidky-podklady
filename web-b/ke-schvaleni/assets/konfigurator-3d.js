@@ -1,4 +1,7 @@
 (() => {
+  const anglicky = document.documentElement.lang === "en";
+  const textProJazyk = (cesky, english) => anglicky ? english : cesky;
+  const skriptUrl = document.currentScript.src;
   const scena = document.getElementById("scena-domu");
   const model = document.getElementById("model-konfiguratoru");
   const schema = document.getElementById("platno");
@@ -47,12 +50,12 @@
     else model.setAttribute("tabindex", "-1");
     nastroje.hidden = !otaceni;
     prepnout.hidden = rez || !pripraven;
-    prepnout.textContent = otaceni ? "Pevný pohled" : "Otáčet ve 3D";
-    if (rez) popis.textContent = "Řez ukazuje umístění techniky a vybavení napříč podlažími. Vybrané prvky se zvýrazní.";
-    else if (otaceni) popis.textContent = "Tažením dům otočíte. Kolečkem nebo dvěma prsty si ho přiblížíte.";
-    else if (sestava.has("markyzy") && pohled === "zahrada") popis.textContent = pripraven ? "Markýzy jsou vidět v otáčecím pohledu na dům." : "Markýzy jsou součástí vybrané sestavy. Pevný pohled ukazuje ostatní zakreslené prvky.";
-    else if (chyba) popis.textContent = "V tomto prohlížeči se zobrazuje pevný pohled s vybranými doplňky.";
-    else popis.textContent = "Pevný pohled ukazuje dům s vybranými doplňky.";
+    prepnout.textContent = otaceni ? textProJazyk("Pevný pohled", "Fixed view") : textProJazyk("Otáčet ve 3D", "Rotate in 3D");
+    if (rez) popis.textContent = textProJazyk("Řez ukazuje umístění techniky a vybavení napříč podlažími. Vybrané prvky se zvýrazní.", "The cross-section shows the building services on each level. Selected features are highlighted.");
+    else if (otaceni) popis.textContent = textProJazyk("Tažením dům otočíte. Kolečkem nebo dvěma prsty si ho přiblížíte.", "Drag to rotate the villa. Use the scroll wheel or pinch with two fingers to zoom.");
+    else if (sestava.has("markyzy") && pohled === "zahrada") popis.textContent = pripraven ? textProJazyk("Markýzy jsou vidět v otáčecím pohledu na dům.", "The awnings are visible in the rotatable view.") : textProJazyk("Markýzy jsou součástí vybrané sestavy. Pevný pohled ukazuje ostatní zakreslené prvky.", "Awnings are included in your selection. The fixed view shows the other features.");
+    else if (chyba) popis.textContent = textProJazyk("V tomto prohlížeči se zobrazuje pevný pohled s vybranými doplňky.", "This browser displays the fixed view with your selected extras.");
+    else popis.textContent = textProJazyk("Pevný pohled ukazuje dům s vybranými doplňky.", "The fixed view shows the villa with your selected extras.");
   }
   function pouzijSchema() {
     chyba = true;
@@ -79,7 +82,7 @@
     if (nacteni) return;
     nacteni = import("./vendor/model-viewer-3.5.0.min.js").then(() => {
       model.loading = "eager";
-      model.src = "assets/dum-3d/dum-b-konfigurator.glb";
+      model.src = new URL("dum-3d/dum-b-konfigurator.glb", skriptUrl).href;
     }).catch(pouzijSchema);
   }
   window.aktualizujModelDomu = (novyPohled, vybrane) => {
